@@ -21,7 +21,7 @@ const fadeUp: Variants = {
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden flex items-end justify-center pb-12 sm:pb-16">
+    <section className="relative min-h-screen overflow-hidden flex items-end justify-center pb-6 sm:pb-10">
       {/* Full-screen background video */}
       <div className="absolute inset-0">
         <video
@@ -59,7 +59,7 @@ const HeroSection = () => {
           <motion.h1
             variants={fadeUp}
             className="font-black text-white mb-8 mt-10 text-center drop-shadow-2xl tracking-tight"
-            style={{ fontFamily: 'Inter, sans-serif', lineHeight: 1.1, fontSize: 'clamp(60px, 11vw, 96px)' }}
+            style={{ fontFamily: 'Inter, sans-serif', lineHeight: 1.1, fontSize: 'clamp(54px, 9.5vw, 85px)' }}
           >
             Scale Your <br /> Enterprise IT Services
           </motion.h1>
@@ -72,7 +72,7 @@ const HeroSection = () => {
             <MagneticButton>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 text-lg font-bold text-white border border-white/80 rounded-lg hover:bg-white/10 hover:border-white transition-all duration-300"
+                className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-bold text-white border border-white/80 rounded-lg hover:bg-white/10 hover:border-white transition-all duration-300"
               >
                 Contact Us
                 <ArrowRight size={20} />
@@ -80,7 +80,7 @@ const HeroSection = () => {
             </MagneticButton>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 text-lg font-bold text-white border border-white/80 rounded-lg hover:bg-white/10 hover:border-white transition-all duration-300"
+              className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-bold text-white border border-white/80 rounded-lg hover:bg-white/10 hover:border-white transition-all duration-300"
             >
               See How We Deliver
               <ArrowRight size={20} />
