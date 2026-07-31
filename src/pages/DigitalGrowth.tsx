@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import SEOHead from "@/components/SEOHead";
 import { digitalMarketingSeoData } from "@/data/seo/digitalMarketingSeo";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
@@ -147,8 +147,17 @@ const FlowStep = ({ label, index, total }: { label: string; index: number; total
 /* ══════════════════════════════════════════════ */
 
 const DigitalGrowth = () => {
+  const [hoveredPill, setHoveredPill] = useState<string | null>(null);
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
+  
+  const services = [
+    { id: "seo", title: "SEO", desc: "Improve rankings and drive organic traffic.", icon: Search, color: "blue", x: 65, y: 12 },
+    { id: "google-ads", title: "Google Ads", desc: "Target the right audience and maximize ROI.", icon: Target, color: "orange", x: 82, y: 45 },
+    { id: "linkedin", title: "LinkedIn Strategy", desc: "Generate B2B leads and grow your network.", icon: Linkedin, color: "blue", x: 70, y: 85 },
+    { id: "content", title: "Content Marketing", desc: "Create valuable content that converts.", icon: PenTool, color: "cyan", x: 25, y: 80 },
+    { id: "social", title: "Social Media", desc: "Build brand awareness and engage your audience.", icon: Users, color: "purple", x: 15, y: 35 }
+  ];
   const imgScale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
   const overlayOp = useTransform(scrollYProgress, [0, 0.5], [0.45, 0.9]);
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
@@ -304,51 +313,134 @@ const DigitalGrowth = () => {
             </div>
 
             {/* Right Content - Abstract Graphic Layout */}
-            <div className="relative w-full aspect-square max-w-[600px] mx-auto lg:ml-auto">
+            <div className="relative w-full aspect-square max-w-[650px] mx-auto lg:ml-auto scale-105 lg:scale-100">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-primary/5 to-purple-50/50 rounded-full blur-3xl opacity-60"></div>
 
-              {/* Central Stack Image */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] lg:w-[500px] lg:h-[500px] z-0 flex items-center justify-center pointer-events-none">
-                <img src="/images/digihero.png" alt="CT Growth Engine" className="w-full h-full object-contain drop-shadow-2xl mix-blend-multiply" />
-              </div>
+              {/* Ecosystem Integration (Growth Hub) */}
+              <div className="absolute inset-0 flex items-center justify-center z-10">
+                {/* Concentric Dashed Rings */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] h-[45%] rounded-full border border-slate-200 border-dashed animate-[spin_60s_linear_infinite]" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] h-[75%] rounded-full border border-slate-200 border-dashed animate-[spin_90s_linear_infinite_reverse]" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] rounded-full border border-slate-100 border-dashed" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] rounded-full border-2 border-white/20 animate-pulse pointer-events-none mix-blend-overlay opacity-30" />
+                
+                {/* Rotating Layer for Lines and Pills */}
+                <div 
+                  className="absolute inset-0 pointer-events-none z-30"
+                  style={{
+                    animation: 'orbit-spin 40s linear infinite',
+                    animationPlayState: hoveredPill ? 'paused' : 'running'
+                  }}
+                >
+                  {/* SVG Connector Lines */}
+                  <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
+                    {services.map((s, i) => {
+                      const isHovered = hoveredPill === s.id;
+                      return (
+                        <g key={i}>
+                          <line 
+                            x1="50%" 
+                            y1="50%" 
+                            x2={`${s.x}%`} 
+                            y2={`${s.y}%`} 
+                            stroke={isHovered ? "#3b82f6" : "url(#lineGradient)"} 
+                            strokeWidth={isHovered ? "2.5" : "1.5"} 
+                            strokeDasharray={isHovered ? "0" : "4 4"} 
+                            className={`transition-all duration-500 ${isHovered ? "opacity-100" : "opacity-40"}`}
+                          />
+                          <circle cx={`${s.x}%`} cy={`${s.y}%`} r={isHovered ? "6" : "4"} fill="#3b82f6" className={`transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-50"}`} />
+                        </g>
+                      );
+                    })}
+                    <defs>
+                      <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#3b82f6" />
+                        <stop offset="100%" stopColor="#8b5cf6" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
 
-              {/* Orbiting Icons & Dashed Lines */}
-              <div className="absolute top-1/2 left-1/2 w-[100%] h-[100%] -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
-                {/* Outer Dashed Orbit Path */}
-                <motion.div
-                  className="absolute inset-0 border-[1.5px] border-dashed border-slate-300/80 rounded-full"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                ></motion.div>
+                  {/* Floating Service Pills */}
+                  {services.map((service) => {
+                    const ServiceIcon = service.icon;
+                    const isHovered = hoveredPill === service.id;
+                    
+                    const baseColor = {
+                      blue: "text-blue-600 bg-blue-50",
+                      orange: "text-orange-600 bg-orange-50",
+                      purple: "text-purple-600 bg-purple-50",
+                      cyan: "text-cyan-600 bg-cyan-50"
+                    }[service.color as "blue" | "orange" | "purple" | "cyan"];
+                    
+                    const hoverColor = {
+                      blue: "bg-blue-600 text-white",
+                      orange: "bg-orange-600 text-white",
+                      purple: "bg-purple-600 text-white",
+                      cyan: "bg-cyan-600 text-white"
+                    }[service.color as "blue" | "orange" | "purple" | "cyan"];
+                    
+                    const hoverTextColor = {
+                      blue: "text-blue-600",
+                      orange: "text-orange-600",
+                      purple: "text-purple-600",
+                      cyan: "text-cyan-600"
+                    }[service.color as "blue" | "orange" | "purple" | "cyan"];
+                    
+                    return (
+                      <div 
+                        key={service.id}
+                        style={{ top: `${service.y}%`, left: `${service.x}%`, transform: 'translate(-50%, -50%)' }}
+                        className="absolute z-30 pointer-events-auto"
+                        onMouseEnter={() => setHoveredPill(service.id)}
+                        onMouseLeave={() => setHoveredPill(null)}
+                      >
+                        <div 
+                          className="flex items-center justify-center"
+                          style={{
+                            animation: 'orbit-spin-reverse 40s linear infinite',
+                            animationPlayState: hoveredPill ? 'paused' : 'running'
+                          }}
+                        >
+                          <div 
+                            className={`transition-all duration-500 bg-white/90 backdrop-blur-xl border rounded-full p-2 sm:p-2.5 pr-4 sm:pr-6 flex items-center gap-3 sm:gap-4 min-w-[200px] ${
+                              isHovered 
+                                ? "scale-105 shadow-[0_15px_35px_rgba(59,130,246,0.2)] border-blue-300" 
+                                : "shadow-[0_8px_25px_rgba(0,0,0,0.06)] border-slate-200/80"
+                            }`}
+                          >
+                            <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300 ${isHovered ? hoverColor : baseColor}`}>
+                              <ServiceIcon size={18} strokeWidth={2.5} />
+                            </div>
+                            <div className="flex-1">
+                              <h4 className={`text-[13px] font-bold leading-tight mb-0.5 transition-colors ${isHovered ? hoverTextColor : "text-slate-900"}`}>{service.title}</h4>
+                              <p className="text-[10px] text-slate-500 font-medium leading-tight max-w-[120px] truncate">
+                                {service.desc}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
 
-                {/* Orbiting Social Media Icons */}
-                {[
-                  { icon: Instagram, color: "text-[#E1306C]", startAngle: 30 },
-                  { icon: Search, color: "text-[#4285F4]", startAngle: 90 },
-                  { icon: Briefcase, color: "text-[#0077b5]", startAngle: 150 },
-                  { icon: Facebook, color: "text-[#1877F2]", startAngle: 210 },
-                  { icon: Youtube, color: "text-[#FF0000]", startAngle: 270 },
-                  { icon: Twitter, color: "text-black", startAngle: 330 },
-                ].map((node, i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute inset-0"
-                    animate={{ rotate: [node.startAngle, node.startAngle + 360] }}
-                    transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                  >
-                    <motion.div
-                      className="absolute -top-6 left-1/2 w-12 h-12 bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center -translate-x-1/2 border border-slate-100 pointer-events-auto"
-                      animate={{ rotate: [-node.startAngle, -(node.startAngle + 360)] }}
-                      transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                    >
-                      <node.icon size={22} className={node.color} />
-                    </motion.div>
-                  </motion.div>
-                ))}
+                {/* Center Growth Hub (Fixed) */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 pointer-events-none">
+                  <div className="absolute inset-0 bg-blue-600/20 rounded-full animate-[ping_3.5s_ease-in-out_infinite] opacity-75" />
+                  <div className="absolute -inset-4 bg-blue-600/30 rounded-full blur-2xl" />
+                  
+                  <div className="relative w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] rounded-full bg-gradient-to-br from-[#0a1b4d] to-[#040b1e] border-4 border-white shadow-[0_15px_35px_rgba(4,11,30,0.3)] flex flex-col items-center justify-center text-center p-4">
+                    <BarChart2 size={36} className="text-blue-400 mb-2" strokeWidth={1.5} />
+                    <h3 className="text-white font-bold text-[16px] sm:text-[18px] leading-tight mb-1">Growth Hub</h3>
+                    <p className="text-blue-200/80 text-[10px] sm:text-[11px] font-medium tracking-wide">
+                      Data. Strategy.<br />Results.
+                    </p>
+                  </div>
+                </div>
               </div>
 
               {/* Data Cards */}
-              <div className="hidden lg:block absolute top-[5%] -right-4 lg:-right-12 w-[240px] bg-white rounded-2xl shadow-[0_20px_40px_rgb(0,0,0,0.08)] p-4 border border-slate-100 z-20">
+              <div className="hidden lg:block absolute top-[2%] -right-4 lg:-right-20 w-[240px] bg-white rounded-2xl shadow-[0_20px_40px_rgb(0,0,0,0.08)] p-4 border border-slate-100 z-50 hover:scale-105 transition-transform duration-300">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-[12px] font-bold text-slate-700">Revenue Overview</span>
                   <span className="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">This Month v</span>
@@ -368,7 +460,7 @@ const DigitalGrowth = () => {
                 </svg>
               </div>
 
-              <div className="hidden lg:block absolute top-[40%] -right-8 lg:-right-16 w-[200px] bg-white rounded-2xl shadow-[0_20px_40px_rgb(0,0,0,0.08)] p-4 border border-slate-100 z-20">
+              <div className="hidden lg:block absolute top-[10%] -left-4 lg:-left-20 w-[200px] bg-white rounded-2xl shadow-[0_20px_40px_rgb(0,0,0,0.08)] p-4 border border-slate-100 z-50 hover:scale-105 transition-transform duration-300">
                 <div className="text-[12px] font-bold text-slate-700 mb-2">Conversions</div>
                 <div className="text-[20px] font-bold text-green-500 mb-1">+35%</div>
                 <div className="text-[10px] text-slate-400 mb-3">vs last month</div>
@@ -385,7 +477,7 @@ const DigitalGrowth = () => {
                 </div>
               </div>
 
-              <div className="hidden lg:flex absolute bottom-[20%] -right-4 lg:-right-8 w-[200px] bg-white rounded-2xl shadow-[0_20px_40px_rgb(0,0,0,0.08)] p-4 border border-slate-100 items-center justify-between z-20">
+              <div className="hidden lg:flex absolute bottom-[10%] -right-4 lg:-right-16 w-[200px] bg-white rounded-2xl shadow-[0_20px_40px_rgb(0,0,0,0.08)] p-4 border border-slate-100 items-center justify-between z-50 hover:scale-105 transition-transform duration-300">
                 <div>
                   <div className="text-[12px] font-bold text-slate-700 mb-1">ROAS</div>
                   <div className="text-[22px] font-bold text-slate-900">4.6x</div>
@@ -400,7 +492,7 @@ const DigitalGrowth = () => {
                 </div>
               </div>
 
-              <div className="hidden lg:block absolute -bottom-4 left-4 lg:left-12 w-[220px] bg-white rounded-2xl shadow-[0_20px_40px_rgb(0,0,0,0.08)] p-4 border border-slate-100 z-20">
+              <div className="hidden lg:block absolute -bottom-6 left-0 lg:-left-12 w-[220px] bg-white rounded-2xl shadow-[0_20px_40px_rgb(0,0,0,0.08)] p-4 border border-slate-100 z-50 hover:scale-105 transition-transform duration-300">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-[12px] font-bold text-slate-700">Active Campaigns</span>
                   <motion.div

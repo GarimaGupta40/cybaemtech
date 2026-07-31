@@ -48,12 +48,18 @@ import {
   MonitorSmartphone,
   FileCheck,
   ClipboardCheck,
-  TrendingDown
+  TrendingDown,
+  Check,
+  ShoppingCart,
+  Wand2,
+  Zap,
+  Palette
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import PortfolioCTA from "@/components/PortfolioCTA";
 import { containerVariants, itemVariants } from "@/lib/animations";
 import { Progress } from "@/components/ui/progress";
 import { portfolioSeoData } from "@/data/seo/portfolioSeo";
@@ -72,7 +78,7 @@ import {
 } from "@/data/portfolioData";
 
 /* ──────────── Tabs ──────────── */
-const tabs = ["IT Services", "Software & AI Solutions", "Cloud Solutions", "Digital Marketing", "Cybersecurity"] as const;
+const tabs = ["IT Services", "Enterprise & AI Solutions", "Website Development", "Cloud Solutions", "Digital Marketing", "Cybersecurity"] as const;
 type TabKey = (typeof tabs)[number];
 
 /* ──────────── Hero ──────────── */
@@ -418,260 +424,438 @@ const softwareFeatures = [
 ];
 
 const SoftwareAISolutionsTab = () => {
-  const navigate = useNavigate();
-
-  const handleNavigation = (path: string) => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    navigate(path);
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="flex flex-col xl:flex-row gap-6 mb-12 items-stretch xl:h-[620px]"
+      className="flex flex-col gap-6 mb-10"
     >
-      {/* Column 1: Featured Enterprise Software (55%) */}
-      <div className="w-full xl:w-[55%] h-full flex flex-col">
-        <motion.div
-          role="button"
-          tabIndex={0}
-          aria-label="View Enterprise Software details"
-          onClick={() => handleNavigation("/solutions/enterprise-software")}
-          onKeyDown={(e) => e.key === "Enter" && handleNavigation("/solutions/enterprise-software")}
-          className="group relative flex-1 w-full rounded-[24px] overflow-hidden bg-[#040b1e] shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col p-8 sm:p-10 justify-end"
-        >
-          {/* Background Image & Overlay */}
-          <div className="absolute inset-0 z-0 overflow-hidden bg-[#040b1e]">
-            {/* Image positioned on the right */}
-            <div className="absolute top-0 right-0 w-[70%] sm:w-[60%] h-full">
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
-                alt="Enterprise Dashboard"
-                className="w-full h-full object-cover opacity-90 brightness-[1.15] contrast-[1.10] saturate-[1.20] origin-right scale-100 group-hover:scale-105 group-hover:brightness-[1.25] transition-all duration-500 ease-out"
-              />
-            </div>
-            
-            {/* Blend image into the dark background - FIXED FULL-CARD GRADIENTS */}
-            {/* This ensures the gradient never moves, completely hiding the image's left edge */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#040b1e] via-[#040b1e]/95 to-transparent sm:via-[#040b1e]/90" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#040b1e] via-transparent to-[#040b1e]/40 pointer-events-none" />
-            
-            {/* Soft blue glow on the right, intensifies on hover */}
-            <div className="absolute top-1/2 right-0 -translate-y-1/2 w-1/2 h-2/3 bg-blue-600/10 group-hover:bg-blue-500/20 blur-[120px] pointer-events-none mix-blend-screen transition-colors duration-500" />
-            
-            {/* Subtle noise/texture overlay for premium SaaS feel */}
+      {/* Top Row: Hero + Why Choose */}
+      <div className="flex flex-col lg:flex-row gap-6">
+        
+        {/* Hero Section */}
+        <div className="lg:w-[70%]">
+          {/* Dark Hero Card */}
+          <div className="bg-[#040b1e] rounded-[2rem] p-6 lg:p-8 relative overflow-hidden flex flex-col md:flex-row items-center gap-6 min-h-[300px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] group">
+          {/* Background Image & Effects */}
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-[#040b1e] to-[#040b1e] opacity-80" />
+            {/* Glowing orbs */}
+            <div className="absolute top-0 right-[20%] w-[40%] h-[60%] bg-blue-600/20 blur-[100px] mix-blend-screen pointer-events-none transition-colors duration-500" />
+            <div className="absolute bottom-0 right-0 w-[30%] h-[50%] bg-purple-600/20 blur-[100px] mix-blend-screen pointer-events-none transition-colors duration-500" />
             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none" />
           </div>
 
-          <div className="relative z-10 w-full h-full flex flex-col justify-between">
-            <div className="w-12 h-12 rounded-[14px] border border-white/20 bg-white/10 backdrop-blur-xl flex items-center justify-center text-blue-100 group-hover:border-white/40 group-hover:text-white transition-all duration-300 shadow-[0_0_20px_rgba(37,99,235,0.2)]">
-              <Code2 size={24} strokeWidth={1.5} />
+          {/* Left Content */}
+          <div className="relative z-10 w-full md:w-[55%] flex flex-col items-start">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-[11px] font-bold tracking-wide uppercase mb-4 shadow-sm">
+              <Settings size={14} className="text-blue-400" /> ENTERPRISE & AI SOLUTIONS
             </div>
             
-            <div className="mt-auto">
-              <h3 className="font-display text-[36px] sm:text-[46px] font-bold text-white leading-[1.1] mb-5 tracking-tight group-hover:text-blue-50 transition-colors">
-                Enterprise <br className="hidden sm:block" />
-                Software Solutions
-              </h3>
-              <div className="w-12 h-1 bg-blue-500 mb-6 rounded-full group-hover:w-20 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.6)] transition-all duration-300" />
-              <p className="text-[16px] text-slate-300/90 font-medium leading-relaxed max-w-lg mb-8">
-                Custom enterprise software built to streamline operations, drive efficiency, and scale with your business seamlessly.
-              </p>
-              
-              {/* Tech Badges */}
-              <div className="flex flex-wrap gap-3 mb-10">
-                <span className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[13px] font-medium backdrop-blur-md hover:bg-white/10 transition-colors">
-                  <Globe size={15} className="text-cyan-400" /> React
-                </span>
-                <span className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[13px] font-medium backdrop-blur-md hover:bg-white/10 transition-colors">
-                  <Server size={15} className="text-green-400" /> Node.js
-                </span>
-                <span className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[13px] font-medium backdrop-blur-md hover:bg-white/10 transition-colors">
-                  <Layers size={15} className="text-blue-400" /> Cloud
-                </span>
-                <span className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[13px] font-medium backdrop-blur-md hover:bg-white/10 transition-colors">
-                  <BrainCircuit size={15} className="text-purple-400" /> AI/ML
-                </span>
-              </div>
-
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-900 font-bold rounded-[12px] hover:bg-slate-100 transition-colors group/btn">
-                Learn More <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Column 2: Stacked Medium Cards (25%) */}
-      <div className="w-full xl:w-[25%] h-full flex flex-col gap-6">
-        <motion.div
-          role="button"
-          tabIndex={0}
-          aria-label="View Website Designing details"
-          onClick={() => handleNavigation("/solutions/web-systems")}
-          onKeyDown={(e) => e.key === "Enter" && handleNavigation("/solutions/web-systems")}
-          className="group relative flex-1 w-full rounded-[24px] bg-white border border-slate-200/70 p-7 flex flex-col justify-between cursor-pointer shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgb(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-        >
-          {/* Custom Vercel/Stripe style 2.5D UI Illustration */}
-          <div className="absolute right-[-10px] bottom-[-20px] w-64 h-64 pointer-events-none transition-transform duration-700 group-hover:scale-105 group-hover:-translate-y-2">
-            {/* Glowing background */}
-            <div className="absolute inset-0 bg-blue-400/20 blur-[50px] rounded-full" />
+            <h2 className="text-4xl lg:text-5xl font-display font-bold text-white leading-[1.15] mb-3">
+              Intelligent Solutions.<br/>
+              <span className="text-slate-300">Real Business Impact.</span>
+            </h2>
             
-            {/* Desktop Monitor */}
-            <div className="absolute right-4 bottom-12 w-48 h-32 bg-white rounded-t-xl border border-slate-200/80 shadow-[0_10px_40px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col">
-              <div className="w-full h-3 bg-slate-100 border-b border-slate-200 flex items-center px-2 gap-1">
-                <div className="w-1.5 h-1.5 rounded-full bg-red-400" />
-                <div className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-                <div className="w-1.5 h-1.5 rounded-full bg-green-400" />
-              </div>
-              <div className="flex-1 p-2 flex flex-col gap-2 relative overflow-hidden">
-                <div className="w-full h-10 bg-blue-50 rounded-lg" />
-                <div className="flex gap-2">
-                  <div className="flex-1 h-12 bg-slate-50 rounded-md" />
-                  <div className="flex-1 h-12 bg-slate-50 rounded-md" />
-                </div>
-                {/* Floating Code Snippet */}
-                <div className="absolute -right-2 top-6 w-24 h-16 bg-slate-900/90 backdrop-blur-md border border-slate-700 rounded-lg shadow-2xl p-2 transform rotate-[-5deg] group-hover:rotate-0 transition-transform duration-500">
-                  <div className="w-10 h-1 bg-blue-400 rounded-full mb-1.5" />
-                  <div className="w-16 h-1 bg-slate-600 rounded-full mb-1.5" />
-                  <div className="w-12 h-1 bg-purple-400 rounded-full" />
-                </div>
-              </div>
-            </div>
-            {/* Monitor Stand */}
-            <div className="absolute right-24 bottom-9 w-8 h-3 bg-slate-200" />
-            <div className="absolute right-16 bottom-8 w-24 h-1 bg-slate-300 rounded-full" />
+            <div className="w-12 h-1 bg-blue-500 rounded-full mb-4 group-hover:w-20 transition-all duration-300" />
 
-            {/* Mobile Phone */}
-            <div className="absolute right-36 bottom-6 w-16 h-32 bg-slate-900 rounded-[14px] border-2 border-slate-700 shadow-[0_15px_30px_rgba(0,0,0,0.15)] overflow-hidden transform rotate-12 group-hover:rotate-6 transition-transform duration-500">
-              <div className="absolute top-1 left-1/2 -translate-x-1/2 w-4 h-1 bg-slate-800 rounded-full" />
-              <div className="w-full h-full mt-4 flex flex-col gap-1.5 px-1.5">
-                <div className="w-full h-8 bg-blue-500/20 rounded-md" />
-                <div className="w-full h-4 bg-slate-800 rounded-sm" />
-                <div className="w-full h-4 bg-slate-800 rounded-sm" />
-                <div className="w-2/3 h-4 bg-slate-800 rounded-sm" />
-              </div>
-            </div>
-            
-            {/* Floating Glass Element */}
-            <div className="absolute right-8 bottom-32 w-12 h-12 rounded-xl bg-white/40 backdrop-blur-md border border-white/60 shadow-xl flex items-center justify-center transform rotate-12 group-hover:translate-y-[-10px] transition-transform duration-700">
-              <Globe size={20} className="text-blue-500" />
-            </div>
-          </div>
-          <div className="relative z-10 bg-white/70 backdrop-blur-sm p-4 -m-4 rounded-xl mb-4 self-start">
-            <div className="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-              <Globe size={22} strokeWidth={2} />
-            </div>
-            <h4 className="font-display text-[22px] font-bold text-slate-900 mb-2 leading-tight">Website <br/>Development</h4>
-            <p className="text-[13px] text-slate-600 font-medium leading-relaxed max-w-[160px]">
-              Modern, responsive, and SEO-friendly websites.
+            <p className="text-[15px] text-slate-300 leading-relaxed mb-6 max-w-sm">
+              Building enterprise-grade applications and AI-powered systems that automate processes and drive measurable growth.
             </p>
-          </div>
-          <div className="relative z-10 flex items-center gap-2 text-[14px] font-bold text-primary group-hover:text-blue-700 transition-colors mt-auto">
-            Learn More <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </div>
-        </motion.div>
 
-        <motion.div
-          role="button"
-          tabIndex={0}
-          aria-label="View AI Solutions details"
-          onClick={() => handleNavigation("/solutions/enterprise-software")}
-          onKeyDown={(e) => e.key === "Enter" && handleNavigation("/solutions/enterprise-software")}
-          className="group relative flex-1 w-full rounded-[24px] bg-[#f8fafc] border border-slate-200/70 p-7 flex flex-col justify-between cursor-pointer shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgb(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-        >
-          {/* Custom Holographic AI Illustration */}
-          <div className="absolute right-[-10px] bottom-[-20px] w-64 h-64 pointer-events-none transition-transform duration-700 group-hover:scale-105 group-hover:-translate-y-2">
-            {/* Glowing orb background */}
-            <div className="absolute inset-0 bg-purple-400/20 blur-[60px] rounded-full" />
-            
-            {/* Holographic Rings */}
-            <div className="absolute right-12 bottom-12 w-40 h-40 border-[1px] border-purple-500/20 rounded-full animate-[spin_10s_linear_infinite]" />
-            <div className="absolute right-16 bottom-16 w-32 h-32 border-[1px] border-blue-500/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
-            <div className="absolute right-24 bottom-24 w-16 h-16 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full blur-[10px] opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
-            
-            {/* Neural Network Nodes (SVG) */}
-            <svg className="absolute right-8 bottom-8 w-48 h-48 text-purple-400/40" viewBox="0 0 100 100">
-              <line x1="20" y1="50" x2="50" y2="20" stroke="currentColor" strokeWidth="0.5" />
-              <line x1="50" y1="20" x2="80" y2="50" stroke="currentColor" strokeWidth="0.5" />
-              <line x1="80" y1="50" x2="50" y2="80" stroke="currentColor" strokeWidth="0.5" />
-              <line x1="50" y1="80" x2="20" y2="50" stroke="currentColor" strokeWidth="0.5" />
-              <line x1="20" y1="50" x2="80" y2="50" stroke="currentColor" strokeWidth="0.2" />
-              <circle cx="20" cy="50" r="2" fill="currentColor" />
-              <circle cx="50" cy="20" r="3" fill="currentColor" />
-              <circle cx="80" cy="50" r="2.5" fill="currentColor" />
-              <circle cx="50" cy="80" r="2" fill="currentColor" />
-            </svg>
-
-            {/* AI Assistant Chat Bubble */}
-            <div className="absolute right-32 bottom-28 w-24 h-16 bg-white/80 backdrop-blur-md rounded-2xl rounded-br-none border border-white shadow-[0_10px_30px_rgba(168,85,247,0.15)] flex items-center justify-center transform -rotate-6 group-hover:rotate-0 transition-transform duration-500">
-              <div className="flex gap-1.5">
-                <div className="w-2 h-2 rounded-full bg-purple-500 animate-bounce" style={{ animationDelay: "0ms" }} />
-                <div className="w-2 h-2 rounded-full bg-purple-500 animate-bounce" style={{ animationDelay: "150ms" }} />
-                <div className="w-2 h-2 rounded-full bg-purple-500 animate-bounce" style={{ animationDelay: "300ms" }} />
-              </div>
-            </div>
-
-            {/* Floating Glass Component */}
-            <div className="absolute right-6 bottom-16 w-14 h-14 bg-gradient-to-br from-white/60 to-white/10 backdrop-blur-xl border border-white/50 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.1)] flex items-center justify-center transform rotate-12 group-hover:-translate-y-4 transition-transform duration-700">
-              <BrainCircuit size={24} className="text-purple-600" />
-            </div>
-          </div>
-          <div className="relative z-10 bg-white/70 backdrop-blur-sm p-4 -m-4 rounded-xl mb-4 self-start">
-            <div className="w-12 h-12 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mb-4 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
-              <BrainCircuit size={22} strokeWidth={2} />
-            </div>
-            <h4 className="font-display text-[22px] font-bold text-slate-900 mb-2 leading-tight">AI Solutions</h4>
-            <p className="text-[13px] text-slate-600 font-medium leading-relaxed max-w-[160px]">
-              AI-powered solutions, chatbots, and automation.
-            </p>
-          </div>
-          <div className="relative z-10 flex items-center gap-2 text-[14px] font-bold text-purple-600 group-hover:text-purple-700 transition-colors mt-auto">
-            Learn More <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Column 3: Why Choose Panel (20%) */}
-      <div className="w-full xl:w-[20%] h-full bg-white border border-slate-200/70 rounded-[24px] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.03)] flex flex-col relative overflow-hidden group hover:shadow-[0_15px_35px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1">
-        <div className="absolute -right-20 -bottom-20 w-56 h-56 bg-blue-50/80 rounded-full blur-3xl pointer-events-none group-hover:bg-blue-100/80 transition-colors duration-500" />
-        
-        <div className="relative z-10 flex flex-col h-full w-full">
-          <h3 className="font-display text-[26px] font-bold text-slate-900 leading-[1.15] mb-5 tracking-tight group-hover:text-primary transition-colors">
-            Why Choose Our Software & AI Solutions?
-          </h3>
-          <div className="w-12 h-1.5 bg-primary mb-10 rounded-full group-hover:w-20 transition-all duration-300" />
-          
-          <div className="flex flex-col gap-7 flex-1 justify-center">
-            {softwareFeatures.map((feature, i) => {
-              const Icon = feature.icon;
-              return (
-                <div key={i} className="flex gap-4 items-start group/feature">
-                  <div className="w-12 h-12 rounded-full bg-blue-50/80 text-primary flex items-center justify-center shrink-0 group-hover/feature:bg-primary group-hover/feature:text-white transition-all duration-300 group-hover/feature:shadow-md">
-                    <Icon size={22} strokeWidth={2} />
-                  </div>
-                  <div className="pt-0.5">
-                    <h4 className="text-[15px] font-bold text-slate-900 mb-1.5 leading-tight group-hover/feature:text-primary transition-colors">{feature.title}</h4>
-                    <p className="text-[13px] text-slate-500 font-medium leading-relaxed pr-2">{feature.description}</p>
-                  </div>
+            {/* Checkmark Pills */}
+            <div className="flex flex-wrap gap-3 mb-8">
+              {[
+                { label: 'Scalable', icon: TrendingUp },
+                { label: 'Secure', icon: ShieldCheck },
+                { label: 'Smart', icon: BrainCircuit },
+                { label: 'Future-Ready', icon: Rocket }
+              ].map(feature => (
+                <div key={feature.label} className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[12px] font-medium backdrop-blur-md hover:bg-white/10 transition-colors cursor-default">
+                  <feature.icon size={14} className="text-blue-400" />
+                  {feature.label}
                 </div>
-              );
-            })}
-          </div>
-          
-          <div className="mt-auto pt-6 w-full flex justify-center border-t border-slate-100">
-            <Link
-              to="/contact"
-              className="w-[95%] flex items-center justify-center gap-2 px-5 py-3 text-[14px] font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity group/btn"
+              ))}
+            </div>
+
+            <Link 
+              to="/solutions/enterprise-software"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
             >
-              <span>Talk to Our Experts</span>
-              <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
+              Explore Enterprise Solutions
+              <ArrowRight size={16} />
             </Link>
           </div>
+
+          {/* Right Illustration (AI / Enterprise graphic) */}
+          <div className="relative z-10 w-full md:w-[45%] flex items-center justify-center h-full min-h-[220px] mt-6 md:mt-0">
+            {/* Custom AI Illustration built with CSS */}
+            <div className="relative w-full max-w-[240px] aspect-square flex items-center justify-center">
+              {/* Circuit lines */}
+              <svg className="absolute inset-0 w-full h-full text-blue-500/30 animate-[spin_40s_linear_infinite]" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 4" />
+                <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.5" />
+                <path d="M50 10 L50 90 M10 50 L90 50" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 4" />
+              </svg>
+              
+              {/* Center AI Chip */}
+              <div className="relative w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl shadow-[0_0_40px_rgba(59,130,246,0.5)] flex items-center justify-center transform rotate-12 group-hover:rotate-0 transition-transform duration-700 z-20">
+                <div className="absolute inset-1 bg-[#040b1e] rounded-xl flex items-center justify-center">
+                  <BrainCircuit size={40} className="text-blue-400 animate-pulse" />
+                </div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-400 rounded-full blur-[4px] animate-ping" />
+              </div>
+
+              {/* Floating Cards */}
+              <div className="absolute top-4 right-0 w-28 h-20 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-2 shadow-xl transform rotate-6 animate-[floating_5s_ease-in-out_infinite] z-10">
+                <div className="text-[8px] font-bold text-blue-200 mb-1">Automation</div>
+                <div className="flex gap-1 items-end h-8">
+                  <div className="w-1.5 bg-blue-400 rounded-full h-[40%]" />
+                  <div className="w-1.5 bg-purple-400 rounded-full h-[70%]" />
+                  <div className="w-1.5 bg-cyan-400 rounded-full h-[100%]" />
+                  <div className="w-1.5 bg-blue-300 rounded-full h-[60%]" />
+                </div>
+              </div>
+
+              <div className="absolute bottom-4 left-0 w-32 h-16 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-2.5 shadow-xl transform -rotate-6 animate-[floating_6s_ease-in-out_infinite_0.5s] z-10 flex items-center gap-2">
+                <div className="w-8 h-8 rounded-full border-2 border-blue-400 border-t-transparent animate-spin" />
+                <div className="flex flex-col gap-1 w-full">
+                  <div className="w-full h-1 bg-white/30 rounded-full" />
+                  <div className="w-2/3 h-1 bg-white/30 rounded-full" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+        </div> {/* End Hero Section */}
+
+        {/* Right Column (Why Choose Our Solutions?) */}
+        <div className="lg:w-[30%] bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-6 lg:p-8 flex flex-col group">
+          <h3 className="font-display text-[24px] font-bold text-slate-900 leading-[1.15] mb-8 tracking-tight">
+            Why Choose <br/>Our Solutions?
+          </h3>
+          
+          <div className="flex flex-col gap-8 flex-1">
+            {[
+              { title: "Enterprise Grade", desc: "Secure, scalable, and built for mission-critical operations.", icon: ShieldCheck, color: "text-blue-600", bg: "bg-blue-50" },
+              { title: "AI-Powered Innovation", desc: "Leverage AI to automate, predict, and make smarter decisions.", icon: Cpu, color: "text-purple-600", bg: "bg-purple-50" },
+              { title: "Scalable & Future-Ready", desc: "Solutions designed to grow with your business and adapt to tomorrow.", icon: Rocket, color: "text-cyan-600", bg: "bg-cyan-50" },
+              { title: "Privacy & Security First", desc: "Data security, compliance, and privacy built into everything we do.", icon: Lock, color: "text-blue-600", bg: "bg-blue-50" }
+            ].map((feature, i) => (
+              <div key={i} className="flex gap-4 items-start group/feature">
+                <div className={`w-12 h-12 rounded-2xl ${feature.bg} ${feature.color} flex items-center justify-center shrink-0 border border-white shadow-sm group-hover/feature:scale-110 transition-transform duration-300`}>
+                  <feature.icon size={20} strokeWidth={2} />
+                </div>
+                <div className="pt-0.5">
+                  <h4 className="text-[14px] font-bold text-slate-900 mb-1 leading-tight group-hover/feature:text-blue-600 transition-colors">{feature.title}</h4>
+                  <p className="text-[12px] text-slate-500 font-medium leading-relaxed pr-2">{feature.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <Link 
+            to="/contact"
+            className="mt-8 inline-flex items-center justify-center gap-2 w-full py-3 text-[14px] font-semibold bg-primary text-primary-foreground rounded-xl hover:opacity-90 transition-all hover:scale-[1.02] shadow-md"
+          >
+            Talk to our experts
+            <ArrowRight size={16} />
+          </Link>
+        </div>
+      </div> {/* End Top Row */}
+
+      {/* Bottom 2 Columns */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+          
+          {/* Enterprise Solutions */}
+          <div className="bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-6 lg:p-8 flex flex-col gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100">
+                <Briefcase size={22} strokeWidth={2} />
+              </div>
+              <div>
+                <h3 className="text-[20px] font-bold text-slate-900">Enterprise Solutions</h3>
+                <p className="text-[12px] text-slate-500 font-medium">Powerful enterprise applications built for efficiency and scale.</p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+              
+              {/* Card 1: Billing Application */}
+              <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-blue-200 hover:shadow-md transition-all duration-300 group h-full">
+                <div className="h-[300px] bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-100 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center p-4 group-hover:shadow-inner transition-all duration-500">
+                  {/* Abstract background shapes */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-purple-300/30 blur-2xl rounded-full" />
+                  <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-300/30 blur-2xl rounded-full" />
+                  
+                  {/* Main Dashboard Card */}
+                  <div className="relative w-full max-w-[220px] bg-white rounded-xl shadow-2xl border border-white/50 flex flex-col overflow-hidden group-hover:-translate-y-2 transition-transform duration-700 z-10">
+                    {/* Header */}
+                    <div className="flex items-center gap-2 p-3 border-b border-slate-100 bg-slate-50/50">
+                       <div className="w-4 h-4 bg-blue-600 rounded flex flex-col items-center justify-center gap-px">
+                         <div className="w-0 h-0 border-l-[3px] border-r-[3px] border-b-[4px] border-l-transparent border-r-transparent border-b-white" />
+                         <div className="w-1.5 h-1.5 bg-white" />
+                       </div>
+                       <div className="text-[10px] font-bold text-slate-700">Invoice #INV-2345</div>
+                       <div className="ml-auto px-1.5 py-0.5 bg-green-100 text-green-700 text-[8px] font-bold rounded-sm">Paid</div>
+                    </div>
+                    {/* Sidebar + Content */}
+                    <div className="flex h-[180px]">
+                      {/* Sidebar */}
+                      <div className="w-8 border-r border-slate-100 bg-slate-50 flex flex-col items-center py-2 gap-3">
+                         <div className="w-4 h-4 rounded bg-slate-200" />
+                         <div className="w-4 h-4 rounded-full bg-slate-200" />
+                         <div className="w-4 h-4 rounded-sm bg-slate-200" />
+                         <div className="w-4 h-4 rounded-sm bg-slate-200 mt-auto" />
+                      </div>
+                      <div className="flex-1 p-3 flex flex-col relative bg-white">
+                         <div className="text-[9px] text-slate-400 font-medium">Invoices</div>
+                         <div className="text-[18px] font-bold text-slate-800">₹12,85,000</div>
+                         <div className="text-[7px] text-slate-400 mt-0.5">Due Date<br/>25 Jul 2026</div>
+                         
+                         <div className="text-[8px] font-bold text-slate-700 mt-3">Invoice Overview</div>
+                         <div className="flex items-end gap-1.5 h-12 mt-1">
+                            <div className="w-3 bg-blue-100 h-[30%] rounded-t-sm" />
+                            <div className="w-3 bg-blue-200 h-[50%] rounded-t-sm" />
+                            <div className="w-3 bg-blue-400 h-[70%] rounded-t-sm" />
+                            <div className="w-3 bg-blue-600 h-[100%] rounded-t-sm" />
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Overlapping Floating Cards */}
+                  <div className="absolute bottom-6 right-6 w-32 bg-white/90 backdrop-blur-md rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white p-3 flex flex-col gap-1.5 z-20 animate-[floating_5s_ease-in-out_infinite] group-hover:scale-105 transition-transform duration-500">
+                     <div className="text-[8px] text-slate-500 font-medium">Payment Received</div>
+                     <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center shadow-md shadow-green-500/30 mx-auto my-1">
+                        <CheckCircle size={14} className="text-white" />
+                     </div>
+                     <div className="text-[12px] font-bold text-slate-800 text-center">₹12,85,000</div>
+                     <div className="text-[6px] text-slate-400 text-center">Transaction ID<br/>TXN45876</div>
+                  </div>
+                  
+                  {/* Floating Coin */}
+                  <div className="absolute bottom-6 left-6 w-14 h-14 bg-gradient-to-tr from-blue-600 to-indigo-400 rounded-full shadow-lg shadow-blue-500/40 flex items-center justify-center border-4 border-white/20 z-20 group-hover:rotate-12 group-hover:-translate-y-2 transition-transform duration-500 animate-[floating_6s_ease-in-out_infinite_reverse]">
+                     <span className="text-white text-xl font-bold">₹</span>
+                  </div>
+                </div>
+                
+                <h4 className="text-[16px] font-bold text-slate-900 mb-2 leading-tight group-hover:text-blue-600 transition-colors">Billing Application</h4>
+                <p className="text-[12px] text-slate-500 leading-relaxed mb-6 flex-1">Smart billing with invoicing, GST, payments and reporting.</p>
+                
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-blue-200 transition-colors">
+                    <Receipt size={14} className="text-blue-500" />
+                    <span className="text-[11px] font-medium text-slate-700">Invoice Management</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-blue-200 transition-colors">
+                    <FileCheck size={14} className="text-blue-500" />
+                    <span className="text-[11px] font-medium text-slate-700">GST Ready</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2: Workflow & Operations */}
+              <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-purple-200 hover:shadow-md transition-all duration-300 group h-full">
+                <div className="h-[300px] bg-gradient-to-br from-indigo-50/40 to-purple-100/50 rounded-[1.25rem] mb-4 relative overflow-hidden flex flex-col items-center justify-center p-2 group-hover:shadow-inner transition-all duration-500">
+                  
+                  {/* Background patterns */}
+                  <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(#4f46e5 1px, transparent 1px)", backgroundSize: "16px 16px" }}></div>
+                  
+                  <div className="relative w-full max-w-[240px] h-full flex flex-col items-center justify-between py-4 group-hover:-translate-y-2 transition-transform duration-700 z-10">
+                    
+                    {/* Top Node */}
+                    <div className="w-40 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 z-10 text-white animate-[floating_4s_ease-in-out_infinite]">
+                       <Rocket size={12} className="fill-white" />
+                       <span className="text-[10px] font-bold tracking-wide">Workflow Automation</span>
+                    </div>
+                    
+                    {/* Connector */}
+                    <div className="w-0.5 h-6 bg-indigo-200/60" />
+                    
+                    {/* Request Node */}
+                    <div className="w-32 h-8 bg-white rounded-full shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10">
+                       <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center"><Users size={10} className="text-blue-600" /></div>
+                       <span className="text-[10px] font-bold text-slate-700">Request</span>
+                    </div>
+                    
+                    <div className="w-0.5 h-6 bg-indigo-200/60" />
+                    
+                    {/* Manager Approval */}
+                    <div className="w-40 h-8 bg-white rounded-full shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10">
+                       <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center shadow-sm shadow-green-500/40"><CheckCircle size={10} className="text-white" /></div>
+                       <span className="text-[10px] font-bold text-slate-700">Manager Approval</span>
+                    </div>
+                    
+                    <div className="w-0.5 h-6 bg-indigo-200/60" />
+                    
+                    {/* Finance Review */}
+                    <div className="w-36 h-8 bg-white/80 backdrop-blur-sm rounded-full shadow-md border border-purple-100 flex items-center justify-center gap-2 z-10">
+                       <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center"><FileText size={10} className="text-purple-600" /></div>
+                       <span className="text-[10px] font-bold text-slate-700">Finance Review</span>
+                    </div>
+                    
+                    {/* Split Connector */}
+                    <div className="flex flex-col items-center w-36">
+                       <div className="w-0.5 h-4 bg-indigo-200/60" />
+                       <div className="w-full h-0.5 bg-indigo-200/60" />
+                       <div className="flex justify-between w-full px-2">
+                         <div className="w-0.5 h-4 bg-indigo-200/60" />
+                         <div className="w-0.5 h-4 bg-indigo-200/60" />
+                       </div>
+                    </div>
+                    
+                    {/* Bottom Nodes */}
+                    <div className="flex justify-between w-full max-w-[200px] px-2">
+                       <div className="w-24 h-12 bg-white rounded-xl shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10 hover:border-blue-200 transition-colors">
+                          <div className="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center"><Users size={12} className="text-blue-600" /></div>
+                          <span className="text-[9px] font-bold text-slate-700">IT Team</span>
+                       </div>
+                       <div className="w-24 h-12 bg-white rounded-xl shadow-md border border-slate-100 flex flex-col items-center justify-center gap-1 z-10 hover:border-green-200 transition-colors">
+                          <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center shadow-sm shadow-green-500/40"><CheckCircle size={10} className="text-white" /></div>
+                          <span className="text-[9px] font-bold text-slate-700">Completed</span>
+                       </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+                <h4 className="text-[16px] font-bold text-slate-900 mb-2 leading-tight group-hover:text-purple-600 transition-colors">Workflow & Operations</h4>
+                <p className="text-[12px] text-slate-500 leading-relaxed mb-6 flex-1">Automate workflows and streamline operations across teams.</p>
+                
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-purple-200 transition-colors">
+                    <Settings size={14} className="text-purple-500" />
+                    <span className="text-[11px] font-medium text-slate-700">Automation</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-purple-200 transition-colors">
+                    <Network size={14} className="text-purple-500" />
+                    <span className="text-[11px] font-medium text-slate-700">Process Flow</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* AI Solutions */}
+          <div className="bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-6 lg:p-8 flex flex-col gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 border border-purple-100">
+                <BrainCircuit size={22} strokeWidth={2} />
+              </div>
+              <div>
+                <h3 className="text-[20px] font-bold text-slate-900">AI Solutions</h3>
+                <p className="text-[12px] text-slate-500 font-medium">AI-powered products solving real-world challenges.</p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+
+              {/* Card 1: Psychometric Analysis */}
+              <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-purple-200 hover:shadow-md transition-all duration-300 group h-full">
+                <div className="h-32 bg-gradient-to-br from-purple-100 to-purple-200 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center">
+                  <div className="absolute inset-0 bg-white/20" />
+                  {/* Human Head Silhouette & Brain Circuit */}
+                  <div className="relative w-16 h-20 bg-purple-500 rounded-t-full rounded-bl-3xl shadow-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
+                    <BrainCircuit size={32} className="text-white opacity-80 animate-pulse" />
+                  </div>
+                  <div className="absolute top-[20%] right-[20%] w-12 h-12 bg-white/60 backdrop-blur-sm rounded-lg shadow-sm border border-white/50 p-1.5 flex flex-col gap-1.5 transform rotate-6 group-hover:-rotate-6 transition-transform">
+                     <div className="w-full h-1.5 bg-purple-300 rounded-full" />
+                     <div className="w-3/4 h-1.5 bg-purple-300 rounded-full" />
+                     <div className="flex gap-1.5 mt-1">
+                        <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                     </div>
+                  </div>
+                </div>
+                <h4 className="text-[14px] font-bold text-slate-900 mb-2 leading-tight">Psychometric Analysis System</h4>
+                <p className="text-[12px] text-slate-500 leading-relaxed flex-1">Live interview psychometric analysis with Generative AI, ATS integration, and bias mitigation.</p>
+              </div>
+
+              {/* Card 2: Business Card OCR */}
+              <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-emerald-200 hover:shadow-md transition-all duration-300 group h-full">
+                <div className="h-32 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center">
+                  <div className="absolute inset-0 bg-white/20" />
+                  <div className="relative w-[70%] h-[60%] flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                    {/* Background card */}
+                    <div className="absolute w-[80%] h-full bg-white/40 border border-white/50 rounded-lg transform -rotate-12 translate-x-3 translate-y-2" />
+                    {/* Foreground Card */}
+                    <div className="relative z-10 w-[90%] h-full bg-white shadow-lg rounded-lg border border-slate-100 p-2.5 flex flex-col justify-between overflow-hidden">
+                       <div className="flex justify-between items-start">
+                         <div className="w-6 h-6 rounded-full bg-slate-200" />
+                         <div className="w-14 h-2 bg-emerald-400 rounded-full" />
+                       </div>
+                       <div className="flex flex-col gap-1.5">
+                         <div className="w-full h-1.5 bg-slate-200 rounded-full" />
+                         <div className="w-3/4 h-1.5 bg-slate-200 rounded-full" />
+                       </div>
+                       {/* Scanning Laser Line */}
+                       <div className="absolute left-0 w-full h-[2px] bg-emerald-500 shadow-[0_0_8px_#10b981] animate-[floating_2s_ease-in-out_infinite]" />
+                    </div>
+                  </div>
+                </div>
+                <h4 className="text-[14px] font-bold text-slate-900 mb-2 leading-tight">Business Card OCR & Extraction</h4>
+                <p className="text-[12px] text-slate-500 leading-relaxed flex-1">AI-driven extraction with automated CRM workflows and offline capture.</p>
+              </div>
+
+              {/* Card 3: ReqGen */}
+              <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-orange-200 hover:shadow-md transition-all duration-300 group h-full">
+                <div className="h-32 bg-gradient-to-br from-orange-100 to-orange-200 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center">
+                  <div className="absolute inset-0 bg-white/20" />
+                  <div className="relative w-full h-full flex flex-col items-center justify-center group-hover:scale-105 transition-transform duration-300 gap-2.5">
+                    <div className="flex items-center gap-2 h-12">
+                      <div className="w-2.5 bg-orange-400 rounded-full h-[40%] animate-pulse" />
+                      <div className="w-2.5 bg-orange-500 rounded-full h-[80%] animate-pulse delay-75" />
+                      <div className="w-2.5 bg-orange-600 rounded-full h-[100%] animate-pulse delay-150" />
+                      <div className="w-2.5 bg-orange-500 rounded-full h-[60%] animate-pulse delay-200" />
+                      <div className="w-2.5 bg-orange-400 rounded-full h-[30%] animate-pulse delay-300" />
+                    </div>
+                    <div className="w-24 bg-white/60 backdrop-blur-sm border border-white/50 rounded-xl p-2 shadow-sm flex items-center gap-2">
+                      <div className="w-4 h-4 rounded-full bg-orange-500 flex items-center justify-center text-white"><AudioWaveform size={10} /></div>
+                      <div className="w-12 h-1.5 bg-slate-300 rounded-full" />
+                    </div>
+                  </div>
+                </div>
+                <h4 className="text-[14px] font-bold text-slate-900 mb-2 leading-tight">ReqGen – Audio Based Requirement Generator</h4>
+                <p className="text-[12px] text-slate-500 leading-relaxed flex-1">Convert audio conversations into structured requirements with AI.</p>
+              </div>
+
+              {/* Card 4: Prescription Scanner */}
+              <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-blue-200 hover:shadow-md transition-all duration-300 group h-full">
+                <div className="h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center">
+                  <div className="absolute inset-0 bg-white/20" />
+                  <div className="relative w-14 h-24 bg-slate-800 rounded-2xl border-[4px] border-slate-900 shadow-xl flex flex-col items-center p-0.5 group-hover:-translate-y-1 transition-transform duration-300">
+                    <div className="w-5 h-1 bg-slate-700 rounded-full mb-1" />
+                    <div className="w-full flex-1 bg-blue-50 rounded-lg overflow-hidden relative flex flex-col items-center pt-2.5">
+                       {/* Medical Cross */}
+                       <div className="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center mb-1.5 z-10">
+                         <div className="w-3 h-3 text-blue-600 relative">
+                           <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-0.5 bg-current" />
+                           <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-0.5 bg-current" />
+                         </div>
+                       </div>
+                       <div className="w-3/4 h-1 bg-blue-200 rounded-full mb-1 z-10" />
+                       <div className="w-1/2 h-1 bg-blue-200 rounded-full z-10" />
+                       {/* Scanner effect */}
+                       <div className="absolute bottom-0 w-full h-[40%] bg-gradient-to-t from-blue-500/30 to-transparent animate-pulse" />
+                    </div>
+                  </div>
+                  <div className="absolute top-[20%] right-[15%] w-12 h-12 bg-white/60 backdrop-blur-sm rounded-lg shadow-sm border border-white/50 p-2 flex flex-col gap-1.5 transform rotate-6 group-hover:-rotate-3 transition-transform">
+                     <div className="w-full h-1.5 bg-slate-300 rounded-full" />
+                     <div className="w-full h-1.5 bg-slate-300 rounded-full" />
+                     <div className="w-3/4 h-1.5 bg-blue-400 rounded-full" />
+                  </div>
+                </div>
+                <h4 className="text-[14px] font-bold text-slate-900 mb-2 leading-tight">Prescription AI Scanner Mobile App</h4>
+                <p className="text-[12px] text-slate-500 leading-relaxed flex-1">AI-powered scanner that reads, validates, and organizes prescriptions.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
     </motion.div>
   );
 };
@@ -834,6 +1018,333 @@ const WebClientCard = ({ client, index }: { client: WebClient; index: number }) 
 };
 
 /* ──────────── Cloud Solutions Tab ──────────── */
+/* ──────────── Website Development Tab ──────────── */
+const WebsiteDevelopmentTab = () => {
+  const navigate = useNavigate();
+  return (
+    <div className="flex flex-col gap-6 lg:gap-8 mb-10">
+      {/* Top Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+        
+        {/* Left Hero (70% on desktop -> col-span-8) */}
+        <div className="lg:col-span-8 bg-gradient-to-br from-blue-50/80 via-white to-blue-50/50 border border-blue-100/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-8 lg:p-12 relative overflow-hidden flex flex-col md:flex-row items-center gap-8 min-h-[500px]">
+          
+          {/* Glassmorphism Background Waves (SVG) */}
+          <div className="absolute inset-0 z-0 pointer-events-none opacity-50">
+             <svg className="absolute w-full h-full inset-0" viewBox="0 0 1000 600" preserveAspectRatio="none">
+               <path d="M0,200 C300,400 700,100 1000,300 L1000,600 L0,600 Z" fill="url(#hero-glass-1)" className="opacity-30 mix-blend-overlay"/>
+               <path d="M0,400 C400,100 600,500 1000,200 L1000,600 L0,600 Z" fill="url(#hero-glass-2)" className="opacity-40"/>
+               <defs>
+                 <linearGradient id="hero-glass-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                   <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.15" />
+                   <stop offset="100%" stopColor="#eff6ff" stopOpacity="0.8" />
+                 </linearGradient>
+                 <linearGradient id="hero-glass-2" x1="0%" y1="100%" x2="100%" y2="0%">
+                   <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.1" />
+                   <stop offset="100%" stopColor="#ffffff" stopOpacity="0.9" />
+                 </linearGradient>
+               </defs>
+             </svg>
+             <div className="absolute inset-0 opacity-[0.2]" style={{ backgroundImage: 'radial-gradient(#94a3b8 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+          </div>
+
+          {/* Left Content */}
+          <div className="relative z-10 w-full md:w-1/2 flex flex-col items-start">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100/50 border border-blue-200 text-blue-700 text-[11px] font-bold tracking-wide uppercase mb-6 shadow-sm">
+              <Globe size={14} className="text-blue-600" /> WEBSITE DEVELOPMENT
+            </div>
+            
+            <h2 className="text-4xl lg:text-5xl font-display font-bold text-slate-900 leading-[1.15] mb-4">
+              Modern Websites.<br/>
+              <span className="text-slate-700">Stronger Brands.</span>
+            </h2>
+            
+            <div className="w-12 h-1 bg-blue-600 rounded-full mb-6" />
+
+            <p className="text-[15px] text-slate-600 leading-relaxed mb-8 max-w-sm">
+              We design and develop high-performance, responsive websites that are fast, user-friendly, and built to grow your business online.
+            </p>
+
+            {/* Checkmark Pills */}
+            <div className="grid grid-cols-2 gap-x-4 gap-y-3 mb-10">
+              {['Modern Design', 'Responsive', 'SEO Optimized', 'Fast Performance', 'Secure', 'Scalable'].map(feature => (
+                <div key={feature} className="flex items-center gap-2 text-[13px] font-semibold text-slate-700">
+                  <div className="w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 shadow-sm border border-blue-200/50">
+                    <Check size={10} strokeWidth={3} />
+                  </div>
+                  {feature}
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <button
+                onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); navigate("/contact"); }}
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity group w-full sm:w-auto shadow-sm"
+              >
+                Start Your Project <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </button>
+              
+              <button
+                onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); navigate("/solutions/web-systems"); }}
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity group w-full sm:w-auto shadow-sm"
+              >
+                Explore Web Systems <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
+          </div>
+
+          {/* Right Laptop Illustration */}
+          <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center h-full min-h-[300px] mt-10 md:mt-0">
+            {/* Soft blue glow behind laptop */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-blue-400/20 rounded-full blur-[60px]" />
+            
+            {/* CSS Laptop Base */}
+            <div className="relative w-[110%] max-w-[450px] rotate-[-5deg] md:rotate-[-8deg] hover:rotate-0 transition-transform duration-700 ease-out z-10">
+              {/* Screen Frame */}
+              <div className="relative bg-slate-900 p-2 rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-4 border-slate-800">
+                {/* Camera dot */}
+                <div className="absolute top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-slate-700" />
+                
+                {/* Inner Screen */}
+                <div className="bg-white rounded-lg overflow-hidden aspect-[16/10] relative flex flex-col shadow-inner">
+                  {/* Fake Website Header */}
+                  <div className="flex items-center justify-between px-4 py-2.5 border-b border-slate-100 bg-white shadow-sm z-10">
+                    <div className="text-[9px] font-black tracking-tight text-slate-900">CYBAEM TECH</div>
+                    <div className="flex gap-3 text-[7px] font-semibold text-slate-500">
+                      <span>Home</span>
+                      <span className="text-blue-600">Services</span>
+                      <span>Portfolio</span>
+                      <span>Contact</span>
+                    </div>
+                  </div>
+                  
+                  {/* Fake Website Hero */}
+                  <div className="flex-1 bg-gradient-to-br from-blue-50 to-white p-6 flex flex-col justify-center relative overflow-hidden">
+                    <div className="absolute right-[-20%] bottom-[-20%] w-[150px] h-[150px] bg-blue-600/10 rounded-full blur-2xl" />
+                    <h3 className="text-[14px] font-bold text-slate-900 leading-tight mb-2">Digital Experiences<br/><span className="text-blue-600">That Drive Results</span></h3>
+                    <p className="text-[6px] text-slate-500 max-w-[120px] mb-4 leading-relaxed">We create beautiful, high-performance websites that deliver real business impact.</p>
+                    <div className="w-16 h-5 rounded-full bg-blue-600 flex items-center justify-center text-white text-[6px] font-bold shadow-md">Explore More</div>
+                    
+                    {/* Fake abstract graphics inside website */}
+                    <div className="absolute right-4 top-1/2 -translate-y-1/2 w-[100px] h-[70px] bg-white rounded-lg shadow-lg border border-slate-100 flex flex-col overflow-hidden">
+                      <div className="h-1/2 bg-blue-100/50" />
+                      <div className="h-1/2 p-2 flex gap-1 items-end">
+                        <div className="flex-1 bg-blue-200 rounded-t-sm h-[60%]" />
+                        <div className="flex-1 bg-blue-500 rounded-t-sm h-[100%]" />
+                        <div className="flex-1 bg-blue-300 rounded-t-sm h-[40%]" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Laptop Keyboard Base */}
+              <div className="relative h-3 bg-slate-300 rounded-b-xl w-[106%] left-[-3%] shadow-[0_10px_20px_rgba(0,0,0,0.2)] border-t border-slate-200 flex justify-center">
+                 <div className="w-1/4 h-1.5 bg-slate-400 rounded-b-md" />
+              </div>
+
+              {/* Floating UI Elements */}
+              <div className="absolute -top-10 left-10 p-3 bg-white/90 backdrop-blur-md rounded-2xl shadow-[0_15px_35px_rgba(37,99,235,0.15)] border border-white flex items-center justify-center animate-[floating_5s_ease-in-out_infinite] z-20">
+                <Code2 size={24} className="text-blue-600" />
+              </div>
+              
+              <div className="absolute top-1/2 -left-12 p-3 bg-white/90 backdrop-blur-md rounded-2xl shadow-[0_15px_35px_rgba(37,99,235,0.15)] border border-white flex flex-col gap-2 animate-[floating_6s_ease-in-out_infinite_0.5s] z-20">
+                 <div className="flex gap-1.5">
+                   <div className="w-5 h-5 rounded bg-blue-600" />
+                   <div className="w-5 h-5 rounded bg-blue-400" />
+                   <div className="w-5 h-5 rounded bg-slate-800" />
+                 </div>
+                 <div className="flex justify-between items-end px-1">
+                   <span className="text-[10px] font-bold text-slate-800">Aa</span>
+                   <span className="text-[8px] font-bold text-slate-400">Aa</span>
+                 </div>
+              </div>
+
+              <div className="absolute -bottom-8 -right-4 p-4 bg-white/90 backdrop-blur-md rounded-2xl shadow-[0_15px_35px_rgba(37,99,235,0.15)] border border-white w-24 flex flex-col gap-2 animate-[floating_7s_ease-in-out_infinite_1s] z-20">
+                <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center mb-1">
+                  <MonitorSmartphone size={16} className="text-blue-600" />
+                </div>
+                <div className="w-full h-1.5 bg-slate-200 rounded-full" />
+                <div className="w-2/3 h-1.5 bg-slate-200 rounded-full" />
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        {/* Right Feature Cards (30% on desktop -> col-span-4) */}
+        <div className="lg:col-span-4 flex flex-col gap-4 lg:gap-6">
+          {/* Card 1: Responsive Design */}
+          <div onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); navigate("/contact"); }} className="flex-1 bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[1.5rem] p-5 lg:p-6 flex items-center justify-between group hover:border-blue-200 hover:shadow-[0_15px_35px_rgba(37,99,235,0.08)] transition-all duration-300 relative overflow-hidden cursor-pointer">
+            <div className="w-[55%] flex flex-col z-10">
+              <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 mb-4">
+                <MonitorSmartphone size={20} strokeWidth={2} />
+              </div>
+              <h4 className="text-[15px] font-bold text-slate-900 mb-1.5 group-hover:text-blue-600 transition-colors">Responsive Design</h4>
+              <p className="text-[12px] text-slate-500 leading-relaxed">Pixel-perfect websites that look stunning on every device.</p>
+            </div>
+            
+            {/* Illustration */}
+            <div className="w-[45%] h-full absolute right-0 top-0 flex items-center justify-center pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="relative w-full h-full flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
+                {/* Desktop Monitor */}
+                <div className="w-20 h-14 bg-slate-50 rounded-md border border-slate-200 shadow-sm flex flex-col overflow-hidden absolute left-2 top-6 group-hover:-translate-y-1 transition-transform duration-500">
+                  <div className="w-full h-2 bg-slate-100 flex items-center px-1 gap-0.5">
+                    <div className="w-1 h-1 rounded-full bg-slate-300" />
+                  </div>
+                  <div className="flex-1 bg-blue-50/50 p-1 flex flex-col gap-1">
+                    <div className="w-full h-4 bg-blue-100 rounded-sm" />
+                    <div className="w-1/2 h-1.5 bg-blue-200 rounded-sm" />
+                  </div>
+                </div>
+                {/* Mobile Phone */}
+                <div className="w-8 h-14 bg-white rounded-lg border-[3px] border-slate-800 shadow-lg absolute right-2 bottom-4 z-10 flex flex-col items-center pt-1 group-hover:translate-y-1 transition-transform duration-500">
+                  <div className="w-3 h-0.5 bg-slate-700 rounded-full mb-1" />
+                  <div className="w-full flex-1 bg-blue-50 flex flex-col gap-0.5 p-0.5">
+                     <div className="w-full h-2.5 bg-blue-200 rounded-sm" />
+                     <div className="w-full h-1 bg-slate-300 rounded-sm" />
+                     <div className="w-3/4 h-1 bg-slate-300 rounded-sm" />
+                  </div>
+                </div>
+                {/* Floating Elements */}
+                <div className="absolute top-4 right-6 w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center shadow-sm animate-pulse">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: E-Commerce Solutions */}
+          <div onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); navigate("/contact"); }} className="flex-1 bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[1.5rem] p-5 lg:p-6 flex items-center justify-between group hover:border-blue-200 hover:shadow-[0_15px_35px_rgba(37,99,235,0.08)] transition-all duration-300 relative overflow-hidden cursor-pointer">
+            <div className="w-[55%] flex flex-col z-10">
+              <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 mb-4">
+                <ShoppingCart size={20} strokeWidth={2} />
+              </div>
+              <h4 className="text-[15px] font-bold text-slate-900 mb-1.5 group-hover:text-blue-600 transition-colors">E-Commerce Solutions</h4>
+              <p className="text-[12px] text-slate-500 leading-relaxed">Powerful online stores built to convert and scale.</p>
+            </div>
+            
+            {/* Illustration */}
+            <div className="w-[45%] h-full absolute right-0 top-0 flex items-center justify-center pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="relative w-full h-full flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
+                {/* Web Window */}
+                <div className="w-24 h-16 bg-white rounded-md border border-slate-200 shadow-md flex flex-col overflow-hidden absolute left-1 group-hover:-translate-x-1 transition-transform duration-500">
+                  <div className="w-full h-2.5 bg-slate-50 border-b border-slate-100 flex items-center px-1 gap-0.5">
+                    <div className="w-1 h-1 rounded-full bg-red-400" />
+                    <div className="w-1 h-1 rounded-full bg-amber-400" />
+                    <div className="w-1 h-1 rounded-full bg-green-400" />
+                  </div>
+                  <div className="flex-1 bg-slate-50 flex items-center justify-center p-1.5">
+                     <div className="w-12 h-10 bg-blue-100 rounded-sm shadow-sm flex flex-col items-center justify-center gap-1">
+                        <div className="w-6 h-4 bg-blue-300 rounded-[2px]" />
+                        <div className="w-4 h-1 bg-blue-400 rounded-full" />
+                     </div>
+                  </div>
+                </div>
+                {/* Floating Cart Icon */}
+                <div className="w-10 h-10 bg-blue-600 rounded-xl shadow-lg absolute right-1 bottom-3 z-10 flex items-center justify-center group-hover:-translate-y-2 group-hover:rotate-6 transition-transform duration-500">
+                   <ShoppingCart size={16} className="text-white" />
+                </div>
+                {/* Shopping Bag Back */}
+                <div className="absolute right-8 bottom-6 opacity-30 group-hover:translate-x-1 transition-transform">
+                   <ShoppingCart size={24} className="text-blue-400" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3: Custom Web Development */}
+          <div onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); navigate("/contact"); }} className="flex-1 bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[1.5rem] p-5 lg:p-6 flex items-center justify-between group hover:border-blue-200 hover:shadow-[0_15px_35px_rgba(37,99,235,0.08)] transition-all duration-300 relative overflow-hidden cursor-pointer">
+            <div className="w-[55%] flex flex-col z-10">
+              <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 mb-4">
+                <Rocket size={20} strokeWidth={2} />
+              </div>
+              <h4 className="text-[15px] font-bold text-slate-900 mb-1.5 group-hover:text-blue-600 transition-colors">Custom Web Development</h4>
+              <p className="text-[12px] text-slate-500 leading-relaxed">Tailored websites with clean code and future-ready architecture.</p>
+            </div>
+            
+            {/* Illustration */}
+            <div className="w-[45%] h-full absolute right-0 top-0 flex items-center justify-center pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="relative w-full h-full flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
+                {/* Code Editor */}
+                <div className="w-24 h-16 bg-slate-900 rounded-md border border-slate-700 shadow-xl flex flex-col overflow-hidden absolute left-1 bottom-4 group-hover:translate-x-1 transition-transform duration-500">
+                  <div className="w-full h-2.5 bg-slate-800 flex items-center px-1 gap-0.5">
+                    <div className="w-1 h-1 rounded-full bg-slate-600" />
+                    <div className="w-1 h-1 rounded-full bg-slate-600" />
+                  </div>
+                  <div className="flex-1 p-1.5 flex flex-col gap-1.5 justify-center">
+                     <div className="w-3/4 h-1 bg-blue-400 rounded-sm" />
+                     <div className="w-1/2 h-1 bg-emerald-400 rounded-sm ml-2" />
+                     <div className="w-5/6 h-1 bg-purple-400 rounded-sm ml-2" />
+                  </div>
+                </div>
+                {/* Floating Code badge */}
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl shadow-lg absolute right-2 top-3 z-10 flex items-center justify-center group-hover:-translate-y-2 transition-transform duration-500">
+                   <Code2 size={18} className="text-white" />
+                </div>
+                {/* Glowing gear */}
+                <div className="absolute right-4 bottom-2 text-slate-300 opacity-50 group-hover:animate-[spin_4s_linear_infinite] transition-all">
+                  <Settings size={22} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      {/* Bottom Section */}
+      <div className="bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center gap-10">
+        
+        <div className="lg:w-1/4">
+          <h3 className="text-2xl font-display font-bold text-slate-900 leading-tight">
+            Why Choose Our<br/>Website Development?
+          </h3>
+          <div className="w-10 h-1 bg-blue-600 rounded-full mt-4" />
+        </div>
+
+        <div className="lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            { 
+              icon: Search, 
+              title: "SEO Optimized", 
+              desc: "Built with best practices to rank higher and get found faster." 
+            },
+            { 
+              icon: Zap, 
+              title: "High Performance", 
+              desc: "Lightning-fast websites for better user experience and conversions." 
+            },
+            { 
+              icon: Palette, 
+              title: "Pixel Perfect Design", 
+              desc: "Beautiful, modern, and conversion-focused designs." 
+            },
+            { 
+              icon: Shield, 
+              title: "Secure & Reliable", 
+              desc: "Security-first approach to protect your website and data." 
+            }
+          ].map((item, i) => (
+            <div key={i} className="flex flex-col">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 mb-4 shadow-sm group hover:scale-105 transition-transform duration-300">
+                <item.icon size={22} strokeWidth={2} />
+              </div>
+              <h4 className="text-[15px] font-bold text-slate-900 mb-2">{item.title}</h4>
+              <p className="text-[13px] text-slate-500 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
 const CloudSolutionsTab = () => {
   const navigate = useNavigate();
   const [hoveredService, setHoveredService] = useState<string | null>(null);
@@ -870,6 +1381,33 @@ const CloudSolutionsTab = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full border border-slate-100 border-dashed animate-[spin_90s_linear_infinite_reverse]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full border border-slate-50 border-dashed" />
           
+          {/* Ambient Glass Bubbles */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden z-10" style={{ maskImage: 'radial-gradient(circle at center, black 30%, transparent 70%)', WebkitMaskImage: 'radial-gradient(circle at center, black 30%, transparent 70%)' }}>
+            {[...Array(15)].map((_, i) => {
+              const size = Math.random() * 12 + 8; // 8px to 20px
+              const left = Math.random() * 80 + 10; // 10% to 90%
+              const top = Math.random() * 80 + 20; // 20% to 100%
+              const duration = Math.random() * 15 + 15; // 15s to 30s
+              const delay = Math.random() * -30; // Random negative delay
+              const animationName = i % 2 === 0 ? 'ambient-bubble-1' : 'ambient-bubble-2';
+              
+              return (
+                <div
+                  key={i}
+                  className="absolute rounded-full bg-blue-100/30 backdrop-blur-sm border border-white/40 shadow-[0_0_12px_rgba(59,130,246,0.3)]"
+                  style={{
+                    width: `${size}px`,
+                    height: `${size}px`,
+                    left: `${left}%`,
+                    top: `${top}%`,
+                    animation: `${animationName} ${duration}s ease-in-out infinite`,
+                    animationDelay: `${delay}s`,
+                  }}
+                />
+              );
+            })}
+          </div>
+          
           {/* SVG Connector Lines */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
             {cloudServices.map((s, i) => {
@@ -901,19 +1439,16 @@ const CloudSolutionsTab = () => {
           {/* Center Cloud Hub */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
             <div className="absolute inset-0 bg-blue-500/20 rounded-full animate-ping opacity-60" style={{ animationDuration: '4s' }} />
-            <div className="absolute -inset-10 bg-blue-400/20 rounded-full blur-3xl" />
+            <div className="absolute -inset-16 bg-blue-500/35 sm:bg-blue-500/40 rounded-full blur-[40px] sm:blur-[50px]" />
             
-            <div className="relative w-[180px] h-[130px] sm:w-[220px] sm:h-[160px] bg-gradient-to-b from-blue-500 to-blue-700 rounded-[60px] shadow-[0_15px_40px_rgba(37,99,235,0.4)] flex flex-col items-center justify-center text-center p-4 border border-blue-400/30">
-              {/* Cloud shape bumps */}
-              <div className="absolute -top-6 sm:-top-8 left-1/2 -translate-x-1/2 w-[100px] h-[100px] sm:w-[130px] sm:h-[130px] bg-gradient-to-b from-blue-400 to-blue-600 rounded-full -z-10" />
-              <div className="absolute top-2 -left-4 sm:-left-6 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] bg-gradient-to-b from-blue-400 to-blue-600 rounded-full -z-10" />
-              <div className="absolute top-2 -right-4 sm:-right-6 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] bg-gradient-to-b from-blue-400 to-blue-600 rounded-full -z-10" />
-              
-              <Server size={32} className="text-white mb-2" strokeWidth={1.5} />
-              <h3 className="text-white font-bold text-[15px] sm:text-[17px] leading-tight mb-0.5">Cloud Infrastructure</h3>
-              <p className="text-blue-100 text-[10px] sm:text-[11px] font-medium tracking-wide">
-                Secure. Scalable. Reliable.
-              </p>
+            <div className="relative flex flex-col items-center justify-center text-center p-4">
+              <div className="relative z-10 flex flex-col items-center mt-1 sm:mt-2">
+                <Server size={32} className="text-blue-700 mb-1.5 drop-shadow-sm" strokeWidth={2} />
+                <h3 className="text-slate-900 font-bold text-[14px] sm:text-[17px] leading-tight mb-0.5">Cloud Infrastructure</h3>
+                <p className="text-slate-600 text-[9px] sm:text-[11px] font-medium tracking-wide">
+                  Secure. Scalable. Reliable.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -992,7 +1527,7 @@ const CloudSolutionsTab = () => {
               <ArrowUpRight size={18} className="shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </button>
             <button
-              onClick={() => handleNavigation("/solutions/cloud-solutions")}
+              onClick={() => handleNavigation("/solutions/managed-it")}
               className="flex-1 flex items-center justify-center gap-2 px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-[1.5px] border-primary text-primary text-[14px] sm:text-[15px] font-bold rounded-lg hover:bg-primary hover:text-white transition-all duration-300 shadow-sm group w-full min-w-0"
             >
               <span className="truncate">Explore Cloud Solutions</span>
@@ -1495,7 +2030,7 @@ const CybersecurityTab = () => {
               <ArrowRight size={18} className="shrink-0 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
-              onClick={() => handleNavigation("/solutions/cybersecurity")}
+              onClick={() => handleNavigation("/solutions/managed-it")}
               className="flex-1 flex items-center justify-center gap-2 px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-[1.5px] border-slate-300 text-slate-700 text-[14px] sm:text-[15px] font-bold rounded-lg hover:border-slate-400 hover:text-slate-900 transition-all duration-300 shadow-sm group w-full min-w-0"
             >
               <span className="truncate">Explore Cybersecurity</span>
@@ -1713,36 +2248,6 @@ const CybersecurityTab = () => {
   );
 };
 
-/* ──────────── CTA ──────────── */
-const PortfolioCTA = () => {
-  return (
-    <section className="py-20 md:py-28 bg-primary">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-12 text-center">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <motion.h2 variants={itemVariants} className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Ready to see your project here?
-          </motion.h2>
-          <motion.p variants={itemVariants} className="text-primary-foreground/70 text-lg mb-8 max-w-xl mx-auto">
-            No sales reps. No scripts. Senior engineers who understand your challenges — from day one.
-          </motion.p>
-          <motion.div variants={itemVariants}>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-primary-foreground text-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
-            >
-              Schedule a Discovery Call <ArrowRight size={18} />
-            </Link>
-          </motion.div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
 
 /* ──────────── Main Page ──────────── */
 const Portfolio = () => {
@@ -1797,7 +2302,8 @@ const Portfolio = () => {
 
           {/* Tab content (Temporarily mapping to existing components) */}
           {activeTab === "IT Services" && <ITServicesTab />}
-          {activeTab === "Software & AI Solutions" && <SoftwareAISolutionsTab />}
+          {activeTab === "Enterprise & AI Solutions" && <SoftwareAISolutionsTab />}
+          {activeTab === "Website Development" && <WebsiteDevelopmentTab />}
           {activeTab === "Cloud Solutions" && <CloudSolutionsTab />}
           {activeTab === "Digital Marketing" && <DigitalMarketingTab />}
           {activeTab === "Cybersecurity" && <CybersecurityTab />}
