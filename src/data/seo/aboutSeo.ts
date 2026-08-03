@@ -13,7 +13,7 @@ export const aboutSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "description": "Cybaem Tech is a technology solutions company specializing in cybersecurity, cloud computing, managed IT services, digital transformation, software development and digital marketing.",
       "foundingLocation": {
         "@type": "Place",
@@ -80,7 +80,7 @@ export const aboutSeoData = {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Cybaem Tech",
-      "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "url": "https://www.cybaemtech.com/",
       "telephone": "+91-9028541383",
       "priceRange": "$$",

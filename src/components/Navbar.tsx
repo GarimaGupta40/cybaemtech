@@ -13,7 +13,6 @@ import {
   Linkedin,
 } from "lucide-react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import cybaemLogo from "@/assets/cybaem-logo.png";
 import MobileMenu, { AnimatedHamburger } from "./MobileMenu";
 
 export const solutionsColumns = [
@@ -28,15 +27,15 @@ export const solutionsColumns = [
       },
       {
         title: "Managed IT & Security",
-        desc: "Zero-Trust protection, 24/7 resilience.",
+        desc: "Managed IT, threat monitoring, and Zero-Trust security.",
         slug: "managed-it",
         icon: Shield,
       },
       {
-        title: "Threat Monitoring",
-        desc: "Proactive defense, no downtime.",
-        slug: "managed-it",
-        icon: ShieldAlert,
+        title: "IT Augmentation",
+        desc: "IT Staffing: Deploy elite engineers in 48 hours.",
+        slug: "it-staff-augmentation",
+        icon: Users,
       },
     ],
   },
@@ -55,34 +54,16 @@ export const solutionsColumns = [
         slug: "web-systems",
         icon: Globe,
       },
-      {
-        title: "IT Augmentation",
-        desc: "IT Staffing: Deploy elite engineers in 48 hours.",
-        slug: "it-staff-augmentation",
-        icon: Users,
-      },
     ],
   },
   {
     label: "GROWTH & REVENUE",
     items: [
       {
-        title: "Digital Growth",
-        desc: "Turn presence into B2B leads.",
+        title: "Digital Revenue Growth",
+        desc: "SEO, CRO, performance marketing, LinkedIn strategy, and B2B lead generation.",
         slug: "digital-revenue-growth",
         icon: TrendingUp,
-      },
-      {
-        title: "SEO & CRO",
-        desc: "Dominate search and conversions.",
-        slug: "digital-revenue-growth",
-        icon: BarChart2,
-      },
-      {
-        title: "LinkedIn Strategy",
-        desc: "Executive thought leadership at scale.",
-        slug: "digital-revenue-growth",
-        icon: Linkedin,
       },
     ],
   },
@@ -141,7 +122,7 @@ const Navbar = () => {
           >
             <Link to="/" className="flex items-center">
               <img
-                src={cybaemLogo}
+                src="/images/cybaem-logo.webp"
                 alt="Cybaem Tech"
                 className="h-9 sm:h-11 w-auto"
                 width={180}
@@ -289,23 +270,19 @@ const Navbar = () => {
                             <div className="w-[220px] ml-3 bg-primary-foreground rounded-xl p-6 flex flex-col justify-between transition-transform duration-200 cursor-pointer hover:-translate-y-px shrink-0">
                               <div>
                                 <h3 className="font-display text-xl font-bold text-foreground leading-tight mb-3">
-                                  Zero scope-creep.
-                                  <br />
-                                  Guaranteed delivery.
+                                  Turning Ideas into Impact
                                 </h3>
                                 <p className="text-xs text-muted-foreground leading-relaxed">
-                                  Every project is led by a dedicated owner,
-                                  strict requirement freezes, and ISO-certified
-                                  security from day one.
+                                  Discover enterprise software, cloud, web, AI, and digital transformation projects delivered for businesses across industries.
                                 </p>
                               </div>
-                              <a
-                                href="#approach"
+                              <Link
+                                to="/portfolio"
                                 className="inline-flex items-center gap-2 text-sm font-medium text-foreground mt-6 hover:text-primary transition-colors"
                                 onClick={() => setSolutionsOpen(false)}
                               >
-                                How we deliver <ArrowRight size={14} />
-                              </a>
+                                View Portfolio <ArrowRight size={14} />
+                              </Link>
                             </div>
                           </div>
                         </motion.div>

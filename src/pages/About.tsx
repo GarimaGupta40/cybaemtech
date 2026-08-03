@@ -62,10 +62,10 @@ const Hero = () => {
     <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-background">
       {/* Background Dots Pattern */}
       <div className="absolute inset-0 z-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle, #000 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-      
+
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Content */}
           <motion.div variants={stagger} initial="hidden" animate="visible" className="max-w-xl">
             <motion.span variants={fadeUp} className="inline-block text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-primary mb-6 bg-primary/5 px-3 py-1 rounded-full">
@@ -86,15 +86,15 @@ const Hero = () => {
           </motion.div>
 
           {/* Right Image Layout */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }} 
-            animate={{ opacity: 1, scale: 1 }} 
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
             {/* Main Image Masked in a pill/oval shape */}
             <div className="relative w-full drop-shadow-[0_15px_35px_rgba(0,0,0,0.25)]">
-              <img src="/images/about-team-1.png" alt="Cybaem Tech Team" className="w-full h-full object-cover" />
+              <img src="/images/about-team-1.webp" alt="Cybaem Tech Team" className="w-full h-full object-cover" />
             </div>
 
             {/* Floating Element 1: Cybaemians */}
@@ -111,9 +111,9 @@ const Hero = () => {
             {/* Floating Element 2: CT Logo */}
             <div className="absolute top-1/4 right-2 sm:-right-6 flex flex-col items-center">
               <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-white/10 backdrop-blur-md border border-white/40 shadow-2xl flex items-center justify-center">
-                <img src="/images/cybaem-logo.png" alt="CT" className="w-12 h-12 sm:w-20 sm:h-20" />
+                <img src="/images/cybaem-logo.webp" alt="CT" className="w-12 h-12 sm:w-20 sm:h-20" />
               </div>
-            
+
             </div>
 
             {/* Floating Element 3: Rating */}
@@ -126,7 +126,7 @@ const Hero = () => {
                 <p className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">Employee Rating</p>
               </div>
             </div>
-            
+
             {/* Decorative background shapes */}
             <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-50 rounded-full blur-3xl opacity-50" />
           </motion.div>
@@ -183,9 +183,9 @@ const PillarsSection = () => {
 
   return (
     <section ref={ref} className="py-12 lg:py-16 bg-gray-50/30 relative z-10 overflow-hidden">
-      
+
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -202,26 +202,26 @@ const PillarsSection = () => {
           <motion.div variants={stagger} initial="hidden" animate={inView ? "visible" : "hidden"} className="grid md:grid-cols-3 gap-6 lg:gap-10">
             {pillars.map((p, i) => (
               <motion.div key={i} variants={fadeUp} className="relative group">
-                
+
                 <div className="bg-white rounded-[2rem] p-6 lg:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col h-full hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-300 relative z-10 text-center">
-                  
+
                   {/* Top Icon */}
                   <div className="w-16 h-16 mx-auto rounded-full bg-blue-50/50 border border-blue-100 flex items-center justify-center mb-5 transition-transform group-hover:scale-105 duration-300">
                     <p.icon size={28} className="text-primary" strokeWidth={1.5} />
                   </div>
-                  
+
                   {/* Title */}
                   <h3 className="font-display text-xl font-bold text-foreground mb-3">{p.title}</h3>
                   <div className="w-6 h-[2px] bg-primary/40 mx-auto rounded-full mb-4"></div>
-                  
+
                   {/* Description */}
                   <p className="text-[13px] text-muted-foreground leading-relaxed flex-1 mb-6 px-1">
                     {p.desc}
                   </p>
-                  
+
                   {/* Divider */}
                   <div className="w-full h-px bg-gray-100 mb-4"></div>
-                  
+
                   {/* Footer */}
                   <div className="flex items-center text-left gap-4">
                     <div className="text-primary shrink-0">
@@ -248,7 +248,7 @@ const PillarsSection = () => {
                       )}
                     </div>
                   </div>
-                  
+
                 </div>
 
                 {/* Connecting Arrow between cards (hidden on mobile and last item) */}
@@ -257,12 +257,12 @@ const PillarsSection = () => {
                     <ArrowRight size={18} />
                   </div>
                 )}
-                
+
               </motion.div>
             ))}
           </motion.div>
         </div>
-        
+
       </div>
     </section>
   );
@@ -287,7 +287,7 @@ const CoreValuesSection = () => {
     <section ref={ref} className="py-20 lg:py-28">
       <div className="container mx-auto px-6 lg:px-12">
         <SectionHeader subtitle="WHAT DRIVES US" title="Our Core" titleHighlight="Values." />
-        
+
         <motion.div variants={stagger} initial="hidden" animate={inView ? "visible" : "hidden"} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {values.map((v, i) => (
             <motion.div key={i} variants={fadeUp} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center hover:-translate-y-1 transition-transform">
@@ -330,7 +330,7 @@ const TimelineSection = () => {
         <div className="relative">
           {/* Background dashed track (Desktop) */}
           <div className="hidden lg:block absolute top-10 left-[calc(100%/14)] right-[calc(100%/14)] h-[2px] border-t-2 border-dashed border-gray-200 z-0" />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-8 relative z-10">
             {milestones.map((m, i) => (
               <div key={i} className="flex flex-col items-center relative">
@@ -352,7 +352,7 @@ const TimelineSection = () => {
                 )}
 
                 {/* Circle Icon */}
-                <motion.div 
+                <motion.div
                   custom={i}
                   variants={{
                     hidden: { scale: 0, opacity: 0 },
@@ -403,8 +403,8 @@ const TestimonialsSection = () => {
     {
       id: 0,
       quote: "CYBAEM transformed our IT operations with 24/7 support and robust security monitoring, helping us achieve higher uptime and stronger operational resilience.",
-      author: "CTO", 
-      role: "Client", 
+      author: "CTO",
+      role: "Client",
       companyName: "FinTech Company",
       image: cybaemLogoIcon,
       rating: 4.5,
@@ -419,8 +419,8 @@ const TestimonialsSection = () => {
     {
       id: 1,
       quote: "Their cloud team helped us migrate to Azure seamlessly, reducing infrastructure costs by 30% while improving application performance and scalability.",
-      author: "Head of IT", 
-      role: "Client", 
+      author: "Head of IT",
+      role: "Client",
       companyName: "Manufacturing Group",
       image: cybaemLogoIcon,
       rating: 4,
@@ -435,8 +435,8 @@ const TestimonialsSection = () => {
     {
       id: 2,
       quote: "Digital campaigns delivered a 2× boost in qualified leads within just 90 days, significantly improving our online visibility and conversion rates.",
-      author: "Marketing Lead", 
-      role: "Client", 
+      author: "Marketing Lead",
+      role: "Client",
       companyName: "SaaS Startup",
       image: cybaemLogoIcon,
       rating: 4.5,
@@ -451,8 +451,8 @@ const TestimonialsSection = () => {
     {
       id: 3,
       quote: "CYBAEM's software development team delivered a scalable enterprise application with modern architecture, accelerating our digital transformation and improving operational efficiency.",
-      author: "Engineering Manager", 
-      role: "Client", 
+      author: "Engineering Manager",
+      role: "Client",
       companyName: "Enterprise Software Company",
       image: cybaemLogoIcon,
       rating: 5,
@@ -490,9 +490,9 @@ const TestimonialsSection = () => {
         <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto -mt-8 mb-24">
           Real stories from real partnerships that drive real impact.
         </p>
-        
+
         <div className="relative max-w-6xl mx-auto flex items-center justify-center min-h-[420px]">
-          
+
           <button onClick={handlePrev} className="absolute left-0 z-20 w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 hidden md:flex items-center justify-center hover:bg-gray-50 transition-colors shrink-0 text-primary">
             <ChevronLeft size={24} />
           </button>
@@ -548,13 +548,13 @@ const TestimonialsSection = () => {
                   <div className="flex flex-col md:flex-row gap-8 relative">
                     {/* Background Quote Mark */}
                     <Quote size={100} className="absolute top-0 left-1/2 -translate-x-1/2 text-gray-50 z-0 pointer-events-none" fill="currentColor" strokeWidth={0} />
-                    
+
                     {/* Left Column */}
                     <div className="flex-1 relative z-10">
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-semibold mb-6">
                         <BadgeCheck size={14} /> Verified Client
                       </div>
-                      
+
                       <div className="flex items-center gap-2 mb-6">
                         <div className="flex text-yellow-400">
                           {[...Array(Math.floor(t.rating))].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
@@ -569,19 +569,19 @@ const TestimonialsSection = () => {
 
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
                         <div className="flex items-center gap-4">
-                           {/* Simplified placeholder for company logo / info */}
-                           <div className="flex items-center gap-2 shrink-0">
-                             <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                               {t.companyName[0]}
-                             </div>
-                             <div className="font-bold text-base text-slate-800 tracking-tight leading-none">
-                                {t.companyName}
-                             </div>
-                           </div>
-                           <div className="border-l border-gray-200 pl-4">
-                             <p className="font-bold text-foreground text-sm">{t.author}</p>
-                             <p className="text-xs text-muted-foreground">{t.role}</p>
-                           </div>
+                          {/* Simplified placeholder for company logo / info */}
+                          <div className="flex items-center gap-2 shrink-0">
+                            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                              {t.companyName[0]}
+                            </div>
+                            <div className="font-bold text-base text-slate-800 tracking-tight leading-none">
+                              {t.companyName}
+                            </div>
+                          </div>
+                          <div className="border-l border-gray-200 pl-4">
+                            <p className="font-bold text-foreground text-sm">{t.author}</p>
+                            <p className="text-xs text-muted-foreground">{t.role}</p>
+                          </div>
                         </div>
                       </div>
 
@@ -597,18 +597,18 @@ const TestimonialsSection = () => {
                     {/* Right Column */}
                     <div className="w-full md:w-[220px] shrink-0 relative z-10 flex flex-col justify-between pt-4">
                       <div className="hidden md:block relative h-[120px] w-[120px] mx-auto -mt-8 md:-mt-10 mb-6 rounded-full overflow-hidden shadow-lg shadow-primary/30 border border-gray-100 shrink-0 bg-white p-2">
-                         <img src={t.image} alt={t.author} className="w-full h-full object-contain opacity-80" />
+                        <img src={t.image} alt={t.author} className="w-full h-full object-contain opacity-80" />
                       </div>
-                      
+
                       <div className="space-y-5 pl-2">
                         {t.metrics.map(m => (
-                           <div key={m.label} className="flex gap-4 items-start">
-                             <m.icon size={18} className="text-gray-400 mt-0.5 shrink-0" />
-                             <div>
-                               <p className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider mb-0.5">{m.label}</p>
-                               <p className="text-sm font-bold text-foreground leading-tight">{m.value}</p>
-                             </div>
-                           </div>
+                          <div key={m.label} className="flex gap-4 items-start">
+                            <m.icon size={18} className="text-gray-400 mt-0.5 shrink-0" />
+                            <div>
+                              <p className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider mb-0.5">{m.label}</p>
+                              <p className="text-sm font-bold text-foreground leading-tight">{m.value}</p>
+                            </div>
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -626,25 +626,25 @@ const TestimonialsSection = () => {
 
         {/* Mobile controls */}
         <div className="flex md:hidden justify-center items-center gap-4 mt-8">
-           <button onClick={handlePrev} className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-primary">
-             <ChevronLeft size={20} />
-           </button>
-           <button onClick={handleNext} className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-primary">
-             <ChevronRight size={20} />
-           </button>
+          <button onClick={handlePrev} className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-primary">
+            <ChevronLeft size={20} />
+          </button>
+          <button onClick={handleNext} className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-primary">
+            <ChevronRight size={20} />
+          </button>
         </div>
 
         <div className="flex justify-center gap-3 mt-8 mb-10">
           {testimonials.map((_, i) => (
-             <button 
-               key={i} 
-               onClick={() => setActiveIndex(i)}
-               className={`w-2.5 h-2.5 rounded-full transition-all ${i === activeIndex ? 'bg-primary w-4' : 'bg-gray-300'}`} 
-             />
+            <button
+              key={i}
+              onClick={() => setActiveIndex(i)}
+              className={`w-2.5 h-2.5 rounded-full transition-all ${i === activeIndex ? 'bg-primary w-4' : 'bg-gray-300'}`}
+            />
           ))}
         </div>
 
-       
+
       </div>
     </section>
   );

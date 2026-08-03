@@ -150,7 +150,7 @@ const DigitalGrowth = () => {
   const [hoveredPill, setHoveredPill] = useState<string | null>(null);
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  
+
   const services = [
     { id: "seo", title: "SEO", desc: "Improve rankings and drive organic traffic.", icon: Search, color: "blue", x: 65, y: 12 },
     { id: "google-ads", title: "Google Ads", desc: "Target the right audience and maximize ROI.", icon: Target, color: "orange", x: 82, y: 45 },
@@ -323,9 +323,9 @@ const DigitalGrowth = () => {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] h-[75%] rounded-full border border-slate-200 border-dashed animate-[spin_90s_linear_infinite_reverse]" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] rounded-full border border-slate-100 border-dashed" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] rounded-full border-2 border-white/20 animate-pulse pointer-events-none mix-blend-overlay opacity-30" />
-                
+
                 {/* Rotating Layer for Lines and Pills */}
-                <div 
+                <div
                   className="absolute inset-0 pointer-events-none z-30"
                   style={{
                     animation: 'orbit-spin 40s linear infinite',
@@ -338,14 +338,14 @@ const DigitalGrowth = () => {
                       const isHovered = hoveredPill === s.id;
                       return (
                         <g key={i}>
-                          <line 
-                            x1="50%" 
-                            y1="50%" 
-                            x2={`${s.x}%`} 
-                            y2={`${s.y}%`} 
-                            stroke={isHovered ? "#3b82f6" : "url(#lineGradient)"} 
-                            strokeWidth={isHovered ? "2.5" : "1.5"} 
-                            strokeDasharray={isHovered ? "0" : "4 4"} 
+                          <line
+                            x1="50%"
+                            y1="50%"
+                            x2={`${s.x}%`}
+                            y2={`${s.y}%`}
+                            stroke={isHovered ? "#3b82f6" : "url(#lineGradient)"}
+                            strokeWidth={isHovered ? "2.5" : "1.5"}
+                            strokeDasharray={isHovered ? "0" : "4 4"}
                             className={`transition-all duration-500 ${isHovered ? "opacity-100" : "opacity-40"}`}
                           />
                           <circle cx={`${s.x}%`} cy={`${s.y}%`} r={isHovered ? "6" : "4"} fill="#3b82f6" className={`transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-50"}`} />
@@ -364,49 +364,48 @@ const DigitalGrowth = () => {
                   {services.map((service) => {
                     const ServiceIcon = service.icon;
                     const isHovered = hoveredPill === service.id;
-                    
+
                     const baseColor = {
                       blue: "text-blue-600 bg-blue-50",
                       orange: "text-orange-600 bg-orange-50",
                       purple: "text-purple-600 bg-purple-50",
                       cyan: "text-cyan-600 bg-cyan-50"
                     }[service.color as "blue" | "orange" | "purple" | "cyan"];
-                    
+
                     const hoverColor = {
                       blue: "bg-blue-600 text-white",
                       orange: "bg-orange-600 text-white",
                       purple: "bg-purple-600 text-white",
                       cyan: "bg-cyan-600 text-white"
                     }[service.color as "blue" | "orange" | "purple" | "cyan"];
-                    
+
                     const hoverTextColor = {
                       blue: "text-blue-600",
                       orange: "text-orange-600",
                       purple: "text-purple-600",
                       cyan: "text-cyan-600"
                     }[service.color as "blue" | "orange" | "purple" | "cyan"];
-                    
+
                     return (
-                      <div 
+                      <div
                         key={service.id}
                         style={{ top: `${service.y}%`, left: `${service.x}%`, transform: 'translate(-50%, -50%)' }}
                         className="absolute z-30 pointer-events-auto"
                         onMouseEnter={() => setHoveredPill(service.id)}
                         onMouseLeave={() => setHoveredPill(null)}
                       >
-                        <div 
+                        <div
                           className="flex items-center justify-center"
                           style={{
                             animation: 'orbit-spin-reverse 40s linear infinite',
                             animationPlayState: hoveredPill ? 'paused' : 'running'
                           }}
                         >
-                          <div 
-                            className={`transition-all duration-500 bg-white/90 backdrop-blur-xl border rounded-full p-2 sm:p-2.5 pr-4 sm:pr-6 flex items-center gap-3 sm:gap-4 min-w-[200px] ${
-                              isHovered 
-                                ? "scale-105 shadow-[0_15px_35px_rgba(59,130,246,0.2)] border-blue-300" 
+                          <div
+                            className={`transition-all duration-500 bg-white/90 backdrop-blur-xl border rounded-full p-2 sm:p-2.5 pr-4 sm:pr-6 flex items-center gap-3 sm:gap-4 min-w-[200px] ${isHovered
+                                ? "scale-105 shadow-[0_15px_35px_rgba(59,130,246,0.2)] border-blue-300"
                                 : "shadow-[0_8px_25px_rgba(0,0,0,0.06)] border-slate-200/80"
-                            }`}
+                              }`}
                           >
                             <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300 ${isHovered ? hoverColor : baseColor}`}>
                               <ServiceIcon size={18} strokeWidth={2.5} />
@@ -428,7 +427,7 @@ const DigitalGrowth = () => {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 pointer-events-none">
                   <div className="absolute inset-0 bg-blue-600/20 rounded-full animate-[ping_3.5s_ease-in-out_infinite] opacity-75" />
                   <div className="absolute -inset-4 bg-blue-600/30 rounded-full blur-2xl" />
-                  
+
                   <div className="relative w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] rounded-full bg-gradient-to-br from-[#0a1b4d] to-[#040b1e] border-4 border-white shadow-[0_15px_35px_rgba(4,11,30,0.3)] flex flex-col items-center justify-center text-center p-4">
                     <BarChart2 size={36} className="text-blue-400 mb-2" strokeWidth={1.5} />
                     <h3 className="text-white font-bold text-[16px] sm:text-[18px] leading-tight mb-1">Growth Hub</h3>
@@ -800,13 +799,13 @@ const DigitalGrowth = () => {
 
 
               <div>
-  <Link
-    to="#"
-    className="inline-flex items-center justify-center px-6 py-2.5 bg-transparent border-2 border-[#1e293b] text-white font-bold rounded-lg hover:bg-white/5 transition-all text-sm sm:text-base"
-  >
-    Explore All Industries
-  </Link>
-</div>
+                <Link
+                  to="#"
+                  className="inline-flex items-center justify-center px-6 py-2.5 bg-transparent border-2 border-[#1e293b] text-white font-bold rounded-lg hover:bg-white/5 transition-all text-sm sm:text-base"
+                >
+                  Explore All Industries
+                </Link>
+              </div>
             </motion.div>
 
             {/* Right Grid */}
@@ -814,7 +813,7 @@ const DigitalGrowth = () => {
               {[
                 { label: "E-commerce", img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=400&auto=format&fit=crop" },
                 { label: "Healthcare", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=400&auto=format&fit=crop" },
-                { label: "Education", img: "/images/education.png" },
+                { label: "Education", img: "/images/education.webp" },
                 { label: "Manufacturing", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop" },
                 { label: "Real Estate", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=400&auto=format&fit=crop" },
               ].map((ind, i) => (

@@ -222,7 +222,7 @@ const Contact = () => {
             >
               {/* The user's provided composite image */}
               <img
-                src="/images/contact-hero-new.png"
+                src="/images/contact-hero-new.webp"
                 alt="Cybaem Tech Hero"
                 className="w-full max-w-[500px] lg:max-w-none lg:w-[130%] object-contain drop-shadow-[0_15px_40px_rgba(15,76,255,0.15)] transition-transform duration-700 lg:-mr-12 lg:scale-110"
                 onError={(e) => {
@@ -630,7 +630,7 @@ const Contact = () => {
                   <path d="M0,100 C30,60 70,60 100,100" fill="none" stroke="#004E98" strokeWidth="2" />
                   <path d="M0,100 C30,40 70,40 100,100" fill="none" stroke="#004E98" strokeWidth="2" />
                 </svg>
-                
+
                 <div className="relative w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-[2rem] flex items-center justify-center shadow-lg transform -rotate-6">
                   <span className="text-white text-6xl font-bold drop-shadow-md">?</span>
                   <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-white rounded-2xl shadow-xl flex items-center justify-center transform rotate-12">
@@ -642,7 +642,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-[#002B7F] mb-4 text-left w-full">Need more<br/>clarity?</h3>
+                <h3 className="text-2xl font-bold text-[#002B7F] mb-4 text-left w-full">Need more<br />clarity?</h3>
                 <p className="text-gray-600 text-sm mb-8 text-left w-full">
                   We're here to help. Reach out and our team will get back to you shortly.
                 </p>
@@ -710,7 +710,7 @@ const Contact = () => {
             className="relative bg-[#002B7F] rounded-3xl p-10 lg:p-16 text-center overflow-hidden shadow-2xl"
           >
             {/* Abstract Background Image & Gradient */}
-            <div 
+            <div
               className="absolute inset-0 opacity-20 mix-blend-overlay"
               style={{
                 backgroundImage: "url('/images/world-map.svg')",
@@ -720,7 +720,7 @@ const Contact = () => {
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-transparent pointer-events-none" />
-            
+
             {/* Glowing Orbs */}
             <div className="absolute -top-24 -left-24 w-64 h-64 bg-blue-500 rounded-full blur-[80px] opacity-40 pointer-events-none"></div>
             <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-cyan-400 rounded-full blur-[80px] opacity-30 pointer-events-none"></div>

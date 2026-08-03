@@ -19,14 +19,14 @@ export const homeSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "description": "Cybaem Tech provides cybersecurity, managed IT services, cloud solutions, software development, digital marketing and enterprise technology consulting.",
       "sameAs": ["https://www.linkedin.com/company/cybaemtech", "https://www.instagram.com/cybaemtech", "https://www.facebook.com/cybaemtech", "https://x.com/Cybaem_Tech", "https://www.youtube.com/@cybaemtech"],
       "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91-9028541383", "contactType": "Customer Support", "areaServed": "IN", "availableLanguage": ["English"] }],
       "knowsAbout": ["Cybersecurity", "Cloud Computing", "Microsoft 365", "Azure", "Google Workspace", "Digital Marketing", "SEO", "Software Development", "Managed IT Services", "IT Infrastructure", "Network Security", "ITSM", "AI Automation", "Cloud Security", "VAPT", "SOC Monitoring"]
     },
     { "@context": "https://schema.org", "@type": "WebSite", "name": "Cybaem Tech", "url": "https://www.cybaemtech.com/", "potentialAction": { "@type": "SearchAction", "target": "https://www.cybaemtech.com/?s={search_term_string}", "query-input": "required name=search_term_string" } },
-    { "@context": "https://schema.org", "@type": "ProfessionalService", "name": "Cybaem Tech", "image": "https://www.cybaemtech.com/images/cybaem-logo.png", "url": "https://www.cybaemtech.com/", "telephone": "+91-9028541383", "priceRange": "$$", "address": { "@type": "PostalAddress", "streetAddress": "304, Suratwala Mark Plazzo, Hinjewadi", "addressLocality": "Pune", "addressRegion": "Maharashtra", "postalCode": "411057", "addressCountry": "IN" }, "geo": { "@type": "GeoCoordinates", "latitude": "18.5900", "longitude": "73.7360" }, "areaServed": ["India", "United States", "United Kingdom", "Australia", "Canada", "Middle East"] },
+    { "@context": "https://schema.org", "@type": "ProfessionalService", "name": "Cybaem Tech", "image": "https://www.cybaemtech.com/images/cybaem-logo.webp", "url": "https://www.cybaemtech.com/", "telephone": "+91-9028541383", "priceRange": "$$", "address": { "@type": "PostalAddress", "streetAddress": "304, Suratwala Mark Plazzo, Hinjewadi", "addressLocality": "Pune", "addressRegion": "Maharashtra", "postalCode": "411057", "addressCountry": "IN" }, "geo": { "@type": "GeoCoordinates", "latitude": "18.5900", "longitude": "73.7360" }, "areaServed": ["India", "United States", "United Kingdom", "Australia", "Canada", "Middle East"] },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cybaemtech.com/" }] },
     { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{ "@type": "Question", "name": "What services does Cybaem Tech provide?", "acceptedAnswer": { "@type": "Answer", "text": "Cybaem Tech provides cybersecurity, cloud services, managed IT services, Microsoft 365, IT infrastructure management, digital marketing, software development, web development, ITSM, AMC, networking and consulting services." } }, { "@type": "Question", "name": "Where is Cybaem Tech located?", "acceptedAnswer": { "@type": "Answer", "text": "Cybaem Tech is located in Hinjewadi, Pune, Maharashtra and serves clients across India and globally." } }, { "@type": "Question", "name": "Does Cybaem Tech provide cybersecurity services?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cybaem Tech offers VAPT, firewall management, endpoint protection, cloud security, network security, compliance consulting and managed cybersecurity services." } }, { "@type": "Question", "name": "Does Cybaem Tech offer cloud migration services?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cybaem Tech provides Microsoft 365 migration, Azure deployment, cloud infrastructure management and cloud security solutions." } }, { "@type": "Question", "name": "Does Cybaem Tech provide AMC services?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cybaem Tech offers comprehensive AMC services including preventive maintenance, remote support, system health monitoring and SLA-based support." } }, { "@type": "Question", "name": "How can I contact Cybaem Tech?", "acceptedAnswer": { "@type": "Answer", "text": "You can contact Cybaem Tech by calling +91 9028541383, emailing sales@cybaemtech.com or submitting an enquiry through the contact page." } }] }
   ]
@@ -42,10 +42,10 @@ export const aboutSeoData = {
   twitterTitle: "About Cybaem Tech | Technology, Cybersecurity & Cloud Experts",
   twitterDescription: "Learn about Cybaem Tech, a trusted technology partner delivering cybersecurity, cloud, managed IT services and digital transformation solutions.",
   jsonLd: [
-    { "@context": "https://schema.org", "@type": "Organization", "name": "Cybaem Tech", "url": "https://www.cybaemtech.com/", "logo": "https://www.cybaemtech.com/images/cybaem-logo.png", "description": "Cybaem Tech is a technology solutions company specializing in cybersecurity, cloud computing, managed IT services, digital transformation, software development and digital marketing.", "foundingLocation": { "@type": "Place", "name": "Pune, Maharashtra, India" }, "sameAs": ["https://www.linkedin.com/company/cybaemtech", "https://www.instagram.com/cybaemtech", "https://www.facebook.com/cybaemtech", "https://x.com/Cybaem_Tech", "https://www.youtube.com/@cybaemtech"], "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91-9028541383", "contactType": "Customer Support", "areaServed": "Worldwide", "availableLanguage": ["English"] }], "knowsAbout": ["Cybersecurity", "Managed IT Services", "Cloud Computing", "Microsoft 365", "Azure", "Software Development", "Web Development", "Digital Marketing", "IT Infrastructure", "ITSM", "Network Security", "Cloud Security", "AI Automation", "Business Technology Consulting", "VAPT Services", "SOC Monitoring", "Data Protection", "Digital Transformation"] },
+    { "@context": "https://schema.org", "@type": "Organization", "name": "Cybaem Tech", "url": "https://www.cybaemtech.com/", "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp", "description": "Cybaem Tech is a technology solutions company specializing in cybersecurity, cloud computing, managed IT services, digital transformation, software development and digital marketing.", "foundingLocation": { "@type": "Place", "name": "Pune, Maharashtra, India" }, "sameAs": ["https://www.linkedin.com/company/cybaemtech", "https://www.instagram.com/cybaemtech", "https://www.facebook.com/cybaemtech", "https://x.com/Cybaem_Tech", "https://www.youtube.com/@cybaemtech"], "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91-9028541383", "contactType": "Customer Support", "areaServed": "Worldwide", "availableLanguage": ["English"] }], "knowsAbout": ["Cybersecurity", "Managed IT Services", "Cloud Computing", "Microsoft 365", "Azure", "Software Development", "Web Development", "Digital Marketing", "IT Infrastructure", "ITSM", "Network Security", "Cloud Security", "AI Automation", "Business Technology Consulting", "VAPT Services", "SOC Monitoring", "Data Protection", "Digital Transformation"] },
     { "@context": "https://schema.org", "@type": "WebSite", "name": "Cybaem Tech", "url": "https://www.cybaemtech.com/", "potentialAction": { "@type": "SearchAction", "target": "https://www.cybaemtech.com/?s={search_term_string}", "query-input": "required name=search_term_string" } },
     { "@context": "https://schema.org", "@type": "AboutPage", "name": "About Cybaem Tech", "url": "https://www.cybaemtech.com/about", "description": "Learn about Cybaem Tech's mission, vision, values, expertise and commitment to delivering secure, scalable and innovative technology solutions." },
-    { "@context": "https://schema.org", "@type": "ProfessionalService", "name": "Cybaem Tech", "image": "https://www.cybaemtech.com/images/cybaem-logo.png", "url": "https://www.cybaemtech.com/", "telephone": "+91-9028541383", "priceRange": "$$", "address": { "@type": "PostalAddress", "streetAddress": "304, Suratwala Mark Plazzo, Hinjewadi", "addressLocality": "Pune", "addressRegion": "Maharashtra", "postalCode": "411057", "addressCountry": "IN" }, "geo": { "@type": "GeoCoordinates", "latitude": "18.5900", "longitude": "73.7360" }, "areaServed": ["India", "United States", "United Kingdom", "Australia", "Canada", "Middle East"] },
+    { "@context": "https://schema.org", "@type": "ProfessionalService", "name": "Cybaem Tech", "image": "https://www.cybaemtech.com/images/cybaem-logo.webp", "url": "https://www.cybaemtech.com/", "telephone": "+91-9028541383", "priceRange": "$$", "address": { "@type": "PostalAddress", "streetAddress": "304, Suratwala Mark Plazzo, Hinjewadi", "addressLocality": "Pune", "addressRegion": "Maharashtra", "postalCode": "411057", "addressCountry": "IN" }, "geo": { "@type": "GeoCoordinates", "latitude": "18.5900", "longitude": "73.7360" }, "areaServed": ["India", "United States", "United Kingdom", "Australia", "Canada", "Middle East"] },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cybaemtech.com/" }, { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.cybaemtech.com/about" }] },
     { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{ "@type": "Question", "name": "Who is Cybaem Tech?", "acceptedAnswer": { "@type": "Answer", "text": "Cybaem Tech is a Pune-based technology company helping businesses with cybersecurity, cloud solutions, managed IT services, software development, digital marketing and digital transformation." } }, { "@type": "Question", "name": "What services does Cybaem Tech specialize in?", "acceptedAnswer": { "@type": "Answer", "text": "Cybaem Tech specializes in cybersecurity, cloud computing, managed IT services, Microsoft 365 solutions, software development, web development, IT infrastructure management and digital marketing." } }, { "@type": "Question", "name": "Where is Cybaem Tech located?", "acceptedAnswer": { "@type": "Answer", "text": "Cybaem Tech is located at 304, Suratwala Mark Plazzo, Hinjewadi, Pune, Maharashtra 411057." } }] }
   ]
@@ -66,7 +66,7 @@ export const contactSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "sameAs": ["https://www.linkedin.com/company/cybaemtech", "https://www.instagram.com/cybaemtech", "https://www.facebook.com/cybaemtech", "https://x.com/Cybaem_Tech", "https://www.youtube.com/@cybaemtech"],
       "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91-9028541383", "contactType": "Customer Support", "areaServed": "Worldwide", "availableLanguage": ["English"] }]
     },
@@ -81,7 +81,7 @@ export const contactSeoData = {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Cybaem Tech",
-      "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "url": "https://www.cybaemtech.com/",
       "telephone": "+91-9028541383",
       "email": "sales@cybaemtech.com",
@@ -124,7 +124,7 @@ export const lifeAtCybaemtechSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "sameAs": ["https://www.linkedin.com/company/cybaemtech", "https://x.com/Cybaem_Tech", "https://www.facebook.com/cybaemtech", "https://www.instagram.com/cybaemtech", "https://www.youtube.com/@cybaemtech"],
       "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91-9028541383", "contactType": "human resources", "areaServed": "IN", "availableLanguage": "English" }]
     },
@@ -146,7 +146,7 @@ export const lifeAtCybaemtechSeoData = {
       "@context": "https://schema.org",
       "@type": "ITService",
       "name": "Cybaem Tech",
-      "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "url": "https://www.cybaemtech.com/",
       "telephone": "+91-9028541383",
       "priceRange": "$$",
@@ -181,7 +181,7 @@ export const blogSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "sameAs": ["https://www.linkedin.com/company/cybaemtech", "https://x.com/Cybaem_Tech", "https://www.facebook.com/cybaemtech", "https://www.instagram.com/cybaemtech", "https://www.youtube.com/@cybaemtech"],
       "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91-9028541383", "contactType": "customer support", "areaServed": "IN", "availableLanguage": "English" }]
     },
@@ -203,7 +203,7 @@ export const blogSeoData = {
       "@context": "https://schema.org",
       "@type": "ITService",
       "name": "Cybaem Tech",
-      "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "url": "https://www.cybaemtech.com/",
       "telephone": "+91-9028541383",
       "priceRange": "$$",
@@ -238,7 +238,7 @@ export const webSystemsSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "sameAs": ["https://www.linkedin.com/company/cybaemtech", "https://x.com/Cybaem_Tech", "https://www.facebook.com/cybaemtech", "https://www.instagram.com/cybaemtech", "https://www.youtube.com/@cybaemtech"]
     },
     {
@@ -248,7 +248,7 @@ export const webSystemsSeoData = {
       "provider": {
         "@type": "ProfessionalService",
         "name": "Cybaem Tech Web Development Research Centre",
-        "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+        "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
         "telephone": "+91-9028541383",
         "priceRange": "$$",
         "address": {
@@ -312,7 +312,7 @@ export const managedITSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "sameAs": ["https://www.linkedin.com/company/cybaemtech", "https://x.com/Cybaem_Tech", "https://www.facebook.com/cybaemtech", "https://www.instagram.com/cybaemtech", "https://www.youtube.com/@cybaemtech"]
     },
     {
@@ -322,7 +322,7 @@ export const managedITSeoData = {
       "provider": {
         "@type": "ProfessionalService",
         "name": "Cybaem Tech",
-        "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+        "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
         "telephone": "+91-9028541383",
         "priceRange": "$$",
         "address": {
@@ -384,7 +384,7 @@ export const itAugmentationSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "sameAs": ["https://www.linkedin.com/company/cybaemtech", "https://x.com/Cybaem_Tech", "https://www.facebook.com/cybaemtech", "https://www.instagram.com/cybaemtech", "https://www.youtube.com/@cybaemtech"],
       "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91-9028541383", "contactType": "customer support", "areaServed": "IN", "availableLanguage": "English" }]
     },
@@ -399,7 +399,7 @@ export const itAugmentationSeoData = {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Cybaem Tech IT Staff Augmentation Services",
-      "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "url": "https://www.cybaemtech.com/it-augmentation",
       "telephone": "+91-9028541383",
       "priceRange": "$$",
@@ -460,7 +460,7 @@ export const digitalMarketingSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "sameAs": ["https://www.linkedin.com/company/cybaemtech", "https://x.com/Cybaem_Tech", "https://www.facebook.com/cybaemtech", "https://www.instagram.com/cybaemtech", "https://www.youtube.com/@cybaemtech"],
       "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91-9028541383", "contactType": "customer support", "areaServed": "IN", "availableLanguage": "English" }]
     },
@@ -475,7 +475,7 @@ export const digitalMarketingSeoData = {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Cybaem Tech Digital Marketing Services",
-      "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "url": "https://www.cybaemtech.com/digital-marketing",
       "telephone": "+91-9028541383",
       "priceRange": "$$",
@@ -552,7 +552,7 @@ export const enterpriseSoftwareSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "sameAs": ["https://www.linkedin.com/company/cybaemtech", "https://x.com/Cybaem_Tech", "https://www.facebook.com/cybaemtech", "https://www.instagram.com/cybaemtech", "https://www.youtube.com/@cybaemtech"]
     },
     {
@@ -562,7 +562,7 @@ export const enterpriseSoftwareSeoData = {
       "provider": {
         "@type": "LocalBusiness",
         "name": "Cybaem Tech",
-        "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+        "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
         "telephone": "+91-9028541383",
         "priceRange": "$$",
         "address": {
@@ -625,7 +625,7 @@ export const itInfrastructureServicesSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "sameAs": ["https://www.linkedin.com/company/cybaemtech", "https://x.com/Cybaem_Tech", "https://www.facebook.com/cybaemtech", "https://www.instagram.com/cybaemtech", "https://www.youtube.com/@cybaemtech"]
     },
     {
@@ -635,7 +635,7 @@ export const itInfrastructureServicesSeoData = {
       "provider": {
         "@type": "ProfessionalService",
         "name": "Cybaem Tech IT Infrastructure Division",
-        "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+        "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
         "telephone": "+91-9028541383",
         "priceRange": "$$$",
         "address": {

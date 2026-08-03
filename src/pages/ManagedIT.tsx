@@ -432,7 +432,7 @@ const ManagedIT = () => {
           {/* Decorative background elements */}
           <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
             <div className="absolute inset-0 opacity-10 mix-blend-screen">
-              <img src="/images/it.png" alt="" className="w-full h-full object-cover blur-md" />
+              <img src="/images/it.webp" alt="" className="w-full h-full object-cover blur-md" />
             </div>
             <div className="w-[800px] h-[400px] bg-red-500 blur-[150px] rounded-full opacity-30 [mask-image:radial-gradient(ellipse,white,transparent)] mix-blend-screen" />
           </div>
@@ -564,7 +564,7 @@ const ManagedIT = () => {
             </motion.div>
 
             <motion.div variants={fadeUp} className="hidden lg:flex justify-end relative pl-4">
-              <img src="/images/it.png" alt="Cybaem IT Blocks" className="w-full max-w-[450px] scale-110 lg:origin-right object-contain drop-shadow-xl mix-blend-multiply opacity-90" />
+              <img src="/images/it.webp" alt="Cybaem IT Blocks" className="w-full max-w-[450px] scale-110 lg:origin-right object-contain drop-shadow-xl mix-blend-multiply opacity-90" />
             </motion.div>
           </div>
         </div>
@@ -872,7 +872,7 @@ const ManagedIT = () => {
                 {/* Background texture only for the highlighted blue card */}
                 {tier.highlighted && (
                   <div className="absolute inset-0 z-0 pointer-events-none opacity-25 mix-blend-overlay flex items-center justify-center">
-                    <img src="/images/it-bg.png" alt="" className="w-full h-full object-cover grayscale" />
+                    <img src="/images/it-bg.webp" alt="" className="w-full h-full object-cover grayscale" />
                   </div>
                 )}
 

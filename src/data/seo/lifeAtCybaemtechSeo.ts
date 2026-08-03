@@ -13,7 +13,7 @@ export const lifeAtCybaemtechSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "sameAs": [
         "https://www.linkedin.com/company/cybaemtech",
         "https://x.com/Cybaem_Tech",
@@ -53,7 +53,7 @@ export const lifeAtCybaemtechSeoData = {
       "@context": "https://schema.org",
       "@type": "ITService",
       "name": "Cybaem Tech",
-      "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "url": "https://www.cybaemtech.com/",
       "telephone": "+91-9028541383",
       "priceRange": "$$",

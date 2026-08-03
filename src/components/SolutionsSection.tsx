@@ -42,7 +42,7 @@ const solutions = [
     capability: "We provide comprehensive NOC support, seamless AWS/Azure cloud migrations, and proactive threat monitoring.",
     cta: "Explore Solution",
     slug: "managed-it-cloud-security",
-    image: "/images/Tech-port/Managed IT.png",
+    image: "/images/Tech-port/Managed it.webp",
     icon: Shield
   },
   {
@@ -128,16 +128,16 @@ const SolutionsSection = () => {
 
         {/* Main Content Layout */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 relative">
-          
+
           {/* Connecting Line (Desktop Only) */}
           <div className="hidden lg:block absolute left-[380px] top-0 bottom-0 w-px bg-blue-500/20 z-0">
             {/* Active Node */}
-            <div 
+            <div
               className="absolute left-[-4px] w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_15px_4px_rgba(96,165,250,0.6)] transition-all duration-500"
               style={{ top: `calc(${activeIndex * (100 / solutions.length)}% + 40px)` }}
             />
             {/* Horizontal connection to showcase */}
-            <div 
+            <div
               className="absolute left-0 h-px bg-gradient-to-r from-blue-400 to-transparent transition-all duration-500"
               style={{ top: `calc(${activeIndex * (100 / solutions.length)}% + 44px)`, width: '40px' }}
             />

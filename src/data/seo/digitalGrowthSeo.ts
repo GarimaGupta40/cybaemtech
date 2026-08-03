@@ -13,7 +13,7 @@ export const digitalGrowthSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "sameAs": [
         "https://www.linkedin.com/company/cybaemtech",
         "https://x.com/Cybaem_Tech",
@@ -46,7 +46,7 @@ export const digitalGrowthSeoData = {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Cybaem Tech Digital Marketing Services",
-      "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "url": "https://www.cybaemtech.com/digital-marketing",
       "telephone": "+91-9028541383",
       "priceRange": "$$",

@@ -13,7 +13,7 @@ export const itInfrastructureSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "sameAs": [
         "https://www.linkedin.com/company/cybaemtech",
         "https://x.com/Cybaem_Tech",
@@ -29,7 +29,7 @@ export const itInfrastructureSeoData = {
       "provider": {
         "@type": "ProfessionalService",
         "name": "Cybaem Tech IT Infrastructure Division",
-        "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+        "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
         "telephone": "+91-9028541383",
         "priceRange": "$$$",
         "address": {

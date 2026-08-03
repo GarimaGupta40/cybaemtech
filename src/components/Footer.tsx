@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import cybaemLogo from "@/assets/cybaem-logo.png";
 import { allSolutions } from "@/data/solutionsData";
 
 const Footer = () => (
@@ -7,7 +6,7 @@ const Footer = () => (
     <div className="container mx-auto px-6 lg:px-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
         <div>
-          <img src={cybaemLogo} alt="Cybaem Tech" className="h-10 w-auto mb-4" width={180} height={40} />
+          <img src="/images/cybaem-logo.webp" alt="Cybaem Tech" className="h-10 w-auto mb-4" width={180} height={40} />
           <p className="text-sm text-muted-foreground leading-relaxed max-w-xs mb-4">
             ISO-certified global technology partner delivering enterprise software, cloud security, and digital growth solutions.
           </p>

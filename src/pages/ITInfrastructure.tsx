@@ -288,7 +288,7 @@ const Hero = () => {
 
   return (
     <>
-      <section ref={heroRef} className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden pt-24 sm:pt-28 lg:pt-20 pb-16 lg:pb-20 bg-cover bg-center lg:bg-right bg-no-repeat" style={{ backgroundImage: `url('/images/it-bg.png')` }}>
+      <section ref={heroRef} className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden pt-24 sm:pt-28 lg:pt-20 pb-16 lg:pb-20 bg-cover bg-center lg:bg-right bg-no-repeat" style={{ backgroundImage: `url('/images/it-bg.webp')` }}>
         <motion.div className="container mx-auto px-5 sm:px-6 lg:px-12 relative z-10 pt-4 lg:pt-16 pb-8 lg:pb-16" style={{ y: contentY }}>
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-6 items-center">
 
@@ -314,13 +314,13 @@ const Hero = () => {
               <motion.div variants={fadeUp} className="flex flex-wrap gap-3 sm:gap-4 mb-10 sm:mb-14">
                 <MagneticButton>
                   <Link to="/contact" className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-[15px] font-semibold bg-primary text-primary-foreground rounded-[12px] sm:rounded-[14px] hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25">
-                    Get Free Assessment <ArrowRight size={18} />
+                    Contact Us <ArrowRight size={18} />
                   </Link>
                 </MagneticButton>
                 <MagneticButton>
-                  <a href="#managed-it" className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-[15px] font-semibold border border-slate-200 text-slate-700 rounded-[12px] sm:rounded-[14px] hover:bg-slate-50 transition-colors bg-white/50 backdrop-blur-sm">
+                  <Link to="/portfolio" className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-[15px] font-semibold border border-slate-200 text-slate-700 rounded-[12px] sm:rounded-[14px] hover:bg-slate-50 transition-colors bg-white/50 backdrop-blur-sm">
                     Explore Services <ArrowRight size={18} className="text-slate-400" />
-                  </a>
+                  </Link>
                 </MagneticButton>
               </motion.div>
 
@@ -1012,8 +1012,8 @@ const CTASection = () => (
 
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
             <MagneticButton>
-              <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:-translate-y-0.5">
-                Schedule Consultation <ArrowUpRight size={18} />
+              <Link to="/portfolio" className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:-translate-y-0.5">
+                Explore Services <ArrowUpRight size={18} />
               </Link>
             </MagneticButton>
             <MagneticButton>
@@ -1026,7 +1026,7 @@ const CTASection = () => (
 
         {/* Right Content - Illustration */}
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="relative h-full flex items-center justify-center w-full min-h-[250px] sm:min-h-[350px] lg:min-h-[550px] mt-8 lg:mt-0">
-          <img src="/images/it-infra.png" alt="IT Infrastructure Solutions" className="w-40% max-w-[500px] h-auto object-contain drop-shadow-2xl scale-110 lg:scale-125 lg:origin-right xl:scale-[1.35] translate-x-4 md:translate-x-8 lg:translate-x-16" />
+          <img src="/images/it-infra.webp" alt="IT Infrastructure Solutions" className="w-40% max-w-[500px] h-auto object-contain drop-shadow-2xl scale-110 lg:scale-125 lg:origin-right xl:scale-[1.35] translate-x-4 md:translate-x-8 lg:translate-x-16" />
         </motion.div>
       </div>
 

@@ -25,7 +25,7 @@ const SEOHead = ({
   title,
   description,
   canonical,
-  ogImage = "https://cybaemtech.com/images/cybaem-logo.png",
+  ogImage = "https://cybaemtech.com/images/cybaem-logo.webp",
   ogTitle,
   ogDescription,
   ogImageAlt,

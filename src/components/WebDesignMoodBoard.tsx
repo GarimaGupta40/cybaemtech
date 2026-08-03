@@ -11,7 +11,7 @@ const moodBoardData = [
     vibe: "Professional, strong, intelligent",
     primaryColors: ["#F8FAFC", "#E2E8F0", "#0F172A"],
     accentColors: ["#1E3A8A", "#166534", "#475569"],
-    image: "/images/it1.png",
+    image: "/images/it1.webp",
   },
   {
     icon: ShoppingCart,
@@ -20,7 +20,7 @@ const moodBoardData = [
     vibe: "High-energy, trustworthy, exciting",
     primaryColors: ["#FFFFFF", "#F9FAFB", "#FFFBEB"],
     accentColors: ["#EA580C", "#DC2626", "#16A34A"],
-    image: "/images/Ecomm.png",
+    image: "/images/ecomm.webp",
   },
   {
     icon: Palette,

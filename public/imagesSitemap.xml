@@ -6,10 +6,10 @@
   <url>
     <loc>https://cybaemtech.com/</loc>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/hero-bg.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/hero-bg.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/cybaem-logo.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/cybaem-logo.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://cybaemtech.com/images/world-map.svg</image:loc>
@@ -23,10 +23,10 @@
       <image:loc>https://cybaemtech.com/images/about-code.avif</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/about-cta.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/about-cta.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/about-cta1.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/about-cta1.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://cybaemtech.com/images/about-datacenter.avif</image:loc>
@@ -41,7 +41,7 @@
       <image:loc>https://cybaemtech.com/images/about-team-1.avif</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/about-team-1.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/about-team-1.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://cybaemtech.com/images/about-team-2.avif</image:loc>
@@ -61,7 +61,7 @@
   <url>
     <loc>https://cybaemtech.com/life-at-cybaemtech</loc>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/it-bg.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/it-bg.webp</image:loc>
     </image:image>
   </url>
 
@@ -69,7 +69,7 @@
   <url>
     <loc>https://cybaemtech.com/contact</loc>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/contact-hero-new.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/contact-hero-new.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://cybaemtech.com/images/contact-hero.avif</image:loc>
@@ -83,28 +83,28 @@
       <image:loc>https://cybaemtech.com/images/portfolio-header.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/CRM-website.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/CRM-website.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/Ecomm-website.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/ecomm-website.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/Ecomm.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/ecomm.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/corporate-websites.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/corporate-websites.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/corporate-websites1.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/corporate-websites1.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://cybaemtech.com/images/saas-website.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/education.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/education.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/digihero.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/digihero.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://cybaemtech.com/images/product-card-1.avif</image:loc>
@@ -214,10 +214,10 @@
   <url>
     <loc>https://cybaemtech.com/solutions/it-staff-augmentation</loc>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/it.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/it.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/it1.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/it1.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://cybaemtech.com/images/og-it-staff-augmentation.jpg</image:loc>
@@ -288,7 +288,7 @@
       <image:loc>https://cybaemtech.com/images/manageit-hero.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/Tech-port/Managed%20IT.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/Tech-port/Managed%20it.webp</image:loc>
     </image:image>
   </url>
 
@@ -307,7 +307,7 @@
   <url>
     <loc>https://cybaemtech.com/solutions/it-infrastructure-services</loc>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/it-infra.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/it-infra.webp</image:loc>
     </image:image>
   </url>
 

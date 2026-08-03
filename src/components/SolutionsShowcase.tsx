@@ -22,7 +22,7 @@ const solutionsData = [
       { text: "Fast & Secure", icon: ShieldCheck },
       { text: "Conversion Focused", icon: Target }
     ],
-    image: "/images/corporate-websites.png"
+    image: "/images/corporate-websites.webp"
   },
   {
     id: "ecommerce",
@@ -37,7 +37,7 @@ const solutionsData = [
       { text: "Mobile-First", icon: MonitorSmartphone },
       { text: "High Performance", icon: Zap }
     ],
-    image: "/images/Ecomm-website.png"
+    image: "/images/ecomm-website.webp"
   },
   {
     id: "portals",
@@ -82,7 +82,7 @@ const solutionsData = [
       { text: "Sales Forecasting", icon: LineChart },
       { text: "Custom Reporting", icon: PieChart }
     ],
-    image: "/images/CRM-website.png"
+    image: "/images/CRM-website.webp"
   },
   {
     id: "erp",
@@ -157,8 +157,8 @@ const SolutionsShowcase = () => {
                     key={solution.id}
                     onClick={() => setActiveTab(solution)}
                     className={`flex items-center justify-between px-5 py-3 transition-all duration-300 text-left rounded-xl group relative ${isActive
-                        ? "bg-gradient-to-r from-blue-500 to-blue-700 shadow-[0_10px_20px_rgba(37,99,235,0.3)] z-10"
-                        : "bg-transparent hover:bg-white/5"
+                      ? "bg-gradient-to-r from-blue-500 to-blue-700 shadow-[0_10px_20px_rgba(37,99,235,0.3)] z-10"
+                      : "bg-transparent hover:bg-white/5"
                       }`}
                   >
                     <div className="flex items-center gap-3">

@@ -5,10 +5,10 @@ const AboutCTA = () => {
   return (
     <section className="py-12 lg:py-20 pb-24">
       <div className="container mx-auto px-6 lg:px-12">
-        <div 
-          className="rounded-[3rem] border border-blue-100/50 p-12 lg:p-16 flex flex-col lg:flex-row items-center gap-12 relative overflow-hidden bg-cover bg-center bg-no-repeat bg-[url('/images/about-cta1.png')] lg:bg-[url('/images/about-cta.png')]"
+        <div
+          className="rounded-[3rem] border border-blue-100/50 p-12 lg:p-16 flex flex-col lg:flex-row items-center gap-12 relative overflow-hidden bg-cover bg-center bg-no-repeat bg-[url('/images/about-cta1.webp')] lg:bg-[url('/images/about-cta.webp')]"
         >
-          
+
           {/* Decorative shapes */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-100/30 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3" />
@@ -41,7 +41,7 @@ const AboutCTA = () => {
                 <p className="text-xs text-muted-foreground">Solve real problems that create impact.</p>
               </div>
             </div>
-            
+
             <div className="flex gap-4">
               <div className="w-12 h-12 rounded-2xl bg-white shadow-sm border border-blue-50 flex items-center justify-center shrink-0">
                 <TrendingUp size={20} className="text-primary" />

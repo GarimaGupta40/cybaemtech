@@ -29,7 +29,7 @@ interface RouteMeta {
 }
 
 const BASE_URL = "https://cybaemtech.com";
-const OG_IMAGE = "https://cybaemtech.com/images/cybaem-logo.png";
+const OG_IMAGE = "https://cybaemtech.com/images/cybaem-logo.webp";
 const AUTHOR = "Cybaem Tech Pvt Ltd";
 const THEME_COLOR = "#1f5b8f";
 const ROBOTS = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";

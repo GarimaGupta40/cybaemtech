@@ -65,7 +65,7 @@ function sendVerificationEmail($email, $token) {
 <body>
   <div class="container">
     <div class="header">
-      <img src="https://cybaemtech.com/images/cybaem-logo.png" alt="Cybaem Tech Logo" width="160" style="max-width:160px;">
+      <img src="https://cybaemtech.com/images/cybaem-logo.webp" alt="Cybaem Tech Logo" width="160" style="max-width:160px;">
     </div>
     <div class="content">
       <h2>Verify Your Email Address</h2>
@@ -260,7 +260,7 @@ switch ($action) {
         
         if (!$verifyUser) {
             header("Content-Type: text/html");
-            echo '<html><head><style>body{font-family:Arial,sans-serif;background:#f4f6f9;margin:0;padding:60px;text-align:center;}.box{max-width:500px;margin:auto;background:#fff;border-radius:12px;padding:40px;box-shadow:0 4px 12px rgba(0,0,0,.08);}.logo{max-width:140px;margin-bottom:20px;}h2{color:#0f172a;}p{color:#666;}</style></head><body><div class="box"><img src="https://cybaemtech.com/images/cybaem-logo.png" alt="Cybaem Tech" class="logo"><h2>Link Expired or Already Verified</h2><p>This verification link is no longer valid. If you\'ve already verified, you can <a href="https://cybaemtech.com/login" style="color:#0f172a;font-weight:600;">sign in here</a>.</p></div></body></html>';
+            echo '<html><head><style>body{font-family:Arial,sans-serif;background:#f4f6f9;margin:0;padding:60px;text-align:center;}.box{max-width:500px;margin:auto;background:#fff;border-radius:12px;padding:40px;box-shadow:0 4px 12px rgba(0,0,0,.08);}.logo{max-width:140px;margin-bottom:20px;}h2{color:#0f172a;}p{color:#666;}</style></head><body><div class="box"><img src="https://cybaemtech.com/images/cybaem-logo.webp" alt="Cybaem Tech" class="logo"><h2>Link Expired or Already Verified</h2><p>This verification link is no longer valid. If you\'ve already verified, you can <a href="https://cybaemtech.com/login" style="color:#0f172a;font-weight:600;">sign in here</a>.</p></div></body></html>';
             exit();
         }
         
@@ -270,7 +270,7 @@ switch ($action) {
         $stmt2->close();
         
         header("Content-Type: text/html");
-        echo '<html><head><style>body{font-family:Arial,sans-serif;background:#f4f6f9;margin:0;padding:60px;text-align:center;}.box{max-width:500px;margin:auto;background:#fff;border-radius:12px;padding:40px;box-shadow:0 4px 12px rgba(0,0,0,.08);}.logo{max-width:140px;margin-bottom:20px;}h2{color:#0f172a;}p{color:#555;line-height:1.6;}.btn{display:inline-block;margin-top:20px;padding:14px 32px;background:#0f172a;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold;}</style></head><body><div class="box"><img src="https://cybaemtech.com/images/cybaem-logo.png" alt="Cybaem Tech" class="logo"><h2>Email Verified Successfully! &#10003;</h2><p>Your email <strong>' . htmlspecialchars($verifyUser['email']) . '</strong> has been verified.<br>You can now sign in to the admin dashboard.</p><a href="https://cybaemtech.com/login" class="btn">Sign In Now</a></div></body></html>';
+        echo '<html><head><style>body{font-family:Arial,sans-serif;background:#f4f6f9;margin:0;padding:60px;text-align:center;}.box{max-width:500px;margin:auto;background:#fff;border-radius:12px;padding:40px;box-shadow:0 4px 12px rgba(0,0,0,.08);}.logo{max-width:140px;margin-bottom:20px;}h2{color:#0f172a;}p{color:#555;line-height:1.6;}.btn{display:inline-block;margin-top:20px;padding:14px 32px;background:#0f172a;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold;}</style></head><body><div class="box"><img src="https://cybaemtech.com/images/cybaem-logo.webp" alt="Cybaem Tech" class="logo"><h2>Email Verified Successfully! &#10003;</h2><p>Your email <strong>' . htmlspecialchars($verifyUser['email']) . '</strong> has been verified.<br>You can now sign in to the admin dashboard.</p><a href="https://cybaemtech.com/login" class="btn">Sign In Now</a></div></body></html>';
         break;
         
     case 'check':

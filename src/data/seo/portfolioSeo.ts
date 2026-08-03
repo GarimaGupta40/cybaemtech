@@ -16,7 +16,7 @@ export const portfolioSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "sameAs": [
         "https://in.linkedin.com/company/cybaemtech",
         "https://x.com/Cybaem_Tech",

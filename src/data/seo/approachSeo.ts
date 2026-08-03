@@ -22,7 +22,7 @@ export const approachSeoData = {
       description: "Explore Cybaem Tech's leadership philosophy, strategic partnerships, innovation mindset, team culture and technology-driven approach to business growth.",
       isPartOf: { "@id": "https://cybaemtech.com/#website" },
       about: { "@id": "https://cybaemtech.com/#organization" },
-      primaryImageOfPage: { "@type": "ImageObject", url: "https://cybaemtech.com/images/cybaem-logo.png" },
+      primaryImageOfPage: { "@type": "ImageObject", url: "https://cybaemtech.com/images/cybaem-logo.webp" },
     },
     {
       "@context": "https://schema.org",

@@ -106,7 +106,7 @@ function escHtml(str: string) {
 
 function buildSeoHtml(meta: RouteMeta) {
   const canonical = meta.canonical.startsWith("http") ? meta.canonical : `${BASE_URL}${meta.canonical}`;
-  const ogImg = "https://www.cybaemtech.com/images/cybaem-logo.png";
+  const ogImg = "https://www.cybaemtech.com/images/cybaem-logo.webp";
   const parts = [
     `<title>${escHtml(meta.title)}</title>`,
     `<meta name="description" content="${escHtml(meta.description)}">`,

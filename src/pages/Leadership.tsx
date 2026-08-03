@@ -379,7 +379,7 @@ const Leadership = () => {
                 {/* Background Image & Overlays */}
                 <div className="absolute inset-0 z-0 bg-[#041235]">
                   <div className="absolute inset-y-0 right-0 w-[85%] lg:w-[75%] transition-transform duration-1000 group-hover/ahead:scale-105">
-                    <img src="/images/it1.png" alt="Looking Ahead Background" className="w-full h-full object-cover object-right" />
+                    <img src="/images/it1.webp" alt="Looking Ahead Background" className="w-full h-full object-cover object-right" />
                     {/* Gradients to blend image with the solid blue on the left and bottom */}
                     <div className="absolute inset-0 bg-gradient-to-r from-[#041235] via-[#041235]/80 to-transparent"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#041235] via-[#041235]/40 to-transparent"></div>

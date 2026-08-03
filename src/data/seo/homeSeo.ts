@@ -13,7 +13,7 @@ export const homeSeoData = {
       "@type": "Organization",
       "name": "Cybaem Tech",
       "url": "https://www.cybaemtech.com/",
-      "logo": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "logo": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "description": "Cybaem Tech provides cybersecurity, managed IT services, cloud solutions, software development, digital marketing and enterprise technology consulting.",
       "sameAs": [
         "https://www.linkedin.com/company/cybaemtech",
@@ -67,7 +67,7 @@ export const homeSeoData = {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Cybaem Tech",
-      "image": "https://www.cybaemtech.com/images/cybaem-logo.png",
+      "image": "https://www.cybaemtech.com/images/cybaem-logo.webp",
       "url": "https://www.cybaemtech.com/",
       "telephone": "+91-9028541383",
       "priceRange": "$$",

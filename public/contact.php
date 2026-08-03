@@ -118,7 +118,7 @@ if ($stmt->execute()) {
 <body>
   <div class="container">
     <div class="header">
-      <img src="https://cybaemtech.com/images/cybaem-logo.png" alt="Cybaem Tech Logo" width="160" style="max-width:160px;">
+      <img src="https://cybaemtech.com/images/cybaem-logo.webp" alt="Cybaem Tech Logo" width="160" style="max-width:160px;">
     </div>
     <div class="content">
       <h2>New Contact Submission</h2>
@@ -159,7 +159,7 @@ if ($stmt->execute()) {
     <body>
       <div class="container">
         <div class="header">
-          <img src="https://cybaemtech.com/images/cybaem-logo.png" alt="Cybaem Tech Logo" width="160" style="max-width:160px;">
+          <img src="https://cybaemtech.com/images/cybaem-logo.webp" alt="Cybaem Tech Logo" width="160" style="max-width:160px;">
         </div>
         <div class="content">
           <h2>Thank You, ' . htmlspecialchars($name) . '!</h2>
