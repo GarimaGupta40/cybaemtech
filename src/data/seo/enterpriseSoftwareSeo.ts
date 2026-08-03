@@ -1,6 +1,6 @@
 export const enterpriseSoftwareSeoData = {
-  title: "AI-Powered Enterprise Software Solutions in Pune | Cybaem Tech",
-  description: "Cybaem Tech engineers scalable, ISO-certified enterprise software solutions in Pune. Explore our AI-powered product ecosystem including Cybaem CRM Ace Pro, ITSM Tool, Project Management, DMS, Site Engineer, and HR Management Systems.",
+  title: "Enterprise Software Development Company | Cybaem Tech",
+  description: "Build scalable enterprise software, custom business applications, AI-powered platforms, integrations, and workflow automation with Cybaem Tech.",
   canonical: "https://www.cybaemtech.com/solutions/enterprise-software",
   keywords: "Cybaem CRM Ace Pro, Cybaem Nova CRM, ITSM Tool Pune, enterprise software company Pune, custom enterprise platforms, AI business software, Document Management System, Project Management Tool, Site Engineer Ecosystem, HR Management System, custom CRM development, ISO certified software development, B2B enterprise applications, scalable business software India",
   ogTitle: "AI-Powered Enterprise Software Solutions & Platforms | Cybaem Tech",

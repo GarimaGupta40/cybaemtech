@@ -1,6 +1,6 @@
 export const managedITSeoData = {
-  title: "Managed IT Services, IT Governance & Risk Management Pune | Cybaem Tech",
-  description: "Cybaem Tech turns unstructured IT risk into structured corporate governance. Explore our 24/7 managed IT services, Microsoft 365/Google Workspace management, secure cloud email migration, and enterprise risk oversight in Pune.",
+  title: "Managed IT Services & IT Governance | Cybaem Tech",
+  description: "Reduce technology risks with managed IT services, 24/7 monitoring, IT governance, Microsoft 365 management, and proactive business support.",
   canonical: "https://www.cybaemtech.com/solutions/managed-it",
   keywords: "Cybaem Managed IT, managed IT services Pune, IT risk governance, 24/7 IT support Pune, Microsoft 365 administration, Google Workspace management, enterprise email migration, cloud transition services, IT security oversight Pune, patch management solutions, IT compliance audit readiness, professional MSP India",
   ogTitle: "Structured Managed IT Services & Executive Risk Governance | Cybaem Tech",

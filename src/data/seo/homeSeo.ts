@@ -1,6 +1,6 @@
 export const homeSeoData = {
-  title: "Cybaem Tech | IT Services, Cybersecurity, Cloud & Digital Marketing Company in Pune",
-  description: "Cybaem Tech is a leading IT services company in Pune providing cybersecurity, cloud solutions, Microsoft 365, managed IT services, AMC, digital marketing, software development, networking, VAPT, ITSM and business technology solutions.",
+  title: "IT Services & Software Development Company | Cybaem Tech",
+  description: "We deliver enterprise software, managed IT, cloud security, web development, IT staffing, and digital growth solutions for businesses.",
   canonical: "https://www.cybaemtech.com/",
   keywords: "Cybaem Tech, IT company Pune, cybersecurity company Pune, managed IT services Pune, cloud consulting Pune, Microsoft 365 services, Azure migration, digital marketing agency Pune, SEO services Pune, VAPT services Pune, SOC services India, computer AMC Pune, network security services, firewall management, IT infrastructure management, software development company Pune, web development Pune, AI automation services, chatbot development, IT outsourcing company, IT consulting services, cloud security services, endpoint security, disaster recovery solutions, backup solutions, IT helpdesk support, NOC monitoring services, IT staffing services, digital transformation company, technology solutions provider India",
   ogTitle: "Cybaem Tech | IT Services, Cybersecurity & Cloud Solutions",

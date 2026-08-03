@@ -1,6 +1,6 @@
 export const lifeAtCybaemtechSeoData = {
-  title: "Life at Cybaem Tech | Culture, Growth & Work Environment",
-  description: "Discover life at Cybaem Tech in Pune – our culture, work environment, learning opportunities, team activities and what it’s like to build IT and digital solutions with us.",
+  title: "Life at Cybaem Tech | Culture, Careers & Growth",
+  description: "Walk through our collaborative work culture, team celebrations, employee experiences, learning opportunities, and career growth.",
   canonical: "https://www.cybaemtech.com/life-at-cybaemtech",
   keywords: "life at Cybaem Tech, Cybaem Tech culture, IT company work culture Pune, tech careers environment, employee experience Cybaem Tech, work-life balance IT company, learning and development IT, team activities in IT company, tech jobs culture Pune",
   ogTitle: "Life at Cybaem Tech | Culture & Team",

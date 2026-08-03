@@ -1,6 +1,6 @@
 export const leadershipSeoData = {
-  title: "Leadership Team | Business Strategy & Executive Vision | Cybaem Tech",
-  description: "Meet the leadership team at Cybaem Tech. Discover our executive vision, business strategy, innovation-driven culture, technology expertise, and commitment to delivering scalable digital transformation solutions for enterprises worldwide.",
+  title: "Leadership Team | Vision & Expertise | Cybaem Tech",
+  description: "Meet our leadership team driving business strategy, technology innovation, client success, and sustainable organizational growth.",
   canonical: "https://www.cybaemtech.com/leadership",
   keywords: "Cybaem Tech leadership, executive leadership Pune, business strategy consulting, technology leadership, digital transformation leaders, innovation leadership, CEO Cybaem Tech, executive management, IT company leadership, software company executives, enterprise technology strategy, corporate leadership, business innovation, digital consulting leadership",
   ogTitle: "Leadership Team | Business Strategy & Executive Vision | Cybaem Tech",

@@ -1,6 +1,6 @@
 export const itInfrastructureSeoData = {
-  title: "IT Infrastructure Services, Cloud, Cybersecurity & AMC Pune | Cybaem Tech",
-  description: "Cybaem Tech delivers end-to-end IT infrastructure services in Pune. Dual ISO-certified solutions spanning AWS/Azure cloud migration, cybersecurity VAPT & SOC monitoring, SLA-based computer AMC, fleet procurement, and senior IT consulting strategy.",
+  title: "IT Infrastructure & Cybersecurity Services | Cybaem Tech",
+  description: "Secure and scale your business with IT infrastructure, cloud, networking, cybersecurity, Microsoft 365, AMC, and technical support services.",
   canonical: "https://www.cybaemtech.com/solutions/it-infrastructure-services",
   keywords: "it infrastructure services Pune, cloud solutions Pune, cloud migration services, cybersecurity services Pune, VAPT Pune, penetration testing Pune, computer AMC services Pune, IT AMC Pune, IT asset management services, hardware procurement India, IT consulting Pune, digital transformation strategy, IT infrastructure audit, enterprise technology roadmap, 24/7 SOC monitoring, managed cloud services, Cybaem Tech solutions",
   ogTitle: "Enterprise IT Infrastructure Services, Cloud & Cybersecurity | Cybaem Tech",

@@ -1,6 +1,6 @@
 export const digitalGrowthSeoData = {
-  title: "Digital Marketing, SEO & B2B Growth Services Pune | Cybaem Tech",
-  description: "Cybaem Tech offers ROI-focused digital marketing in Pune. Dominate organic search with advanced SEO & CRO, turn digital presence into B2B leads, and scale executive thought leadership with our premium LinkedIn strategies.",
+  title: "Digital Marketing & B2B Lead Generation | Cybaem Tech",
+  description: "Grow qualified leads and revenue with our end-to-end SEO, PPC, performance marketing, and B2B digital growth solutions.",
   canonical: "https://www.cybaemtech.com/digital-marketing",
   keywords: "digital marketing services Pune, SEO services Pune, B2B digital growth, conversion rate optimization Pune, CRO services, LinkedIn executive branding, B2B lead generation agency, organic search dominance, corporate thought leadership, executive presence marketing, social media marketing Pune, PPC agency Pune, Google Ads management, performance marketing, Cybaem Tech digital marketing",
   ogTitle: "Digital Marketing & B2B Growth Services in Pune | Cybaem Tech",

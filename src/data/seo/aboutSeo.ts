@@ -1,6 +1,6 @@
 export const aboutSeoData = {
-  title: "About Cybaem Tech | Leading IT, Cybersecurity & Cloud Solutions Company in Pune",
-  description: "Learn about Cybaem Tech, a trusted technology partner helping businesses with cybersecurity, cloud solutions, managed IT services, Microsoft 365, digital transformation, software development and digital marketing across India and globally.",
+  title: "About Cybaem Tech | Global IT Solutions Company",
+  description: "We are an ISO-certified IT company delivering enterprise software, cloud security, managed IT, and digital growth solutions.",
   canonical: "https://www.cybaemtech.com/about",
   keywords: "About Cybaem Tech, Cybaem Tech company profile, IT company Pune, technology solutions company, managed IT services company, cybersecurity company Pune, cloud consulting company, Microsoft 365 partner, Azure cloud experts, digital transformation company, IT infrastructure company, software development company, web development company, AI automation company, digital marketing agency Pune, IT consulting company, network security provider, cloud migration experts, IT support company, business technology partner, enterprise IT solutions, IT outsourcing services, cybersecurity consultants, technology consulting company, IT innovation company India",
   ogTitle: "About Cybaem Tech | IT, Cybersecurity & Cloud Solutions Experts",

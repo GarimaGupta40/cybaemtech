@@ -1,6 +1,6 @@
 export const itStaffAugmentationSeoData = {
-  title: "IT Staff Augmentation & Outsourcing in Pune | Cybaem Tech",
-  description: "Cybaem Tech offers IT staff augmentation in Pune with onsite and remote engineers, helpdesk teams and specialist IT resources for server, cloud, network and security.",
+  title: "IT Staff Augmentation Services | Cybaem Tech",
+  description: "Grow your technology team with skilled remote and onsite developers, engineers, helpdesk professionals, and specialist IT talent.",
   canonical: "https://www.cybaemtech.com/it-augmentation",
   keywords: "IT staff augmentation Pune, IT outsourcing Pune, hire onsite IT engineer, remote IT specialist, contract IT staffing, IT helpdesk outsourcing, network administrator Pune, system administrator Pune, server and cloud engineers, dedicated IT resources, project-based IT staffing, managed IT teams, Cybaem Tech IT staffing",
   ogTitle: "IT Staff Augmentation & Outsourcing in Pune | Cybaem Tech",

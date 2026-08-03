@@ -1,6 +1,6 @@
 export const portfolioSeoData = {
-  title: "Our IT Projects & Case Studies Portfolio Pune | Cybaem Tech",
-  description: "Explore Cybaem Tech's portfolio of successful IT projects in Pune. Discover our case studies covering cloud migrations, managed IT infrastructure, digital transformation, and corporate technology solutions.",
+  title: "IT Projects & Case Studies Portfolio | Cybaem Tech",
+  description: "Get detailed insights from our IT project portfolio and case studies across enterprise software, web development, managed IT, cloud, and digital solutions.",
   canonical: "https://www.cybaemtech.com/portfolio",
   keywords: "IT portfolio Pune, technology case studies, cloud migration success stories, managed IT projects India, digital transformation examples, corporate infrastructure deployment, network setup portfolio, Cybaem Tech case studies, software deployment Pune",
   ogTitle: "Our IT Projects & Case Studies Portfolio Pune | Cybaem Tech",
