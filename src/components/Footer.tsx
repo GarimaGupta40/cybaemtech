@@ -23,7 +23,7 @@ const Footer = () => (
           </address>
         </div>
         <div>
-          <h4 className="font-display font-semibold text-sm mb-4">Solutions</h4>
+          <h3 className="font-display font-semibold text-sm mb-4">Solutions</h3>
           <nav className="space-y-2">
             {allSolutions.map((s) => (
               <Link key={s.slug} to={`/solutions/${s.slug}`} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
@@ -33,7 +33,7 @@ const Footer = () => (
           </nav>
         </div>
         <div>
-          <h4 className="font-display font-semibold text-sm mb-4">Company</h4>
+          <h3 className="font-display font-semibold text-sm mb-4">Company</h3>
           <nav className="space-y-2">
             <Link to="/about" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">About Us</Link>
             <Link to="/portfolio" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">Portfolio</Link>
@@ -44,7 +44,7 @@ const Footer = () => (
           </nav>
         </div>
         <div>
-          <h4 className="font-display font-semibold text-sm mb-4">Connect</h4>
+          <h3 className="font-display font-semibold text-sm mb-4">Connect</h3>
           <div className="space-y-2">
             <a href="https://www.linkedin.com/company/cybaemtech/" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">LinkedIn</a>
             <a href="https://www.instagram.com/cybaemtech/" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">Instagram</a>

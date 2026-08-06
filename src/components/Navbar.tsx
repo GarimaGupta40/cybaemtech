@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import MobileMenu, { AnimatedHamburger } from "./MobileMenu";
+import cybaemLogo from "@/assets/cybaem-logo.png";
 
 export const solutionsColumns = [
   {
@@ -122,7 +123,7 @@ const Navbar = () => {
           >
             <Link to="/" className="flex items-center">
               <img
-                src="/images/cybaem-logo.webp"
+                src={cybaemLogo}
                 alt="Cybaem Tech"
                 className="h-9 sm:h-11 w-auto"
                 width={180}

@@ -20,7 +20,7 @@ const moodBoardData = [
     vibe: "High-energy, trustworthy, exciting",
     primaryColors: ["#FFFFFF", "#F9FAFB", "#FFFBEB"],
     accentColors: ["#EA580C", "#DC2626", "#16A34A"],
-    image: "/images/ecomm.webp",
+    image: "/images/Ecomm.webp",
   },
   {
     icon: Palette,

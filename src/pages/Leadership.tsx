@@ -157,7 +157,7 @@ const Leadership = () => {
 
               {/* Right Column (Image from User) */}
               <div className="lg:absolute lg:top-[-2rem] lg:right-[-3rem] xl:right-[-6rem] lg:w-[52%] lg:h-[calc(100%+4rem)] z-0 rounded-3xl lg:rounded-l-3xl overflow-hidden shadow-2xl lg:shadow-none pointer-events-none">
-                <img src="/images/leadership-hero.png" alt="Leadership Impact" className="w-full h-full object-cover object-left" />
+                <img src="/images/leadership-hero.webp" alt="Leadership Impact" className="w-full h-full object-cover object-left" />
                 {/* Fade gradient to blend with left side on desktop */}
                 <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent hidden lg:block"></div>
               </div>

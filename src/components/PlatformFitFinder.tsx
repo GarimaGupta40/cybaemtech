@@ -206,7 +206,7 @@ const PlatformFitFinder = () => {
             </div>
 
             <div className="relative h-[250px] lg:h-[300px] flex items-center justify-center">
-              <img src="/images/web-platform.png" alt="Platform Fit Finder" className="w-full lg:w-[120%] max-w-[500px] object-contain object-center drop-shadow-xl lg:translate-x-8" onError={(e) => { e.currentTarget.style.display = 'none' }} />
+              <img src="/images/web-platform.webp" alt="Platform Fit Finder" className="w-full lg:w-[120%] max-w-[500px] object-contain object-center drop-shadow-xl lg:translate-x-8" onError={(e) => { e.currentTarget.style.display = 'none' }} />
             </div>
           </div>
 
@@ -222,7 +222,7 @@ const PlatformFitFinder = () => {
                 return (
                   <div key={i} className="flex flex-col items-center gap-3">
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all ${isActive ? "bg-primary text-primary-foreground shadow-[0_0_0_4px_hsl(var(--primary)/0.2)]" :
-                        isCompleted ? "bg-primary text-primary-foreground" : "bg-white border-2 border-slate-200 text-slate-400"
+                      isCompleted ? "bg-primary text-primary-foreground" : "bg-white border-2 border-slate-200 text-slate-400"
                       }`}>
                       {isCompleted ? <Check size={16} strokeWidth={3} /> : i + 1}
                     </div>
@@ -264,8 +264,8 @@ const PlatformFitFinder = () => {
                           key={opt.value}
                           onClick={() => selectOption(step, opt.value)}
                           className={`flex items-start gap-3.5 p-3 rounded-[14px] border-[1.5px] text-left transition-all ${isSelected
-                              ? "border-primary shadow-[0_0_0_1px_hsl(var(--primary)/0.2)] bg-white"
-                              : "border-slate-100 hover:border-slate-300 hover:bg-slate-50 bg-white"
+                            ? "border-primary shadow-[0_0_0_1px_hsl(var(--primary)/0.2)] bg-white"
+                            : "border-slate-100 hover:border-slate-300 hover:bg-slate-50 bg-white"
                             }`}
                         >
                           {/* Checkbox square */}

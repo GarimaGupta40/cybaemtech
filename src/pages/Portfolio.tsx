@@ -98,7 +98,7 @@ const PortfolioHero = () => {
       {/* Right Column: Image Background (Absolute on Desktop) */}
       <div className="absolute right-4 lg:right-8 top-[48%] -translate-y-1/2 w-full lg:w-[45%] xl:w-[48%] 2xl:w-[50%] z-0 hidden lg:block pointer-events-none select-none mt-8">
         <img
-          src="/images/portfolio-header.png"
+          src="/images/portfolio-header.webp"
           alt="Our IT Service Work Showcase"
           className="w-full h-auto object-contain object-right rounded-tl-[100px] rounded-br-[100px] shadow-[0_0_50px_rgba(0,0,0,0.25)]"
         />
@@ -138,7 +138,7 @@ const PortfolioHero = () => {
             {/* Mobile Image (Visible only on mobile/tablet) */}
             <div className="relative mt-12 lg:hidden w-full bg-transparent overflow-visible">
               <img
-                src="/images/portfolio-header.png"
+                src="/images/portfolio-header.webp"
                 alt="Our IT Service Work Showcase"
                 className="w-full h-auto object-cover rounded-tl-[60px] rounded-br-[60px] shadow-[0_0_30px_rgba(0,0,0,0.15)]"
               />
@@ -267,7 +267,7 @@ const itServices = [
     title: "Threat Monitoring",
     description: "Real-time monitoring and proactive threat detection.",
     icon: Activity,
-    bgImage: "https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&q=80&w=800",
+    bgImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
     slug: "managed-it",
   },
   {
@@ -328,37 +328,38 @@ const ITServicesTab = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group relative h-[270px] rounded-[24px] overflow-hidden bg-[#0a1128] cursor-pointer shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-400"
+              className="group relative h-[270px] rounded-[24px] overflow-hidden bg-[#071026] cursor-pointer shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_45px_rgba(2,132,199,0.25)] hover:-translate-y-1 transition-all duration-400 border border-white/10"
             >
-              {/* Background Image */}
-              <div className="absolute inset-0 z-0">
+              {/* Background Image - Vibrant & Highly Visible */}
+              <div className="absolute inset-0 z-0 overflow-hidden">
                 <img
                   src={service.bgImage}
                   alt={service.title}
-                  className="w-full h-full object-cover opacity-20 group-hover:scale-110 group-hover:opacity-30 transition-all duration-700 ease-out mix-blend-overlay"
+                  className="w-full h-full object-cover opacity-65 group-hover:opacity-80 brightness-[1.12] contrast-[1.08] group-hover:scale-105 transition-all duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#040b1e] via-[#040b1e]/60 to-transparent" />
-                <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-blue-600/20 transition-colors duration-500" />
+                {/* Softer Navy/Blue Gradient Overlay (40-55% opacity) */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#04091a]/95 via-[#061233]/45 to-sky-950/25 pointer-events-none" />
+                <div className="absolute inset-0 bg-blue-900/15 group-hover:bg-blue-600/10 transition-colors duration-500 pointer-events-none" />
               </div>
 
               {/* Content */}
               <div className="relative z-10 flex flex-col h-full p-6">
                 <div className="mb-auto">
-                  <div className="w-12 h-12 rounded-[14px] border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center text-slate-200 mb-6 group-hover:border-white/30 group-hover:text-white transition-colors duration-300">
+                  <div className="w-12 h-12 rounded-[14px] border border-white/20 bg-[#071435]/60 backdrop-blur-md flex items-center justify-center text-white mb-6 group-hover:border-white/40 group-hover:bg-[#071435]/80 transition-all duration-300 shadow-md">
                     <Icon size={24} strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-display text-[20px] font-bold text-white leading-tight mb-3">
+                  <h3 className="font-display text-[20px] font-bold text-white leading-tight mb-3 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
                     {service.title}
                   </h3>
-                  <div className="w-8 h-0.5 bg-blue-600 mb-4 transition-all duration-300 group-hover:w-12 group-hover:bg-blue-500" />
-                  <p className="text-[13px] text-slate-300/90 font-medium leading-relaxed line-clamp-3">
+                  <div className="w-8 h-0.5 bg-sky-400 mb-4 transition-all duration-300 group-hover:w-12 group-hover:bg-sky-300 shadow-sm" />
+                  <p className="text-[13px] text-white/95 font-medium leading-relaxed line-clamp-3 drop-shadow-[0_1.5px_4px_rgba(0,0,0,0.9)]">
                     {service.description}
                   </p>
                 </div>
 
                 {/* Arrow Button */}
                 <div className="mt-auto self-end">
-                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#040b1e] group-hover:border-white transition-all duration-300">
+                  <div className="w-10 h-10 rounded-full border border-white/30 bg-black/20 backdrop-blur-sm flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#040b1e] group-hover:border-white transition-all duration-300 shadow-md">
                     <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform duration-300" />
                   </div>
                 </div>
@@ -433,109 +434,146 @@ const SoftwareAISolutionsTab = () => {
     >
       {/* Top Row: Hero + Why Choose */}
       <div className="flex flex-col lg:flex-row gap-6">
-        
+
         {/* Hero Section */}
         <div className="lg:w-[70%]">
           {/* Dark Hero Card */}
           <div className="bg-[#040b1e] rounded-[2rem] p-6 lg:p-8 relative overflow-hidden flex flex-col md:flex-row items-center gap-6 min-h-[300px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] group">
-          {/* Background Image & Effects */}
-          <div className="absolute inset-0 z-0 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-[#040b1e] to-[#040b1e] opacity-80" />
-            {/* Glowing orbs */}
-            <div className="absolute top-0 right-[20%] w-[40%] h-[60%] bg-blue-600/20 blur-[100px] mix-blend-screen pointer-events-none transition-colors duration-500" />
-            <div className="absolute bottom-0 right-0 w-[30%] h-[50%] bg-purple-600/20 blur-[100px] mix-blend-screen pointer-events-none transition-colors duration-500" />
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none" />
-          </div>
-
-          {/* Left Content */}
-          <div className="relative z-10 w-full md:w-[55%] flex flex-col items-start">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-[11px] font-bold tracking-wide uppercase mb-4 shadow-sm">
-              <Settings size={14} className="text-blue-400" /> ENTERPRISE & AI SOLUTIONS
-            </div>
-            
-            <h2 className="text-4xl lg:text-5xl font-display font-bold text-white leading-[1.15] mb-3">
-              Intelligent Solutions.<br/>
-              <span className="text-slate-300">Real Business Impact.</span>
-            </h2>
-            
-            <div className="w-12 h-1 bg-blue-500 rounded-full mb-4 group-hover:w-20 transition-all duration-300" />
-
-            <p className="text-[15px] text-slate-300 leading-relaxed mb-6 max-w-sm">
-              Building enterprise-grade applications and AI-powered systems that automate processes and drive measurable growth.
-            </p>
-
-            {/* Checkmark Pills */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              {[
-                { label: 'Scalable', icon: TrendingUp },
-                { label: 'Secure', icon: ShieldCheck },
-                { label: 'Smart', icon: BrainCircuit },
-                { label: 'Future-Ready', icon: Rocket }
-              ].map(feature => (
-                <div key={feature.label} className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[12px] font-medium backdrop-blur-md hover:bg-white/10 transition-colors cursor-default">
-                  <feature.icon size={14} className="text-blue-400" />
-                  {feature.label}
-                </div>
-              ))}
+            {/* Background Image & Effects */}
+            <div className="absolute inset-0 z-0 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-[#040b1e] to-[#040b1e] opacity-80" />
+              {/* Glowing orbs */}
+              <div className="absolute top-0 right-[20%] w-[40%] h-[60%] bg-blue-600/20 blur-[100px] mix-blend-screen pointer-events-none transition-colors duration-500" />
+              <div className="absolute bottom-0 right-0 w-[30%] h-[50%] bg-purple-600/20 blur-[100px] mix-blend-screen pointer-events-none transition-colors duration-500" />
+              <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none" />
             </div>
 
-            <Link 
-              to="/solutions/enterprise-software"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
-            >
-              Explore Enterprise Solutions
-              <ArrowRight size={16} />
-            </Link>
-          </div>
-
-          {/* Right Illustration (AI / Enterprise graphic) */}
-          <div className="relative z-10 w-full md:w-[45%] flex items-center justify-center h-full min-h-[220px] mt-6 md:mt-0">
-            {/* Custom AI Illustration built with CSS */}
-            <div className="relative w-full max-w-[240px] aspect-square flex items-center justify-center">
-              {/* Circuit lines */}
-              <svg className="absolute inset-0 w-full h-full text-blue-500/30 animate-[spin_40s_linear_infinite]" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 4" />
-                <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.5" />
-                <path d="M50 10 L50 90 M10 50 L90 50" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 4" />
-              </svg>
-              
-              {/* Center AI Chip */}
-              <div className="relative w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl shadow-[0_0_40px_rgba(59,130,246,0.5)] flex items-center justify-center transform rotate-12 group-hover:rotate-0 transition-transform duration-700 z-20">
-                <div className="absolute inset-1 bg-[#040b1e] rounded-xl flex items-center justify-center">
-                  <BrainCircuit size={40} className="text-blue-400 animate-pulse" />
-                </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-400 rounded-full blur-[4px] animate-ping" />
+            {/* Left Content */}
+            <div className="relative z-10 w-full md:w-[55%] flex flex-col items-start">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-[11px] font-bold tracking-wide uppercase mb-4 shadow-sm">
+                <Settings size={14} className="text-blue-400" /> ENTERPRISE & AI SOLUTIONS
               </div>
 
-              {/* Floating Cards */}
-              <div className="absolute top-4 right-0 w-28 h-20 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-2 shadow-xl transform rotate-6 animate-[floating_5s_ease-in-out_infinite] z-10">
-                <div className="text-[8px] font-bold text-blue-200 mb-1">Automation</div>
-                <div className="flex gap-1 items-end h-8">
-                  <div className="w-1.5 bg-blue-400 rounded-full h-[40%]" />
-                  <div className="w-1.5 bg-purple-400 rounded-full h-[70%]" />
-                  <div className="w-1.5 bg-cyan-400 rounded-full h-[100%]" />
-                  <div className="w-1.5 bg-blue-300 rounded-full h-[60%]" />
-                </div>
+              <h2 className="text-4xl lg:text-5xl font-display font-bold text-white leading-[1.15] mb-3">
+                Intelligent Solutions.<br />
+                <span className="text-slate-300">Real Business Impact.</span>
+              </h2>
+
+              <div className="w-12 h-1 bg-blue-500 rounded-full mb-4 group-hover:w-20 transition-all duration-300" />
+
+              <p className="text-[15px] text-slate-300 leading-relaxed mb-6 max-w-sm">
+                Building enterprise-grade applications and AI-powered systems that automate processes and drive measurable growth.
+              </p>
+
+              {/* Checkmark Pills */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                {[
+                  { label: 'Scalable', icon: TrendingUp },
+                  { label: 'Secure', icon: ShieldCheck },
+                  { label: 'Smart', icon: BrainCircuit },
+                  { label: 'Future-Ready', icon: Rocket }
+                ].map(feature => (
+                  <div key={feature.label} className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[12px] font-medium backdrop-blur-md hover:bg-white/10 transition-colors cursor-default">
+                    <feature.icon size={14} className="text-blue-400" />
+                    {feature.label}
+                  </div>
+                ))}
               </div>
 
-              <div className="absolute bottom-4 left-0 w-32 h-16 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-2.5 shadow-xl transform -rotate-6 animate-[floating_6s_ease-in-out_infinite_0.5s] z-10 flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full border-2 border-blue-400 border-t-transparent animate-spin" />
-                <div className="flex flex-col gap-1 w-full">
-                  <div className="w-full h-1 bg-white/30 rounded-full" />
-                  <div className="w-2/3 h-1 bg-white/30 rounded-full" />
+              <Link
+                to="/solutions/enterprise-software"
+                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
+              >
+                Explore Enterprise Solutions
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            {/* Right Static Layered Dashboard Composition (Product Showcase) */}
+            <div className="relative z-10 w-full md:w-[48%] flex items-center justify-center min-h-[320px] sm:min-h-[380px] mt-6 md:mt-0 py-4">
+              <div className="relative w-full max-w-[380px] sm:max-w-[440px] flex items-center justify-center">
+
+                {/* Soft Ambient Blue Glow Background */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-indigo-500/10 to-transparent blur-3xl rounded-full pointer-events-none" />
+
+                {/* Layer 1: Top-Left Floating Light Browser Mockup (Brand-Neutral SaaS Analytics UI) */}
+                <div className="absolute -top-6 -left-3 sm:-left-8 w-44 sm:w-56 rounded-xl bg-white border border-white/60 shadow-[0_20px_40px_rgba(0,0,0,0.35)] overflow-hidden transform -rotate-6 z-10">
+                  <div className="h-5.5 bg-slate-100/90 border-b border-slate-200/80 flex items-center px-2.5 gap-1.5">
+                    <div className="w-2 h-2 rounded-full bg-red-400" />
+                    <div className="w-2 h-2 rounded-full bg-amber-400" />
+                    <div className="w-2 h-2 rounded-full bg-emerald-400" />
+                    <div className="mx-auto text-[8px] font-mono text-slate-400 font-medium truncate max-w-[100px]">analytics.io</div>
+                  </div>
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=95&w=1600&auto=format&fit=crop"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/images/saas-website.webp"; }}
+                    alt="SaaS Analytics Dashboard UI"
+                    className="w-full h-28 sm:h-36 object-cover object-top"
+                  />
                 </div>
+
+                {/* Layer 2: Top-Right Floating Dark Dashboard Mockup (Brand-Neutral CRM Admin UI) */}
+                <div className="absolute -top-4 -right-3 sm:-right-8 w-44 sm:w-56 rounded-xl bg-[#0b1329] border border-blue-400/40 shadow-[0_20px_40px_rgba(0,82,204,0.3)] overflow-hidden transform rotate-6 z-10">
+                  <div className="h-5.5 bg-[#060c1c] border-b border-white/10 flex items-center px-2.5 gap-1.5">
+                    <div className="w-2 h-2 rounded-full bg-slate-600" />
+                    <div className="w-2 h-2 rounded-full bg-slate-600" />
+                    <div className="w-2 h-2 rounded-full bg-slate-600" />
+                    <div className="mx-auto text-[8px] font-mono text-slate-400 font-medium truncate max-w-[100px]">admin.platform.io</div>
+                  </div>
+                  <img
+                    src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=95&w=1600&auto=format&fit=crop"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/images/CRM-website.webp"; }}
+                    alt="CRM Admin Dashboard UI"
+                    className="w-full h-28 sm:h-36 object-cover object-top"
+                  />
+                </div>
+
+                {/* Layer 3: Center Primary 4K Laptop Showcase (Clean Brand-Neutral Enterprise UI) */}
+                <div className="relative z-20 w-60 sm:w-76 rounded-xl bg-[#060e24] border border-blue-400/60 shadow-[0_25px_60px_rgba(59,130,246,0.4)] overflow-hidden mt-8 sm:mt-10 transform -rotate-1">
+                  <div className="h-6 bg-[#030714] border-b border-white/10 flex items-center justify-between px-3">
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-2 h-2 rounded-full bg-[#ff5f56]" />
+                      <div className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
+                      <div className="w-2 h-2 rounded-full bg-[#27c93f]" />
+                    </div>
+                    <div className="text-[8px] font-medium text-slate-400 bg-white/5 px-2.5 py-0.5 rounded-full border border-white/10 font-mono">
+                      dashboard.io
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=95&w=2000&auto=format&fit=crop"
+                      onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/images/Tech-port/Enterprise Custom Software.webp"; }}
+                      alt="Enterprise Business BI Dashboard UI"
+                      className="w-full h-40 sm:h-52 object-cover object-top brightness-[1.02]"
+                    />
+                  </div>
+                </div>
+
+                {/* Layer 4: Bottom-Right 4K Smartphone App Mockup (Brand-Neutral Mobile Application UI) */}
+                <div className="absolute -bottom-4 -right-2 sm:-right-5 w-24 sm:w-28 rounded-2xl bg-slate-900 border-2 border-slate-700/90 shadow-[0_20px_40px_rgba(0,0,0,0.6)] overflow-hidden z-30 transform rotate-3">
+                  <div className="h-3 bg-black flex items-center justify-center">
+                    <div className="w-7 h-1 bg-slate-800 rounded-full" />
+                  </div>
+                  <img
+                    src="https://images.unsplash.com/photo-1555421689-491a97ff2040?q=95&w=1200&auto=format&fit=crop"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/images/Ecomm-website.webp"; }}
+                    alt="Mobile Application UI"
+                    className="w-full h-32 sm:h-40 object-cover object-top"
+                  />
+                </div>
+
               </div>
             </div>
           </div>
-        </div>
         </div> {/* End Hero Section */}
 
         {/* Right Column (Why Choose Our Solutions?) */}
         <div className="lg:w-[30%] bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-6 lg:p-8 flex flex-col group">
           <h3 className="font-display text-[24px] font-bold text-slate-900 leading-[1.15] mb-8 tracking-tight">
-            Why Choose <br/>Our Solutions?
+            Why Choose <br />Our Solutions?
           </h3>
-          
+
           <div className="flex flex-col gap-8 flex-1">
             {[
               { title: "Enterprise Grade", desc: "Secure, scalable, and built for mission-critical operations.", icon: ShieldCheck, color: "text-blue-600", bg: "bg-blue-50" },
@@ -554,8 +592,8 @@ const SoftwareAISolutionsTab = () => {
               </div>
             ))}
           </div>
-          
-          <Link 
+
+          <Link
             to="/contact"
             className="mt-8 inline-flex items-center justify-center gap-2 w-full py-3 text-[14px] font-semibold bg-primary text-primary-foreground rounded-xl hover:opacity-90 transition-all hover:scale-[1.02] shadow-md"
           >
@@ -567,294 +605,294 @@ const SoftwareAISolutionsTab = () => {
 
       {/* Bottom 2 Columns */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-          
-          {/* Enterprise Solutions */}
-          <div className="bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-6 lg:p-8 flex flex-col gap-6">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100">
-                <Briefcase size={22} strokeWidth={2} />
-              </div>
-              <div>
-                <h3 className="text-[20px] font-bold text-slate-900">Enterprise Solutions</h3>
-                <p className="text-[12px] text-slate-500 font-medium">Powerful enterprise applications built for efficiency and scale.</p>
-              </div>
+
+        {/* Enterprise Solutions */}
+        <div className="bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-6 lg:p-8 flex flex-col gap-6">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100">
+              <Briefcase size={22} strokeWidth={2} />
             </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
-              
-              {/* Card 1: Billing Application */}
-              <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-blue-200 hover:shadow-md transition-all duration-300 group h-full">
-                <div className="h-[300px] bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-100 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center p-4 group-hover:shadow-inner transition-all duration-500">
-                  {/* Abstract background shapes */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-purple-300/30 blur-2xl rounded-full" />
-                  <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-300/30 blur-2xl rounded-full" />
-                  
-                  {/* Main Dashboard Card */}
-                  <div className="relative w-full max-w-[220px] bg-white rounded-xl shadow-2xl border border-white/50 flex flex-col overflow-hidden group-hover:-translate-y-2 transition-transform duration-700 z-10">
-                    {/* Header */}
-                    <div className="flex items-center gap-2 p-3 border-b border-slate-100 bg-slate-50/50">
-                       <div className="w-4 h-4 bg-blue-600 rounded flex flex-col items-center justify-center gap-px">
-                         <div className="w-0 h-0 border-l-[3px] border-r-[3px] border-b-[4px] border-l-transparent border-r-transparent border-b-white" />
-                         <div className="w-1.5 h-1.5 bg-white" />
-                       </div>
-                       <div className="text-[10px] font-bold text-slate-700">Invoice #INV-2345</div>
-                       <div className="ml-auto px-1.5 py-0.5 bg-green-100 text-green-700 text-[8px] font-bold rounded-sm">Paid</div>
-                    </div>
-                    {/* Sidebar + Content */}
-                    <div className="flex h-[180px]">
-                      {/* Sidebar */}
-                      <div className="w-8 border-r border-slate-100 bg-slate-50 flex flex-col items-center py-2 gap-3">
-                         <div className="w-4 h-4 rounded bg-slate-200" />
-                         <div className="w-4 h-4 rounded-full bg-slate-200" />
-                         <div className="w-4 h-4 rounded-sm bg-slate-200" />
-                         <div className="w-4 h-4 rounded-sm bg-slate-200 mt-auto" />
-                      </div>
-                      <div className="flex-1 p-3 flex flex-col relative bg-white">
-                         <div className="text-[9px] text-slate-400 font-medium">Invoices</div>
-                         <div className="text-[18px] font-bold text-slate-800">₹12,85,000</div>
-                         <div className="text-[7px] text-slate-400 mt-0.5">Due Date<br/>25 Jul 2026</div>
-                         
-                         <div className="text-[8px] font-bold text-slate-700 mt-3">Invoice Overview</div>
-                         <div className="flex items-end gap-1.5 h-12 mt-1">
-                            <div className="w-3 bg-blue-100 h-[30%] rounded-t-sm" />
-                            <div className="w-3 bg-blue-200 h-[50%] rounded-t-sm" />
-                            <div className="w-3 bg-blue-400 h-[70%] rounded-t-sm" />
-                            <div className="w-3 bg-blue-600 h-[100%] rounded-t-sm" />
-                         </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Overlapping Floating Cards */}
-                  <div className="absolute bottom-6 right-6 w-32 bg-white/90 backdrop-blur-md rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white p-3 flex flex-col gap-1.5 z-20 animate-[floating_5s_ease-in-out_infinite] group-hover:scale-105 transition-transform duration-500">
-                     <div className="text-[8px] text-slate-500 font-medium">Payment Received</div>
-                     <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center shadow-md shadow-green-500/30 mx-auto my-1">
-                        <CheckCircle size={14} className="text-white" />
-                     </div>
-                     <div className="text-[12px] font-bold text-slate-800 text-center">₹12,85,000</div>
-                     <div className="text-[6px] text-slate-400 text-center">Transaction ID<br/>TXN45876</div>
-                  </div>
-                  
-                  {/* Floating Coin */}
-                  <div className="absolute bottom-6 left-6 w-14 h-14 bg-gradient-to-tr from-blue-600 to-indigo-400 rounded-full shadow-lg shadow-blue-500/40 flex items-center justify-center border-4 border-white/20 z-20 group-hover:rotate-12 group-hover:-translate-y-2 transition-transform duration-500 animate-[floating_6s_ease-in-out_infinite_reverse]">
-                     <span className="text-white text-xl font-bold">₹</span>
-                  </div>
-                </div>
-                
-                <h4 className="text-[16px] font-bold text-slate-900 mb-2 leading-tight group-hover:text-blue-600 transition-colors">Billing Application</h4>
-                <p className="text-[12px] text-slate-500 leading-relaxed mb-6 flex-1">Smart billing with invoicing, GST, payments and reporting.</p>
-                
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-blue-200 transition-colors">
-                    <Receipt size={14} className="text-blue-500" />
-                    <span className="text-[11px] font-medium text-slate-700">Invoice Management</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-blue-200 transition-colors">
-                    <FileCheck size={14} className="text-blue-500" />
-                    <span className="text-[11px] font-medium text-slate-700">GST Ready</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 2: Workflow & Operations */}
-              <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-purple-200 hover:shadow-md transition-all duration-300 group h-full">
-                <div className="h-[300px] bg-gradient-to-br from-indigo-50/40 to-purple-100/50 rounded-[1.25rem] mb-4 relative overflow-hidden flex flex-col items-center justify-center p-2 group-hover:shadow-inner transition-all duration-500">
-                  
-                  {/* Background patterns */}
-                  <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(#4f46e5 1px, transparent 1px)", backgroundSize: "16px 16px" }}></div>
-                  
-                  <div className="relative w-full max-w-[240px] h-full flex flex-col items-center justify-between py-4 group-hover:-translate-y-2 transition-transform duration-700 z-10">
-                    
-                    {/* Top Node */}
-                    <div className="w-40 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 z-10 text-white animate-[floating_4s_ease-in-out_infinite]">
-                       <Rocket size={12} className="fill-white" />
-                       <span className="text-[10px] font-bold tracking-wide">Workflow Automation</span>
-                    </div>
-                    
-                    {/* Connector */}
-                    <div className="w-0.5 h-6 bg-indigo-200/60" />
-                    
-                    {/* Request Node */}
-                    <div className="w-32 h-8 bg-white rounded-full shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10">
-                       <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center"><Users size={10} className="text-blue-600" /></div>
-                       <span className="text-[10px] font-bold text-slate-700">Request</span>
-                    </div>
-                    
-                    <div className="w-0.5 h-6 bg-indigo-200/60" />
-                    
-                    {/* Manager Approval */}
-                    <div className="w-40 h-8 bg-white rounded-full shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10">
-                       <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center shadow-sm shadow-green-500/40"><CheckCircle size={10} className="text-white" /></div>
-                       <span className="text-[10px] font-bold text-slate-700">Manager Approval</span>
-                    </div>
-                    
-                    <div className="w-0.5 h-6 bg-indigo-200/60" />
-                    
-                    {/* Finance Review */}
-                    <div className="w-36 h-8 bg-white/80 backdrop-blur-sm rounded-full shadow-md border border-purple-100 flex items-center justify-center gap-2 z-10">
-                       <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center"><FileText size={10} className="text-purple-600" /></div>
-                       <span className="text-[10px] font-bold text-slate-700">Finance Review</span>
-                    </div>
-                    
-                    {/* Split Connector */}
-                    <div className="flex flex-col items-center w-36">
-                       <div className="w-0.5 h-4 bg-indigo-200/60" />
-                       <div className="w-full h-0.5 bg-indigo-200/60" />
-                       <div className="flex justify-between w-full px-2">
-                         <div className="w-0.5 h-4 bg-indigo-200/60" />
-                         <div className="w-0.5 h-4 bg-indigo-200/60" />
-                       </div>
-                    </div>
-                    
-                    {/* Bottom Nodes */}
-                    <div className="flex justify-between w-full max-w-[200px] px-2">
-                       <div className="w-24 h-12 bg-white rounded-xl shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10 hover:border-blue-200 transition-colors">
-                          <div className="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center"><Users size={12} className="text-blue-600" /></div>
-                          <span className="text-[9px] font-bold text-slate-700">IT Team</span>
-                       </div>
-                       <div className="w-24 h-12 bg-white rounded-xl shadow-md border border-slate-100 flex flex-col items-center justify-center gap-1 z-10 hover:border-green-200 transition-colors">
-                          <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center shadow-sm shadow-green-500/40"><CheckCircle size={10} className="text-white" /></div>
-                          <span className="text-[9px] font-bold text-slate-700">Completed</span>
-                       </div>
-                    </div>
-                    
-                  </div>
-                </div>
-                
-                <h4 className="text-[16px] font-bold text-slate-900 mb-2 leading-tight group-hover:text-purple-600 transition-colors">Workflow & Operations</h4>
-                <p className="text-[12px] text-slate-500 leading-relaxed mb-6 flex-1">Automate workflows and streamline operations across teams.</p>
-                
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-purple-200 transition-colors">
-                    <Settings size={14} className="text-purple-500" />
-                    <span className="text-[11px] font-medium text-slate-700">Automation</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-purple-200 transition-colors">
-                    <Network size={14} className="text-purple-500" />
-                    <span className="text-[11px] font-medium text-slate-700">Process Flow</span>
-                  </div>
-                </div>
-              </div>
-
+            <div>
+              <h3 className="text-[20px] font-bold text-slate-900">Enterprise Solutions</h3>
+              <p className="text-[12px] text-slate-500 font-medium">Powerful enterprise applications built for efficiency and scale.</p>
             </div>
           </div>
 
-          {/* AI Solutions */}
-          <div className="bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-6 lg:p-8 flex flex-col gap-6">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 border border-purple-100">
-                <BrainCircuit size={22} strokeWidth={2} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+
+            {/* Card 1: Billing Application */}
+            <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-blue-200 hover:shadow-md transition-all duration-300 group h-full">
+              <div className="h-[300px] bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-100 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center p-4 group-hover:shadow-inner transition-all duration-500">
+                {/* Abstract background shapes */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-300/30 blur-2xl rounded-full" />
+                <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-300/30 blur-2xl rounded-full" />
+
+                {/* Main Dashboard Card */}
+                <div className="relative w-full max-w-[220px] bg-white rounded-xl shadow-2xl border border-white/50 flex flex-col overflow-hidden group-hover:-translate-y-2 transition-transform duration-700 z-10">
+                  {/* Header */}
+                  <div className="flex items-center gap-2 p-3 border-b border-slate-100 bg-slate-50/50">
+                    <div className="w-4 h-4 bg-blue-600 rounded flex flex-col items-center justify-center gap-px">
+                      <div className="w-0 h-0 border-l-[3px] border-r-[3px] border-b-[4px] border-l-transparent border-r-transparent border-b-white" />
+                      <div className="w-1.5 h-1.5 bg-white" />
+                    </div>
+                    <div className="text-[10px] font-bold text-slate-700">Invoice #INV-2345</div>
+                    <div className="ml-auto px-1.5 py-0.5 bg-green-100 text-green-700 text-[8px] font-bold rounded-sm">Paid</div>
+                  </div>
+                  {/* Sidebar + Content */}
+                  <div className="flex h-[180px]">
+                    {/* Sidebar */}
+                    <div className="w-8 border-r border-slate-100 bg-slate-50 flex flex-col items-center py-2 gap-3">
+                      <div className="w-4 h-4 rounded bg-slate-200" />
+                      <div className="w-4 h-4 rounded-full bg-slate-200" />
+                      <div className="w-4 h-4 rounded-sm bg-slate-200" />
+                      <div className="w-4 h-4 rounded-sm bg-slate-200 mt-auto" />
+                    </div>
+                    <div className="flex-1 p-3 flex flex-col relative bg-white">
+                      <div className="text-[9px] text-slate-400 font-medium">Invoices</div>
+                      <div className="text-[18px] font-bold text-slate-800">₹12,85,000</div>
+                      <div className="text-[7px] text-slate-400 mt-0.5">Due Date<br />25 Jul 2026</div>
+
+                      <div className="text-[8px] font-bold text-slate-700 mt-3">Invoice Overview</div>
+                      <div className="flex items-end gap-1.5 h-12 mt-1">
+                        <div className="w-3 bg-blue-100 h-[30%] rounded-t-sm" />
+                        <div className="w-3 bg-blue-200 h-[50%] rounded-t-sm" />
+                        <div className="w-3 bg-blue-400 h-[70%] rounded-t-sm" />
+                        <div className="w-3 bg-blue-600 h-[100%] rounded-t-sm" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Overlapping Floating Cards */}
+                <div className="absolute bottom-6 right-6 w-32 bg-white/90 backdrop-blur-md rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white p-3 flex flex-col gap-1.5 z-20 animate-[floating_5s_ease-in-out_infinite] group-hover:scale-105 transition-transform duration-500">
+                  <div className="text-[8px] text-slate-500 font-medium">Payment Received</div>
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center shadow-md shadow-green-500/30 mx-auto my-1">
+                    <CheckCircle size={14} className="text-white" />
+                  </div>
+                  <div className="text-[12px] font-bold text-slate-800 text-center">₹12,85,000</div>
+                  <div className="text-[6px] text-slate-400 text-center">Transaction ID<br />TXN45876</div>
+                </div>
+
+                {/* Floating Coin */}
+                <div className="absolute bottom-6 left-6 w-14 h-14 bg-gradient-to-tr from-blue-600 to-indigo-400 rounded-full shadow-lg shadow-blue-500/40 flex items-center justify-center border-4 border-white/20 z-20 group-hover:rotate-12 group-hover:-translate-y-2 transition-transform duration-500 animate-[floating_6s_ease-in-out_infinite_reverse]">
+                  <span className="text-white text-xl font-bold">₹</span>
+                </div>
               </div>
-              <div>
-                <h3 className="text-[20px] font-bold text-slate-900">AI Solutions</h3>
-                <p className="text-[12px] text-slate-500 font-medium">AI-powered products solving real-world challenges.</p>
+
+              <h4 className="text-[16px] font-bold text-slate-900 mb-2 leading-tight group-hover:text-blue-600 transition-colors">Billing Application</h4>
+              <p className="text-[12px] text-slate-500 leading-relaxed mb-6 flex-1">Smart billing with invoicing, GST, payments and reporting.</p>
+
+              <div className="flex flex-wrap gap-2 mt-auto">
+                <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-blue-200 transition-colors">
+                  <Receipt size={14} className="text-blue-500" />
+                  <span className="text-[11px] font-medium text-slate-700">Invoice Management</span>
+                </div>
+                <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-blue-200 transition-colors">
+                  <FileCheck size={14} className="text-blue-500" />
+                  <span className="text-[11px] font-medium text-slate-700">GST Ready</span>
+                </div>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+            {/* Card 2: Workflow & Operations */}
+            <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-purple-200 hover:shadow-md transition-all duration-300 group h-full">
+              <div className="h-[300px] bg-gradient-to-br from-indigo-50/40 to-purple-100/50 rounded-[1.25rem] mb-4 relative overflow-hidden flex flex-col items-center justify-center p-2 group-hover:shadow-inner transition-all duration-500">
 
-              {/* Card 1: Psychometric Analysis */}
-              <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-purple-200 hover:shadow-md transition-all duration-300 group h-full">
-                <div className="h-32 bg-gradient-to-br from-purple-100 to-purple-200 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center">
-                  <div className="absolute inset-0 bg-white/20" />
-                  {/* Human Head Silhouette & Brain Circuit */}
-                  <div className="relative w-16 h-20 bg-purple-500 rounded-t-full rounded-bl-3xl shadow-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
-                    <BrainCircuit size={32} className="text-white opacity-80 animate-pulse" />
-                  </div>
-                  <div className="absolute top-[20%] right-[20%] w-12 h-12 bg-white/60 backdrop-blur-sm rounded-lg shadow-sm border border-white/50 p-1.5 flex flex-col gap-1.5 transform rotate-6 group-hover:-rotate-6 transition-transform">
-                     <div className="w-full h-1.5 bg-purple-300 rounded-full" />
-                     <div className="w-3/4 h-1.5 bg-purple-300 rounded-full" />
-                     <div className="flex gap-1.5 mt-1">
-                        <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-                     </div>
-                  </div>
-                </div>
-                <h4 className="text-[14px] font-bold text-slate-900 mb-2 leading-tight">Psychometric Analysis System</h4>
-                <p className="text-[12px] text-slate-500 leading-relaxed flex-1">Live interview psychometric analysis with Generative AI, ATS integration, and bias mitigation.</p>
-              </div>
+                {/* Background patterns */}
+                <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(#4f46e5 1px, transparent 1px)", backgroundSize: "16px 16px" }}></div>
 
-              {/* Card 2: Business Card OCR */}
-              <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-emerald-200 hover:shadow-md transition-all duration-300 group h-full">
-                <div className="h-32 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center">
-                  <div className="absolute inset-0 bg-white/20" />
-                  <div className="relative w-[70%] h-[60%] flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    {/* Background card */}
-                    <div className="absolute w-[80%] h-full bg-white/40 border border-white/50 rounded-lg transform -rotate-12 translate-x-3 translate-y-2" />
-                    {/* Foreground Card */}
-                    <div className="relative z-10 w-[90%] h-full bg-white shadow-lg rounded-lg border border-slate-100 p-2.5 flex flex-col justify-between overflow-hidden">
-                       <div className="flex justify-between items-start">
-                         <div className="w-6 h-6 rounded-full bg-slate-200" />
-                         <div className="w-14 h-2 bg-emerald-400 rounded-full" />
-                       </div>
-                       <div className="flex flex-col gap-1.5">
-                         <div className="w-full h-1.5 bg-slate-200 rounded-full" />
-                         <div className="w-3/4 h-1.5 bg-slate-200 rounded-full" />
-                       </div>
-                       {/* Scanning Laser Line */}
-                       <div className="absolute left-0 w-full h-[2px] bg-emerald-500 shadow-[0_0_8px_#10b981] animate-[floating_2s_ease-in-out_infinite]" />
+                <div className="relative w-full max-w-[240px] h-full flex flex-col items-center justify-between py-4 group-hover:-translate-y-2 transition-transform duration-700 z-10">
+
+                  {/* Top Node */}
+                  <div className="w-40 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 z-10 text-white animate-[floating_4s_ease-in-out_infinite]">
+                    <Rocket size={12} className="fill-white" />
+                    <span className="text-[10px] font-bold tracking-wide">Workflow Automation</span>
+                  </div>
+
+                  {/* Connector */}
+                  <div className="w-0.5 h-6 bg-indigo-200/60" />
+
+                  {/* Request Node */}
+                  <div className="w-32 h-8 bg-white rounded-full shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10">
+                    <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center"><Users size={10} className="text-blue-600" /></div>
+                    <span className="text-[10px] font-bold text-slate-700">Request</span>
+                  </div>
+
+                  <div className="w-0.5 h-6 bg-indigo-200/60" />
+
+                  {/* Manager Approval */}
+                  <div className="w-40 h-8 bg-white rounded-full shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10">
+                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center shadow-sm shadow-green-500/40"><CheckCircle size={10} className="text-white" /></div>
+                    <span className="text-[10px] font-bold text-slate-700">Manager Approval</span>
+                  </div>
+
+                  <div className="w-0.5 h-6 bg-indigo-200/60" />
+
+                  {/* Finance Review */}
+                  <div className="w-36 h-8 bg-white/80 backdrop-blur-sm rounded-full shadow-md border border-purple-100 flex items-center justify-center gap-2 z-10">
+                    <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center"><FileText size={10} className="text-purple-600" /></div>
+                    <span className="text-[10px] font-bold text-slate-700">Finance Review</span>
+                  </div>
+
+                  {/* Split Connector */}
+                  <div className="flex flex-col items-center w-36">
+                    <div className="w-0.5 h-4 bg-indigo-200/60" />
+                    <div className="w-full h-0.5 bg-indigo-200/60" />
+                    <div className="flex justify-between w-full px-2">
+                      <div className="w-0.5 h-4 bg-indigo-200/60" />
+                      <div className="w-0.5 h-4 bg-indigo-200/60" />
                     </div>
                   </div>
-                </div>
-                <h4 className="text-[14px] font-bold text-slate-900 mb-2 leading-tight">Business Card OCR & Extraction</h4>
-                <p className="text-[12px] text-slate-500 leading-relaxed flex-1">AI-driven extraction with automated CRM workflows and offline capture.</p>
-              </div>
 
-              {/* Card 3: ReqGen */}
-              <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-orange-200 hover:shadow-md transition-all duration-300 group h-full">
-                <div className="h-32 bg-gradient-to-br from-orange-100 to-orange-200 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center">
-                  <div className="absolute inset-0 bg-white/20" />
-                  <div className="relative w-full h-full flex flex-col items-center justify-center group-hover:scale-105 transition-transform duration-300 gap-2.5">
-                    <div className="flex items-center gap-2 h-12">
-                      <div className="w-2.5 bg-orange-400 rounded-full h-[40%] animate-pulse" />
-                      <div className="w-2.5 bg-orange-500 rounded-full h-[80%] animate-pulse delay-75" />
-                      <div className="w-2.5 bg-orange-600 rounded-full h-[100%] animate-pulse delay-150" />
-                      <div className="w-2.5 bg-orange-500 rounded-full h-[60%] animate-pulse delay-200" />
-                      <div className="w-2.5 bg-orange-400 rounded-full h-[30%] animate-pulse delay-300" />
+                  {/* Bottom Nodes */}
+                  <div className="flex justify-between w-full max-w-[200px] px-2">
+                    <div className="w-24 h-12 bg-white rounded-xl shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10 hover:border-blue-200 transition-colors">
+                      <div className="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center"><Users size={12} className="text-blue-600" /></div>
+                      <span className="text-[9px] font-bold text-slate-700">IT Team</span>
                     </div>
-                    <div className="w-24 bg-white/60 backdrop-blur-sm border border-white/50 rounded-xl p-2 shadow-sm flex items-center gap-2">
-                      <div className="w-4 h-4 rounded-full bg-orange-500 flex items-center justify-center text-white"><AudioWaveform size={10} /></div>
-                      <div className="w-12 h-1.5 bg-slate-300 rounded-full" />
+                    <div className="w-24 h-12 bg-white rounded-xl shadow-md border border-slate-100 flex flex-col items-center justify-center gap-1 z-10 hover:border-green-200 transition-colors">
+                      <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center shadow-sm shadow-green-500/40"><CheckCircle size={10} className="text-white" /></div>
+                      <span className="text-[9px] font-bold text-slate-700">Completed</span>
                     </div>
                   </div>
+
                 </div>
-                <h4 className="text-[14px] font-bold text-slate-900 mb-2 leading-tight">ReqGen – Audio Based Requirement Generator</h4>
-                <p className="text-[12px] text-slate-500 leading-relaxed flex-1">Convert audio conversations into structured requirements with AI.</p>
               </div>
 
-              {/* Card 4: Prescription Scanner */}
-              <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-blue-200 hover:shadow-md transition-all duration-300 group h-full">
-                <div className="h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center">
-                  <div className="absolute inset-0 bg-white/20" />
-                  <div className="relative w-14 h-24 bg-slate-800 rounded-2xl border-[4px] border-slate-900 shadow-xl flex flex-col items-center p-0.5 group-hover:-translate-y-1 transition-transform duration-300">
-                    <div className="w-5 h-1 bg-slate-700 rounded-full mb-1" />
-                    <div className="w-full flex-1 bg-blue-50 rounded-lg overflow-hidden relative flex flex-col items-center pt-2.5">
-                       {/* Medical Cross */}
-                       <div className="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center mb-1.5 z-10">
-                         <div className="w-3 h-3 text-blue-600 relative">
-                           <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-0.5 bg-current" />
-                           <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-0.5 bg-current" />
-                         </div>
-                       </div>
-                       <div className="w-3/4 h-1 bg-blue-200 rounded-full mb-1 z-10" />
-                       <div className="w-1/2 h-1 bg-blue-200 rounded-full z-10" />
-                       {/* Scanner effect */}
-                       <div className="absolute bottom-0 w-full h-[40%] bg-gradient-to-t from-blue-500/30 to-transparent animate-pulse" />
-                    </div>
-                  </div>
-                  <div className="absolute top-[20%] right-[15%] w-12 h-12 bg-white/60 backdrop-blur-sm rounded-lg shadow-sm border border-white/50 p-2 flex flex-col gap-1.5 transform rotate-6 group-hover:-rotate-3 transition-transform">
-                     <div className="w-full h-1.5 bg-slate-300 rounded-full" />
-                     <div className="w-full h-1.5 bg-slate-300 rounded-full" />
-                     <div className="w-3/4 h-1.5 bg-blue-400 rounded-full" />
-                  </div>
-                </div>
-                <h4 className="text-[14px] font-bold text-slate-900 mb-2 leading-tight">Prescription AI Scanner Mobile App</h4>
-                <p className="text-[12px] text-slate-500 leading-relaxed flex-1">AI-powered scanner that reads, validates, and organizes prescriptions.</p>
-              </div>
+              <h4 className="text-[16px] font-bold text-slate-900 mb-2 leading-tight group-hover:text-purple-600 transition-colors">Workflow & Operations</h4>
+              <p className="text-[12px] text-slate-500 leading-relaxed mb-6 flex-1">Automate workflows and streamline operations across teams.</p>
 
+              <div className="flex flex-wrap gap-2 mt-auto">
+                <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-purple-200 transition-colors">
+                  <Settings size={14} className="text-purple-500" />
+                  <span className="text-[11px] font-medium text-slate-700">Automation</span>
+                </div>
+                <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-purple-200 transition-colors">
+                  <Network size={14} className="text-purple-500" />
+                  <span className="text-[11px] font-medium text-slate-700">Process Flow</span>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
+
+        {/* AI Solutions */}
+        <div className="bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-6 lg:p-8 flex flex-col gap-6">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 border border-purple-100">
+              <BrainCircuit size={22} strokeWidth={2} />
+            </div>
+            <div>
+              <h3 className="text-[20px] font-bold text-slate-900">AI Solutions</h3>
+              <p className="text-[12px] text-slate-500 font-medium">AI-powered products solving real-world challenges.</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+
+            {/* Card 1: Psychometric Analysis */}
+            <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-purple-200 hover:shadow-md transition-all duration-300 group h-full">
+              <div className="h-32 bg-gradient-to-br from-purple-100 to-purple-200 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center">
+                <div className="absolute inset-0 bg-white/20" />
+                {/* Human Head Silhouette & Brain Circuit */}
+                <div className="relative w-16 h-20 bg-purple-500 rounded-t-full rounded-bl-3xl shadow-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
+                  <BrainCircuit size={32} className="text-white opacity-80 animate-pulse" />
+                </div>
+                <div className="absolute top-[20%] right-[20%] w-12 h-12 bg-white/60 backdrop-blur-sm rounded-lg shadow-sm border border-white/50 p-1.5 flex flex-col gap-1.5 transform rotate-6 group-hover:-rotate-6 transition-transform">
+                  <div className="w-full h-1.5 bg-purple-300 rounded-full" />
+                  <div className="w-3/4 h-1.5 bg-purple-300 rounded-full" />
+                  <div className="flex gap-1.5 mt-1">
+                    <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                  </div>
+                </div>
+              </div>
+              <h4 className="text-[14px] font-bold text-slate-900 mb-2 leading-tight">Psychometric Analysis System</h4>
+              <p className="text-[12px] text-slate-500 leading-relaxed flex-1">Live interview psychometric analysis with Generative AI, ATS integration, and bias mitigation.</p>
+            </div>
+
+            {/* Card 2: Business Card OCR */}
+            <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-emerald-200 hover:shadow-md transition-all duration-300 group h-full">
+              <div className="h-32 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center">
+                <div className="absolute inset-0 bg-white/20" />
+                <div className="relative w-[70%] h-[60%] flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                  {/* Background card */}
+                  <div className="absolute w-[80%] h-full bg-white/40 border border-white/50 rounded-lg transform -rotate-12 translate-x-3 translate-y-2" />
+                  {/* Foreground Card */}
+                  <div className="relative z-10 w-[90%] h-full bg-white shadow-lg rounded-lg border border-slate-100 p-2.5 flex flex-col justify-between overflow-hidden">
+                    <div className="flex justify-between items-start">
+                      <div className="w-6 h-6 rounded-full bg-slate-200" />
+                      <div className="w-14 h-2 bg-emerald-400 rounded-full" />
+                    </div>
+                    <div className="flex flex-col gap-1.5">
+                      <div className="w-full h-1.5 bg-slate-200 rounded-full" />
+                      <div className="w-3/4 h-1.5 bg-slate-200 rounded-full" />
+                    </div>
+                    {/* Scanning Laser Line */}
+                    <div className="absolute left-0 w-full h-[2px] bg-emerald-500 shadow-[0_0_8px_#10b981] animate-[floating_2s_ease-in-out_infinite]" />
+                  </div>
+                </div>
+              </div>
+              <h4 className="text-[14px] font-bold text-slate-900 mb-2 leading-tight">Business Card OCR & Extraction</h4>
+              <p className="text-[12px] text-slate-500 leading-relaxed flex-1">AI-driven extraction with automated CRM workflows and offline capture.</p>
+            </div>
+
+            {/* Card 3: ReqGen */}
+            <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-orange-200 hover:shadow-md transition-all duration-300 group h-full">
+              <div className="h-32 bg-gradient-to-br from-orange-100 to-orange-200 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center">
+                <div className="absolute inset-0 bg-white/20" />
+                <div className="relative w-full h-full flex flex-col items-center justify-center group-hover:scale-105 transition-transform duration-300 gap-2.5">
+                  <div className="flex items-center gap-2 h-12">
+                    <div className="w-2.5 bg-orange-400 rounded-full h-[40%] animate-pulse" />
+                    <div className="w-2.5 bg-orange-500 rounded-full h-[80%] animate-pulse delay-75" />
+                    <div className="w-2.5 bg-orange-600 rounded-full h-[100%] animate-pulse delay-150" />
+                    <div className="w-2.5 bg-orange-500 rounded-full h-[60%] animate-pulse delay-200" />
+                    <div className="w-2.5 bg-orange-400 rounded-full h-[30%] animate-pulse delay-300" />
+                  </div>
+                  <div className="w-24 bg-white/60 backdrop-blur-sm border border-white/50 rounded-xl p-2 shadow-sm flex items-center gap-2">
+                    <div className="w-4 h-4 rounded-full bg-orange-500 flex items-center justify-center text-white"><AudioWaveform size={10} /></div>
+                    <div className="w-12 h-1.5 bg-slate-300 rounded-full" />
+                  </div>
+                </div>
+              </div>
+              <h4 className="text-[14px] font-bold text-slate-900 mb-2 leading-tight">ReqGen – Audio Based Requirement Generator</h4>
+              <p className="text-[12px] text-slate-500 leading-relaxed flex-1">Convert audio conversations into structured requirements with AI.</p>
+            </div>
+
+            {/* Card 4: Prescription Scanner */}
+            <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-blue-200 hover:shadow-md transition-all duration-300 group h-full">
+              <div className="h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center">
+                <div className="absolute inset-0 bg-white/20" />
+                <div className="relative w-14 h-24 bg-slate-800 rounded-2xl border-[4px] border-slate-900 shadow-xl flex flex-col items-center p-0.5 group-hover:-translate-y-1 transition-transform duration-300">
+                  <div className="w-5 h-1 bg-slate-700 rounded-full mb-1" />
+                  <div className="w-full flex-1 bg-blue-50 rounded-lg overflow-hidden relative flex flex-col items-center pt-2.5">
+                    {/* Medical Cross */}
+                    <div className="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center mb-1.5 z-10">
+                      <div className="w-3 h-3 text-blue-600 relative">
+                        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-0.5 bg-current" />
+                        <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-0.5 bg-current" />
+                      </div>
+                    </div>
+                    <div className="w-3/4 h-1 bg-blue-200 rounded-full mb-1 z-10" />
+                    <div className="w-1/2 h-1 bg-blue-200 rounded-full z-10" />
+                    {/* Scanner effect */}
+                    <div className="absolute bottom-0 w-full h-[40%] bg-gradient-to-t from-blue-500/30 to-transparent animate-pulse" />
+                  </div>
+                </div>
+                <div className="absolute top-[20%] right-[15%] w-12 h-12 bg-white/60 backdrop-blur-sm rounded-lg shadow-sm border border-white/50 p-2 flex flex-col gap-1.5 transform rotate-6 group-hover:-rotate-3 transition-transform">
+                  <div className="w-full h-1.5 bg-slate-300 rounded-full" />
+                  <div className="w-full h-1.5 bg-slate-300 rounded-full" />
+                  <div className="w-3/4 h-1.5 bg-blue-400 rounded-full" />
+                </div>
+              </div>
+              <h4 className="text-[14px] font-bold text-slate-900 mb-2 leading-tight">Prescription AI Scanner Mobile App</h4>
+              <p className="text-[12px] text-slate-500 leading-relaxed flex-1">AI-powered scanner that reads, validates, and organizes prescriptions.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
     </motion.div>
   );
@@ -923,8 +961,8 @@ const WebDigitalTab = ({ initialCategory }: { initialCategory?: string }) => {
             key={cat}
             onClick={() => setFilter(cat)}
             className={`px-5 py-2.5 text-[13px] sm:text-sm rounded-full font-bold transition-all duration-300 border ${filter === cat
-                ? "bg-primary text-white border-primary shadow-lg scale-105"
-                : "bg-slate-50 text-slate-600 border-slate-200/60 hover:text-slate-900 hover:bg-slate-100 hover:border-slate-300 hover:shadow-sm"
+              ? "bg-primary text-white border-primary shadow-lg scale-105"
+              : "bg-slate-50 text-slate-600 border-slate-200/60 hover:text-slate-900 hover:bg-slate-100 hover:border-slate-300 hover:shadow-sm"
               }`}
           >
             {cat}
@@ -1025,27 +1063,27 @@ const WebsiteDevelopmentTab = () => {
     <div className="flex flex-col gap-6 lg:gap-8 mb-10">
       {/* Top Section */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-        
+
         {/* Left Hero (70% on desktop -> col-span-8) */}
         <div className="lg:col-span-8 bg-gradient-to-br from-blue-50/80 via-white to-blue-50/50 border border-blue-100/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-8 lg:p-12 relative overflow-hidden flex flex-col md:flex-row items-center gap-8 min-h-[500px]">
-          
+
           {/* Glassmorphism Background Waves (SVG) */}
           <div className="absolute inset-0 z-0 pointer-events-none opacity-50">
-             <svg className="absolute w-full h-full inset-0" viewBox="0 0 1000 600" preserveAspectRatio="none">
-               <path d="M0,200 C300,400 700,100 1000,300 L1000,600 L0,600 Z" fill="url(#hero-glass-1)" className="opacity-30 mix-blend-overlay"/>
-               <path d="M0,400 C400,100 600,500 1000,200 L1000,600 L0,600 Z" fill="url(#hero-glass-2)" className="opacity-40"/>
-               <defs>
-                 <linearGradient id="hero-glass-1" x1="0%" y1="0%" x2="100%" y2="100%">
-                   <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.15" />
-                   <stop offset="100%" stopColor="#eff6ff" stopOpacity="0.8" />
-                 </linearGradient>
-                 <linearGradient id="hero-glass-2" x1="0%" y1="100%" x2="100%" y2="0%">
-                   <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.1" />
-                   <stop offset="100%" stopColor="#ffffff" stopOpacity="0.9" />
-                 </linearGradient>
-               </defs>
-             </svg>
-             <div className="absolute inset-0 opacity-[0.2]" style={{ backgroundImage: 'radial-gradient(#94a3b8 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+            <svg className="absolute w-full h-full inset-0" viewBox="0 0 1000 600" preserveAspectRatio="none">
+              <path d="M0,200 C300,400 700,100 1000,300 L1000,600 L0,600 Z" fill="url(#hero-glass-1)" className="opacity-30 mix-blend-overlay" />
+              <path d="M0,400 C400,100 600,500 1000,200 L1000,600 L0,600 Z" fill="url(#hero-glass-2)" className="opacity-40" />
+              <defs>
+                <linearGradient id="hero-glass-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.15" />
+                  <stop offset="100%" stopColor="#eff6ff" stopOpacity="0.8" />
+                </linearGradient>
+                <linearGradient id="hero-glass-2" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.1" />
+                  <stop offset="100%" stopColor="#ffffff" stopOpacity="0.9" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div className="absolute inset-0 opacity-[0.2]" style={{ backgroundImage: 'radial-gradient(#94a3b8 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
           </div>
 
           {/* Left Content */}
@@ -1053,12 +1091,12 @@ const WebsiteDevelopmentTab = () => {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100/50 border border-blue-200 text-blue-700 text-[11px] font-bold tracking-wide uppercase mb-6 shadow-sm">
               <Globe size={14} className="text-blue-600" /> WEBSITE DEVELOPMENT
             </div>
-            
+
             <h2 className="text-4xl lg:text-5xl font-display font-bold text-slate-900 leading-[1.15] mb-4">
-              Modern Websites.<br/>
+              Modern Websites.<br />
               <span className="text-slate-700">Stronger Brands.</span>
             </h2>
-            
+
             <div className="w-12 h-1 bg-blue-600 rounded-full mb-6" />
 
             <p className="text-[15px] text-slate-600 leading-relaxed mb-8 max-w-sm">
@@ -1085,7 +1123,7 @@ const WebsiteDevelopmentTab = () => {
               >
                 Start Your Project <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
-              
+
               <button
                 onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); navigate("/solutions/web-systems"); }}
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity group w-full sm:w-auto shadow-sm"
@@ -1099,14 +1137,14 @@ const WebsiteDevelopmentTab = () => {
           <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center h-full min-h-[300px] mt-10 md:mt-0">
             {/* Soft blue glow behind laptop */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-blue-400/20 rounded-full blur-[60px]" />
-            
+
             {/* CSS Laptop Base */}
             <div className="relative w-[110%] max-w-[450px] rotate-[-5deg] md:rotate-[-8deg] hover:rotate-0 transition-transform duration-700 ease-out z-10">
               {/* Screen Frame */}
               <div className="relative bg-slate-900 p-2 rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-4 border-slate-800">
                 {/* Camera dot */}
                 <div className="absolute top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-slate-700" />
-                
+
                 {/* Inner Screen */}
                 <div className="bg-white rounded-lg overflow-hidden aspect-[16/10] relative flex flex-col shadow-inner">
                   {/* Fake Website Header */}
@@ -1119,14 +1157,14 @@ const WebsiteDevelopmentTab = () => {
                       <span>Contact</span>
                     </div>
                   </div>
-                  
+
                   {/* Fake Website Hero */}
                   <div className="flex-1 bg-gradient-to-br from-blue-50 to-white p-6 flex flex-col justify-center relative overflow-hidden">
                     <div className="absolute right-[-20%] bottom-[-20%] w-[150px] h-[150px] bg-blue-600/10 rounded-full blur-2xl" />
-                    <h3 className="text-[14px] font-bold text-slate-900 leading-tight mb-2">Digital Experiences<br/><span className="text-blue-600">That Drive Results</span></h3>
+                    <h3 className="text-[14px] font-bold text-slate-900 leading-tight mb-2">Digital Experiences<br /><span className="text-blue-600">That Drive Results</span></h3>
                     <p className="text-[6px] text-slate-500 max-w-[120px] mb-4 leading-relaxed">We create beautiful, high-performance websites that deliver real business impact.</p>
                     <div className="w-16 h-5 rounded-full bg-blue-600 flex items-center justify-center text-white text-[6px] font-bold shadow-md">Explore More</div>
-                    
+
                     {/* Fake abstract graphics inside website */}
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 w-[100px] h-[70px] bg-white rounded-lg shadow-lg border border-slate-100 flex flex-col overflow-hidden">
                       <div className="h-1/2 bg-blue-100/50" />
@@ -1139,27 +1177,27 @@ const WebsiteDevelopmentTab = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Laptop Keyboard Base */}
               <div className="relative h-3 bg-slate-300 rounded-b-xl w-[106%] left-[-3%] shadow-[0_10px_20px_rgba(0,0,0,0.2)] border-t border-slate-200 flex justify-center">
-                 <div className="w-1/4 h-1.5 bg-slate-400 rounded-b-md" />
+                <div className="w-1/4 h-1.5 bg-slate-400 rounded-b-md" />
               </div>
 
               {/* Floating UI Elements */}
               <div className="absolute -top-10 left-10 p-3 bg-white/90 backdrop-blur-md rounded-2xl shadow-[0_15px_35px_rgba(37,99,235,0.15)] border border-white flex items-center justify-center animate-[floating_5s_ease-in-out_infinite] z-20">
                 <Code2 size={24} className="text-blue-600" />
               </div>
-              
+
               <div className="absolute top-1/2 -left-12 p-3 bg-white/90 backdrop-blur-md rounded-2xl shadow-[0_15px_35px_rgba(37,99,235,0.15)] border border-white flex flex-col gap-2 animate-[floating_6s_ease-in-out_infinite_0.5s] z-20">
-                 <div className="flex gap-1.5">
-                   <div className="w-5 h-5 rounded bg-blue-600" />
-                   <div className="w-5 h-5 rounded bg-blue-400" />
-                   <div className="w-5 h-5 rounded bg-slate-800" />
-                 </div>
-                 <div className="flex justify-between items-end px-1">
-                   <span className="text-[10px] font-bold text-slate-800">Aa</span>
-                   <span className="text-[8px] font-bold text-slate-400">Aa</span>
-                 </div>
+                <div className="flex gap-1.5">
+                  <div className="w-5 h-5 rounded bg-blue-600" />
+                  <div className="w-5 h-5 rounded bg-blue-400" />
+                  <div className="w-5 h-5 rounded bg-slate-800" />
+                </div>
+                <div className="flex justify-between items-end px-1">
+                  <span className="text-[10px] font-bold text-slate-800">Aa</span>
+                  <span className="text-[8px] font-bold text-slate-400">Aa</span>
+                </div>
               </div>
 
               <div className="absolute -bottom-8 -right-4 p-4 bg-white/90 backdrop-blur-md rounded-2xl shadow-[0_15px_35px_rgba(37,99,235,0.15)] border border-white w-24 flex flex-col gap-2 animate-[floating_7s_ease-in-out_infinite_1s] z-20">
@@ -1185,7 +1223,7 @@ const WebsiteDevelopmentTab = () => {
               <h4 className="text-[15px] font-bold text-slate-900 mb-1.5 group-hover:text-blue-600 transition-colors">Responsive Design</h4>
               <p className="text-[12px] text-slate-500 leading-relaxed">Pixel-perfect websites that look stunning on every device.</p>
             </div>
-            
+
             {/* Illustration */}
             <div className="w-[45%] h-full absolute right-0 top-0 flex items-center justify-center pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity duration-500">
               <div className="relative w-full h-full flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
@@ -1203,9 +1241,9 @@ const WebsiteDevelopmentTab = () => {
                 <div className="w-8 h-14 bg-white rounded-lg border-[3px] border-slate-800 shadow-lg absolute right-2 bottom-4 z-10 flex flex-col items-center pt-1 group-hover:translate-y-1 transition-transform duration-500">
                   <div className="w-3 h-0.5 bg-slate-700 rounded-full mb-1" />
                   <div className="w-full flex-1 bg-blue-50 flex flex-col gap-0.5 p-0.5">
-                     <div className="w-full h-2.5 bg-blue-200 rounded-sm" />
-                     <div className="w-full h-1 bg-slate-300 rounded-sm" />
-                     <div className="w-3/4 h-1 bg-slate-300 rounded-sm" />
+                    <div className="w-full h-2.5 bg-blue-200 rounded-sm" />
+                    <div className="w-full h-1 bg-slate-300 rounded-sm" />
+                    <div className="w-3/4 h-1 bg-slate-300 rounded-sm" />
                   </div>
                 </div>
                 {/* Floating Elements */}
@@ -1225,7 +1263,7 @@ const WebsiteDevelopmentTab = () => {
               <h4 className="text-[15px] font-bold text-slate-900 mb-1.5 group-hover:text-blue-600 transition-colors">E-Commerce Solutions</h4>
               <p className="text-[12px] text-slate-500 leading-relaxed">Powerful online stores built to convert and scale.</p>
             </div>
-            
+
             {/* Illustration */}
             <div className="w-[45%] h-full absolute right-0 top-0 flex items-center justify-center pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity duration-500">
               <div className="relative w-full h-full flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
@@ -1237,19 +1275,19 @@ const WebsiteDevelopmentTab = () => {
                     <div className="w-1 h-1 rounded-full bg-green-400" />
                   </div>
                   <div className="flex-1 bg-slate-50 flex items-center justify-center p-1.5">
-                     <div className="w-12 h-10 bg-blue-100 rounded-sm shadow-sm flex flex-col items-center justify-center gap-1">
-                        <div className="w-6 h-4 bg-blue-300 rounded-[2px]" />
-                        <div className="w-4 h-1 bg-blue-400 rounded-full" />
-                     </div>
+                    <div className="w-12 h-10 bg-blue-100 rounded-sm shadow-sm flex flex-col items-center justify-center gap-1">
+                      <div className="w-6 h-4 bg-blue-300 rounded-[2px]" />
+                      <div className="w-4 h-1 bg-blue-400 rounded-full" />
+                    </div>
                   </div>
                 </div>
                 {/* Floating Cart Icon */}
                 <div className="w-10 h-10 bg-blue-600 rounded-xl shadow-lg absolute right-1 bottom-3 z-10 flex items-center justify-center group-hover:-translate-y-2 group-hover:rotate-6 transition-transform duration-500">
-                   <ShoppingCart size={16} className="text-white" />
+                  <ShoppingCart size={16} className="text-white" />
                 </div>
                 {/* Shopping Bag Back */}
                 <div className="absolute right-8 bottom-6 opacity-30 group-hover:translate-x-1 transition-transform">
-                   <ShoppingCart size={24} className="text-blue-400" />
+                  <ShoppingCart size={24} className="text-blue-400" />
                 </div>
               </div>
             </div>
@@ -1264,7 +1302,7 @@ const WebsiteDevelopmentTab = () => {
               <h4 className="text-[15px] font-bold text-slate-900 mb-1.5 group-hover:text-blue-600 transition-colors">Custom Web Development</h4>
               <p className="text-[12px] text-slate-500 leading-relaxed">Tailored websites with clean code and future-ready architecture.</p>
             </div>
-            
+
             {/* Illustration */}
             <div className="w-[45%] h-full absolute right-0 top-0 flex items-center justify-center pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity duration-500">
               <div className="relative w-full h-full flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
@@ -1275,14 +1313,14 @@ const WebsiteDevelopmentTab = () => {
                     <div className="w-1 h-1 rounded-full bg-slate-600" />
                   </div>
                   <div className="flex-1 p-1.5 flex flex-col gap-1.5 justify-center">
-                     <div className="w-3/4 h-1 bg-blue-400 rounded-sm" />
-                     <div className="w-1/2 h-1 bg-emerald-400 rounded-sm ml-2" />
-                     <div className="w-5/6 h-1 bg-purple-400 rounded-sm ml-2" />
+                    <div className="w-3/4 h-1 bg-blue-400 rounded-sm" />
+                    <div className="w-1/2 h-1 bg-emerald-400 rounded-sm ml-2" />
+                    <div className="w-5/6 h-1 bg-purple-400 rounded-sm ml-2" />
                   </div>
                 </div>
                 {/* Floating Code badge */}
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl shadow-lg absolute right-2 top-3 z-10 flex items-center justify-center group-hover:-translate-y-2 transition-transform duration-500">
-                   <Code2 size={18} className="text-white" />
+                  <Code2 size={18} className="text-white" />
                 </div>
                 {/* Glowing gear */}
                 <div className="absolute right-4 bottom-2 text-slate-300 opacity-50 group-hover:animate-[spin_4s_linear_infinite] transition-all">
@@ -1292,40 +1330,40 @@ const WebsiteDevelopmentTab = () => {
             </div>
           </div>
         </div>
-        
+
       </div>
 
       {/* Bottom Section */}
       <div className="bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center gap-10">
-        
+
         <div className="lg:w-1/4">
           <h3 className="text-2xl font-display font-bold text-slate-900 leading-tight">
-            Why Choose Our<br/>Website Development?
+            Why Choose Our<br />Website Development?
           </h3>
           <div className="w-10 h-1 bg-blue-600 rounded-full mt-4" />
         </div>
 
         <div className="lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { 
-              icon: Search, 
-              title: "SEO Optimized", 
-              desc: "Built with best practices to rank higher and get found faster." 
+            {
+              icon: Search,
+              title: "SEO Optimized",
+              desc: "Built with best practices to rank higher and get found faster."
             },
-            { 
-              icon: Zap, 
-              title: "High Performance", 
-              desc: "Lightning-fast websites for better user experience and conversions." 
+            {
+              icon: Zap,
+              title: "High Performance",
+              desc: "Lightning-fast websites for better user experience and conversions."
             },
-            { 
-              icon: Palette, 
-              title: "Pixel Perfect Design", 
-              desc: "Beautiful, modern, and conversion-focused designs." 
+            {
+              icon: Palette,
+              title: "Pixel Perfect Design",
+              desc: "Beautiful, modern, and conversion-focused designs."
             },
-            { 
-              icon: Shield, 
-              title: "Secure & Reliable", 
-              desc: "Security-first approach to protect your website and data." 
+            {
+              icon: Shield,
+              title: "Secure & Reliable",
+              desc: "Security-first approach to protect your website and data."
             }
           ].map((item, i) => (
             <div key={i} className="flex flex-col">
@@ -1372,15 +1410,15 @@ const CloudSolutionsTab = () => {
   return (
     <div className="bg-white border border-slate-200/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[24px] p-6 sm:p-10 lg:p-12 mb-10 overflow-hidden relative">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        
+
         {/* Left - Cloud Ecosystem (55%) */}
         <div className="lg:col-span-7 relative w-full aspect-[4/3] sm:aspect-square lg:aspect-auto lg:h-[600px] flex items-center justify-center">
-          
+
           {/* Background Elements */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50%] h-[50%] rounded-full border border-slate-200 border-dashed animate-[spin_60s_linear_infinite]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full border border-slate-100 border-dashed animate-[spin_90s_linear_infinite_reverse]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full border border-slate-50 border-dashed" />
-          
+
           {/* Ambient Glass Bubbles */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden z-10" style={{ maskImage: 'radial-gradient(circle at center, black 30%, transparent 70%)', WebkitMaskImage: 'radial-gradient(circle at center, black 30%, transparent 70%)' }}>
             {[...Array(15)].map((_, i) => {
@@ -1390,7 +1428,7 @@ const CloudSolutionsTab = () => {
               const duration = Math.random() * 15 + 15; // 15s to 30s
               const delay = Math.random() * -30; // Random negative delay
               const animationName = i % 2 === 0 ? 'ambient-bubble-1' : 'ambient-bubble-2';
-              
+
               return (
                 <div
                   key={i}
@@ -1407,21 +1445,21 @@ const CloudSolutionsTab = () => {
               );
             })}
           </div>
-          
+
           {/* SVG Connector Lines */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
             {cloudServices.map((s, i) => {
               const isHovered = hoveredService === s.id;
               return (
                 <g key={i}>
-                  <line 
-                    x1="50%" 
-                    y1="50%" 
-                    x2={`${s.x}%`} 
-                    y2={`${s.y}%`} 
-                    stroke={isHovered ? "#3b82f6" : "url(#cloudGradient)"} 
-                    strokeWidth={isHovered ? "2.5" : "1.5"} 
-                    strokeDasharray={isHovered ? "0" : "4 4"} 
+                  <line
+                    x1="50%"
+                    y1="50%"
+                    x2={`${s.x}%`}
+                    y2={`${s.y}%`}
+                    stroke={isHovered ? "#3b82f6" : "url(#cloudGradient)"}
+                    strokeWidth={isHovered ? "2.5" : "1.5"}
+                    strokeDasharray={isHovered ? "0" : "4 4"}
                     className={`transition-all duration-500 ${isHovered ? "opacity-100 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]" : "opacity-30"}`}
                   />
                   <circle cx={`${s.x}%`} cy={`${s.y}%`} r={isHovered ? "5" : "3"} fill="#3b82f6" className={`transition-all duration-300 ${isHovered ? "opacity-100 shadow-[0_0_10px_rgba(59,130,246,0.8)]" : "opacity-50"}`} />
@@ -1440,8 +1478,14 @@ const CloudSolutionsTab = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
             <div className="absolute inset-0 bg-blue-500/20 rounded-full animate-ping opacity-60" style={{ animationDuration: '4s' }} />
             <div className="absolute -inset-16 bg-blue-500/35 sm:bg-blue-500/40 rounded-full blur-[40px] sm:blur-[50px]" />
-            
-            <div className="relative flex flex-col items-center justify-center text-center p-4">
+
+            <div className="relative flex flex-col items-center justify-center text-center p-4 min-w-[180px] sm:min-w-[220px]">
+              {/* Background Cloud Icon behind Cloud Infrastructure text */}
+              <Cloud
+                size={140}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-blue-500/25 pointer-events-none stroke-[1.2] filter drop-shadow-sm"
+              />
+
               <div className="relative z-10 flex flex-col items-center mt-1 sm:mt-2">
                 <Server size={32} className="text-blue-700 mb-1.5 drop-shadow-sm" strokeWidth={2} />
                 <h3 className="text-slate-900 font-bold text-[14px] sm:text-[17px] leading-tight mb-0.5">Cloud Infrastructure</h3>
@@ -1457,20 +1501,20 @@ const CloudSolutionsTab = () => {
             const ServiceIcon = service.icon;
             const isHovered = hoveredService === service.id;
             const floatDelay = `${index * 0.5}s`;
-            
+
             return (
-              <div 
+              <div
                 key={service.id}
                 style={{ top: `${service.y}%`, left: `${service.x}%`, transform: 'translate(-50%, -50%)' }}
                 className="absolute z-30 pointer-events-auto"
                 onMouseEnter={() => setHoveredService(service.id)}
                 onMouseLeave={() => setHoveredService(null)}
               >
-                <div 
+                <div
                   className="flex items-center justify-center animate-[floating_4s_ease-in-out_infinite]"
                   style={{ animationDelay: floatDelay, animationPlayState: isHovered ? 'paused' : 'running' }}
                 >
-                  <div 
+                  <div
                     className={`transition-all duration-300 bg-white/95 backdrop-blur-xl border rounded-2xl p-2.5 sm:p-3 pr-4 sm:pr-6 flex items-center gap-3 shadow-[0_8px_25px_rgba(0,0,0,0.06)] min-w-[200px] cursor-default
                       ${isHovered ? "scale-105 -translate-y-1 shadow-[0_15px_35px_rgba(59,130,246,0.15)] border-blue-300" : "border-slate-200/80"}`}
                   >
@@ -1500,7 +1544,7 @@ const CloudSolutionsTab = () => {
             Build Today.<br />
             Scale Tomorrow.
           </h3>
-          
+
           <div className="w-12 h-1.5 bg-blue-600 rounded-full mb-6" />
 
           <p className="text-[15px] sm:text-[16px] text-slate-600 leading-relaxed mb-8 max-w-lg">
@@ -1517,20 +1561,20 @@ const CloudSolutionsTab = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full mt-2">
             <button
               onClick={() => handleNavigation("/contact")}
               className="flex-1 flex items-center justify-center gap-2 px-4 sm:px-5 py-3.5 sm:py-4 bg-primary text-primary-foreground text-[14px] sm:text-[15px] font-bold rounded-lg hover:opacity-90 transition-all duration-300 shadow-md group w-full min-w-0"
             >
-              <span className="truncate">Talk to Cloud Experts</span>
+              <span className="truncate">Talk to Experts</span>
               <ArrowUpRight size={18} className="shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </button>
             <button
               onClick={() => handleNavigation("/solutions/managed-it")}
               className="flex-1 flex items-center justify-center gap-2 px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-[1.5px] border-primary text-primary text-[14px] sm:text-[15px] font-bold rounded-lg hover:bg-primary hover:text-white transition-all duration-300 shadow-sm group w-full min-w-0"
             >
-              <span className="truncate">Explore Cloud Solutions</span>
+              <span className="truncate">Explore Solutions</span>
               <ArrowRight size={18} className="shrink-0 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -1548,7 +1592,7 @@ const CloudSolutionsTab = () => {
             <div className="text-[12px] font-bold text-slate-500 mt-0.5">Uptime Guarantee</div>
           </div>
         </div>
-        
+
         <div className="flex items-center gap-4 pt-4 sm:pt-0 sm:pl-8">
           <div className="w-12 h-12 rounded-full bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-md">
             <TrendingUp size={20} strokeWidth={2.5} />
@@ -1663,24 +1707,24 @@ const DigitalMarketingTab = () => {
       className="flex flex-col gap-6"
     >
       <div className="bg-white border border-slate-200/70 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[24px] p-8 sm:p-12 relative overflow-hidden flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
-        
+
         {/* Left Side (40%) */}
         <div className="w-full lg:w-[40%] relative z-10">
           <div className="inline-block px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[11px] font-bold tracking-wider uppercase mb-6 shadow-sm">
             Digital Marketing
           </div>
-          
+
           <h2 className="font-display text-[42px] sm:text-[52px] font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight">
             Grow Smarter.<br />
             Reach Further.
           </h2>
-          
+
           <div className="w-16 h-1 bg-blue-600 mb-6 rounded-full" />
-          
+
           <p className="text-slate-600 text-[15px] sm:text-[16px] leading-relaxed mb-8 max-w-[90%] font-medium">
             Data-driven digital marketing strategies that increase visibility, generate high-quality leads, and maximize ROI.
           </p>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-2 mb-10">
             {marketingFeatures.map((feature, i) => (
               <div key={i} className="flex items-center gap-3">
@@ -1691,7 +1735,7 @@ const DigitalMarketingTab = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-2">
             <button
               onClick={() => handleNavigation("/contact")}
@@ -1704,7 +1748,7 @@ const DigitalMarketingTab = () => {
               onClick={() => handleNavigation("/solutions/digital-revenue-growth")}
               className="flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white border-[1.5px] border-primary text-primary text-[13px] sm:text-[14px] font-bold rounded-lg hover:bg-primary hover:text-white transition-all duration-300 shadow-sm group w-full sm:w-[200px]"
             >
-              <span className="truncate">Explore Digital Growth</span>
+              <span className="truncate">Explore More</span>
               <ArrowRight size={16} className="shrink-0 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -1712,18 +1756,18 @@ const DigitalMarketingTab = () => {
 
         {/* Right Side - Ecosystem (60%) */}
         <div className="w-full lg:w-[60%] relative flex justify-center items-center lg:min-h-[600px] z-10 py-6 lg:py-0">
-          
+
           {/* Desktop Absolute Layout */}
           <div className="hidden lg:flex relative w-full max-w-[600px] aspect-square items-center justify-center">
-            
+
             {/* Concentric Dashed Rings */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] h-[45%] rounded-full border border-slate-200 border-dashed animate-[spin_60s_linear_infinite]" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] h-[75%] rounded-full border border-slate-200 border-dashed animate-[spin_90s_linear_infinite_reverse]" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] rounded-full border border-slate-100 border-dashed" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] rounded-full border-2 border-white/20 animate-pulse pointer-events-none mix-blend-overlay opacity-30" />
-            
+
             {/* Rotating Layer for Lines and Pills */}
-            <div 
+            <div
               className="absolute inset-0 pointer-events-none z-30"
               style={{
                 animation: 'orbit-spin 40s linear infinite',
@@ -1736,14 +1780,14 @@ const DigitalMarketingTab = () => {
                   const isHovered = hoveredPill === s.id;
                   return (
                     <g key={i}>
-                      <line 
-                        x1="50%" 
-                        y1="50%" 
-                        x2={`${s.x}%`} 
-                        y2={`${s.y}%`} 
-                        stroke={isHovered ? "#3b82f6" : "url(#lineGradient)"} 
-                        strokeWidth={isHovered ? "2.5" : "1.5"} 
-                        strokeDasharray={isHovered ? "0" : "4 4"} 
+                      <line
+                        x1="50%"
+                        y1="50%"
+                        x2={`${s.x}%`}
+                        y2={`${s.y}%`}
+                        stroke={isHovered ? "#3b82f6" : "url(#lineGradient)"}
+                        strokeWidth={isHovered ? "2.5" : "1.5"}
+                        strokeDasharray={isHovered ? "0" : "4 4"}
                         className={`transition-all duration-500 ${isHovered ? "opacity-100" : "opacity-40"}`}
                       />
                       <circle cx={`${s.x}%`} cy={`${s.y}%`} r={isHovered ? "6" : "4"} fill="#3b82f6" className={`transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-50"}`} />
@@ -1762,49 +1806,48 @@ const DigitalMarketingTab = () => {
               {services.map((service) => {
                 const ServiceIcon = service.icon;
                 const isHovered = hoveredPill === service.id;
-                
+
                 const baseColor = {
                   blue: "text-blue-600 bg-blue-50",
                   orange: "text-orange-600 bg-orange-50",
                   purple: "text-purple-600 bg-purple-50",
                   cyan: "text-cyan-600 bg-cyan-50"
                 }[service.color as "blue" | "orange" | "purple" | "cyan"];
-                
+
                 const hoverColor = {
                   blue: "bg-blue-600 text-white",
                   orange: "bg-orange-600 text-white",
                   purple: "bg-purple-600 text-white",
                   cyan: "bg-cyan-600 text-white"
                 }[service.color as "blue" | "orange" | "purple" | "cyan"];
-                
+
                 const hoverTextColor = {
                   blue: "text-blue-600",
                   orange: "text-orange-600",
                   purple: "text-purple-600",
                   cyan: "text-cyan-600"
                 }[service.color as "blue" | "orange" | "purple" | "cyan"];
-                
+
                 return (
-                  <div 
+                  <div
                     key={service.id}
                     style={{ top: `${service.y}%`, left: `${service.x}%`, transform: 'translate(-50%, -50%)' }}
                     className="absolute z-30 pointer-events-auto"
                     onMouseEnter={() => setHoveredPill(service.id)}
                     onMouseLeave={() => setHoveredPill(null)}
                   >
-                    <div 
+                    <div
                       className="flex items-center justify-center"
                       style={{
                         animation: 'orbit-spin-reverse 40s linear infinite',
                         animationPlayState: hoveredPill ? 'paused' : 'running'
                       }}
                     >
-                      <div 
-                        className={`transition-all duration-500 bg-white/90 backdrop-blur-xl border rounded-full p-2 sm:p-2.5 pr-4 sm:pr-6 flex items-center gap-3 sm:gap-4 min-w-[200px] ${
-                          isHovered 
-                            ? "scale-105 shadow-[0_15px_35px_rgba(59,130,246,0.2)] border-blue-300" 
+                      <div
+                        className={`transition-all duration-500 bg-white/90 backdrop-blur-xl border rounded-full p-2 sm:p-2.5 pr-4 sm:pr-6 flex items-center gap-3 sm:gap-4 min-w-[200px] ${isHovered
+                            ? "scale-105 shadow-[0_15px_35px_rgba(59,130,246,0.2)] border-blue-300"
                             : "shadow-[0_8px_25px_rgba(0,0,0,0.06)] border-slate-200/80"
-                        }`}
+                          }`}
                       >
                         <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300 ${isHovered ? hoverColor : baseColor}`}>
                           <ServiceIcon size={18} strokeWidth={2.5} />
@@ -1826,7 +1869,7 @@ const DigitalMarketingTab = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 pointer-events-none">
               <div className="absolute inset-0 bg-blue-600/20 rounded-full animate-[ping_3.5s_ease-in-out_infinite] opacity-75" />
               <div className="absolute -inset-4 bg-blue-600/30 rounded-full blur-2xl" />
-              
+
               <div className="relative w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] rounded-full bg-gradient-to-br from-[#0a1b4d] to-[#040b1e] border-4 border-white shadow-[0_15px_35px_rgba(4,11,30,0.3)] flex flex-col items-center justify-center text-center p-4">
                 <BarChart2 size={36} className="text-blue-400 mb-2" strokeWidth={1.5} />
                 <h3 className="text-white font-bold text-[16px] sm:text-[18px] leading-tight mb-1">Growth Hub</h3>
@@ -1852,37 +1895,37 @@ const DigitalMarketingTab = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-               {services.map(service => {
-                 const ServiceIcon = service.icon;
-                 const colorClasses = {
-                   blue: "text-blue-600 bg-blue-50 group-hover:bg-blue-600",
-                   orange: "text-orange-600 bg-orange-50 group-hover:bg-orange-600",
-                   purple: "text-purple-600 bg-purple-50 group-hover:bg-purple-600",
-                   cyan: "text-cyan-600 bg-cyan-50 group-hover:bg-cyan-600"
-                 }[service.color as "blue" | "orange" | "purple" | "cyan"];
-                 
-                 return (
-                   <div 
-                     key={`mobile-${service.id}`}
-                     className="group hover:scale-[1.02] transition-all duration-300 bg-white border border-slate-200/80 rounded-[20px] p-3 pr-4 flex items-center gap-4 shadow-sm hover:shadow-md hover:border-blue-200/60 w-full"
-                   >
-                     <div className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300 ${colorClasses} group-hover:text-white`}>
-                       <ServiceIcon size={20} strokeWidth={2.5} />
-                     </div>
-                     <div className="flex-1">
-                       <h4 className="text-[14px] font-bold text-slate-900 leading-tight mb-0.5 group-hover:text-blue-600 transition-colors">{service.title}</h4>
-                       <p className="text-[11px] text-slate-500 font-medium leading-tight">
-                         {service.desc}
-                       </p>
-                     </div>
-                   </div>
-                 )
-               })}
+              {services.map(service => {
+                const ServiceIcon = service.icon;
+                const colorClasses = {
+                  blue: "text-blue-600 bg-blue-50 group-hover:bg-blue-600",
+                  orange: "text-orange-600 bg-orange-50 group-hover:bg-orange-600",
+                  purple: "text-purple-600 bg-purple-50 group-hover:bg-purple-600",
+                  cyan: "text-cyan-600 bg-cyan-50 group-hover:bg-cyan-600"
+                }[service.color as "blue" | "orange" | "purple" | "cyan"];
+
+                return (
+                  <div
+                    key={`mobile-${service.id}`}
+                    className="group hover:scale-[1.02] transition-all duration-300 bg-white border border-slate-200/80 rounded-[20px] p-3 pr-4 flex items-center gap-4 shadow-sm hover:shadow-md hover:border-blue-200/60 w-full"
+                  >
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300 ${colorClasses} group-hover:text-white`}>
+                      <ServiceIcon size={20} strokeWidth={2.5} />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-[14px] font-bold text-slate-900 leading-tight mb-0.5 group-hover:text-blue-600 transition-colors">{service.title}</h4>
+                      <p className="text-[11px] text-slate-500 font-medium leading-tight">
+                        {service.desc}
+                      </p>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
       </div>
-      
+
       {/* Bottom Stats Bar */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat, i) => {
@@ -1893,7 +1936,7 @@ const DigitalMarketingTab = () => {
             orange: "text-orange-600 bg-orange-50",
             emerald: "text-emerald-600 bg-emerald-50"
           }[stat.color as "blue" | "purple" | "orange" | "emerald"];
-          
+
           return (
             <div key={i} className="bg-white border border-slate-200/70 shadow-[0_8px_20px_rgb(0,0,0,0.02)] rounded-[20px] p-5 sm:p-6 flex items-center gap-4 sm:gap-5 hover:shadow-md hover:border-slate-300 transition-all duration-300 group">
               <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 transition-all duration-500 ${colorStyles} group-hover:scale-110`}>
@@ -1935,7 +1978,7 @@ const ProcessTimeline = () => {
                 <span className="inline-block w-10 h-10 rounded-full bg-primary/10 text-primary font-bold text-sm leading-10 mb-3">
                   {s.step}
                 </span>
-                <h4 className="text-sm font-semibold text-foreground mb-1">{s.title}</h4>
+                <h3 className="text-sm font-semibold text-foreground mb-1">{s.title}</h3>
                 <p className="text-[11px] text-muted-foreground leading-relaxed">{s.desc}</p>
               </motion.div>
             ))}
@@ -1988,7 +2031,7 @@ const CybersecurityTab = () => {
   return (
     <div className="bg-white border border-slate-200/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[24px] p-6 sm:p-10 lg:p-12 mb-10 overflow-hidden relative">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        
+
         {/* Left - Text Content (45%) */}
         <div className="lg:col-span-5 relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50/80 border border-blue-100 mb-6">
@@ -2000,7 +2043,7 @@ const CybersecurityTab = () => {
             Protect Today.<br />
             Prevent Tomorrow.
           </h3>
-          
+
           <div className="w-12 h-1.5 bg-blue-600 rounded-full mb-6" />
 
           <p className="text-[15px] sm:text-[16px] text-slate-600 leading-relaxed mb-8 max-w-lg">
@@ -2020,20 +2063,20 @@ const CybersecurityTab = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full mt-2">
             <button
               onClick={() => handleNavigation("/contact")}
               className="flex-1 flex items-center justify-center gap-2 px-4 sm:px-5 py-3.5 sm:py-4 bg-[#0a2540] text-white text-[14px] sm:text-[15px] font-bold rounded-lg hover:bg-[#113054] transition-all duration-300 shadow-md group w-full min-w-0"
             >
-              <span className="truncate">Talk to Security Experts</span>
+              <span className="truncate">Talk to Experts</span>
               <ArrowRight size={18} className="shrink-0 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => handleNavigation("/solutions/managed-it")}
               className="flex-1 flex items-center justify-center gap-2 px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-[1.5px] border-slate-300 text-slate-700 text-[14px] sm:text-[15px] font-bold rounded-lg hover:border-slate-400 hover:text-slate-900 transition-all duration-300 shadow-sm group w-full min-w-0"
             >
-              <span className="truncate">Explore Cybersecurity</span>
+              <span className="truncate">Explore More</span>
               <ArrowRight size={18} className="shrink-0 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -2041,13 +2084,13 @@ const CybersecurityTab = () => {
 
         {/* Right - SOC Dashboard (55%) */}
         <div className="lg:col-span-7 relative w-full h-[700px] lg:h-[750px] flex items-center justify-center">
-          
+
           {/* Dashboard Container */}
           <div className="absolute inset-0 bg-[#0b1120] rounded-[24px] shadow-[0_20px_60px_rgba(11,17,32,0.4)] border border-slate-800/80 overflow-hidden flex flex-col">
             {/* Ambient Background Glows */}
             <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-emerald-600/10 rounded-full blur-[80px] pointer-events-none translate-x-1/3 translate-y-1/3" />
-            
+
             {/* Top Bar */}
             <div className="h-[4.5rem] flex items-center justify-between px-6 border-b border-slate-800/60 shrink-0">
               <div className="text-[11px] font-black tracking-widest text-slate-400">SECURITY STATUS</div>
@@ -2059,7 +2102,7 @@ const CybersecurityTab = () => {
 
             {/* Dashboard Content Grid */}
             <div className="flex-1 p-5 lg:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 h-full overflow-y-auto overflow-x-hidden relative z-10 custom-scrollbar">
-              
+
               {/* 1. Left Col - 4 Stat Cards */}
               <div className="flex flex-col gap-3 lg:gap-4">
                 {[
@@ -2088,7 +2131,7 @@ const CybersecurityTab = () => {
                           <span className={`text-[10px] lg:text-[11px] font-bold ${stat.trendCol}`}>{stat.trend}</span>
                         </div>
                       )}
-                      
+
                       {/* Mini Sparkline Chart */}
                       <svg className="w-[50px] lg:w-[60px] h-[14px] lg:h-[16px] text-blue-500 mt-2 opacity-50 group-hover:opacity-100 transition-opacity drop-shadow-[0_0_5px_rgba(59,130,246,0.5)]" viewBox="0 0 50 20" preserveAspectRatio="none">
                         <path d={sparklines[i]} fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -2101,11 +2144,11 @@ const CybersecurityTab = () => {
               {/* 2. Right Col - Security Score */}
               <div className="bg-slate-900/50 border border-slate-800/80 rounded-xl p-5 flex flex-col items-center justify-center relative overflow-hidden h-full min-h-[220px]">
                 <div className="absolute top-4 left-5 text-[10px] font-black tracking-widest text-slate-400">SECURITY SCORE</div>
-                
+
                 <div className="relative w-32 h-32 lg:w-36 lg:h-36 mt-4 group">
                   <svg className="w-full h-full transform -rotate-90 drop-shadow-[0_0_15px_rgba(16,185,129,0.3)] group-hover:drop-shadow-[0_0_25px_rgba(16,185,129,0.5)] transition-all duration-500" viewBox="0 0 100 100">
                     <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="8" fill="none" className="text-slate-800" />
-                    <circle cx="50" cy="50" r="40" stroke="url(#scoreGrad)" strokeWidth="8" fill="none" strokeLinecap="round" 
+                    <circle cx="50" cy="50" r="40" stroke="url(#scoreGrad)" strokeWidth="8" fill="none" strokeLinecap="round"
                       strokeDasharray="251.2" strokeDashoffset="5" className="animate-[dash_2s_ease-out_forwards]" />
                     <defs>
                       <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -2122,7 +2165,7 @@ const CybersecurityTab = () => {
                     <span className="text-[10px] lg:text-[11px] font-bold text-emerald-400 mt-1">Excellent</span>
                   </div>
                 </div>
-                
+
                 <p className="text-[10px] lg:text-[11px] text-slate-400 text-center mt-4 max-w-[180px]">
                   Your security posture is strong and continuously improving.
                 </p>
@@ -2156,7 +2199,7 @@ const CybersecurityTab = () => {
                     <span className="text-[9px] lg:text-[10px] text-slate-400 flex items-center gap-1">Total Events <span className="text-emerald-400 font-bold ml-1">↓ 12.4%</span></span>
                   </div>
                 </div>
-                
+
                 {/* Bar Chart */}
                 <div className="flex-1 flex items-end gap-[2px] lg:gap-[3px] mt-2 relative w-full h-[100px]">
                   {/* Grid lines */}
@@ -2164,26 +2207,26 @@ const CybersecurityTab = () => {
                   <div className="absolute inset-x-0 bottom-[25%] border-t border-slate-800/60 h-[25%]" />
                   <div className="absolute inset-x-0 bottom-[50%] border-t border-slate-800/60 h-[25%]" />
                   <div className="absolute inset-x-0 bottom-[75%] border-t border-slate-800/60 h-[25%]" />
-                  
+
                   {Array.from({ length: 36 }).map((_, i) => {
                     const isHigh = i > 22 && i < 30;
                     const baseHeight = isHigh ? 50 : 15;
                     const randomAdd = Math.random() * (isHigh ? 45 : 35);
                     const height = `${baseHeight + randomAdd}%`;
                     const delay = `${i * 0.02}s`;
-                    
+
                     return (
-                      <div key={i} className="flex-1 bg-blue-600 hover:bg-blue-400 rounded-t-[1px] transition-all duration-300 relative z-10 opacity-80 hover:opacity-100" 
-                        style={{ 
+                      <div key={i} className="flex-1 bg-blue-600 hover:bg-blue-400 rounded-t-[1px] transition-all duration-300 relative z-10 opacity-80 hover:opacity-100"
+                        style={{
                           height,
                           animation: `growUp 1s ease-out forwards`,
                           animationDelay: delay
-                        }} 
+                        }}
                       />
                     );
                   })}
                 </div>
-                
+
                 <div className="flex justify-between text-[8px] lg:text-[9px] font-bold text-slate-500 mt-3 border-t border-slate-800/50 pt-2">
                   <span>00:00</span>
                   <span>06:00</span>
@@ -2210,7 +2253,7 @@ const CybersecurityTab = () => {
             <div className="text-[11px] text-slate-500 mt-0.5">Last 30 Days</div>
           </div>
         </div>
-        
+
         <div className="flex items-center gap-4 pt-4 sm:pt-0 sm:pl-8">
           <div className="w-12 h-12 rounded-full bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center shrink-0">
             <Target size={20} strokeWidth={2.5} />
@@ -2275,7 +2318,7 @@ const Portfolio = () => {
       <ProcessTimeline />
 
       {/* Tab section */}
-      <section className="pb-20 md:pb-28">
+      <section className="pb-6 lg:pb-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           {/* Tab buttons */}
           <div className="relative flex overflow-x-auto hide-scrollbar gap-2 mb-12 p-2 bg-slate-50/80 rounded-2xl border border-slate-100 shadow-inner snap-x">
@@ -2284,8 +2327,8 @@ const Portfolio = () => {
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`relative shrink-0 snap-start px-6 py-3 text-[14px] font-bold rounded-[14px] transition-all duration-300 ${activeTab === tab
-                    ? "text-white"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/50"
+                  ? "text-white"
+                  : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/50"
                   }`}
               >
                 {activeTab === tab && (

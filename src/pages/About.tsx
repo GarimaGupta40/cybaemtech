@@ -384,8 +384,8 @@ const TimelineSection = () => {
                   animate={inView ? "visible" : "hidden"}
                   className="flex flex-col items-center"
                 >
-                  <h4 className="font-display font-bold text-primary mb-2 text-lg">{m.year}</h4>
-                  <h5 className="font-bold text-foreground text-sm mb-3">{m.title}</h5>
+                  <h3 className="font-display font-bold text-primary mb-2 text-lg">{m.year}</h3>
+                  <h4 className="font-bold text-foreground text-sm mb-3">{m.title}</h4>
                   <p className="text-[11px] text-muted-foreground leading-relaxed px-2">{m.desc}</p>
                 </motion.div>
               </div>

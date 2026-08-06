@@ -288,7 +288,17 @@ const Hero = () => {
 
   return (
     <>
-      <section ref={heroRef} className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden pt-24 sm:pt-28 lg:pt-20 pb-16 lg:pb-20 bg-cover bg-center lg:bg-right bg-no-repeat" style={{ backgroundImage: `url('/images/it-bg.webp')` }}>
+      <section ref={heroRef} className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden pt-16 sm:pt-20 lg:pt-16 pb-16 lg:pb-20 bg-white w-full">
+        {/* Right-Side Hero Visual Layer (Exact Untouched Image & Diagram Properties) */}
+        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[64%] xl:w-[67%] z-0 overflow-hidden pointer-events-none">
+          <img
+            src="/images/it-bg1.png"
+            alt="IT Infrastructure Ecosystem"
+            className="w-full h-full object-contain object-[76%_55%] lg:object-[74%_55%] scale-100 origin-center brightness-[1.02]"
+          />
+          {/* Subtle Edge Fade at Bottom Only */}
+          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none z-10" />
+        </div>
         <motion.div className="container mx-auto px-5 sm:px-6 lg:px-12 relative z-10 pt-4 lg:pt-16 pb-8 lg:pb-16" style={{ y: contentY }}>
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-6 items-center">
 
@@ -981,7 +991,7 @@ const CTASection = () => (
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3 text-primary">
                 <Shield size={20} strokeWidth={2.5} />
               </div>
-              <h4 className="font-bold text-[#0a1930] text-sm mb-1">Secure</h4>
+              <h3 className="font-bold text-[#0a1930] text-sm mb-1">Secure</h3>
               <p className="text-xs text-slate-500">Protect what matters most.</p>
             </div>
             {/* Scalable */}
@@ -989,7 +999,7 @@ const CTASection = () => (
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3 text-primary">
                 <Cloud size={20} strokeWidth={2.5} />
               </div>
-              <h4 className="font-bold text-[#0a1930] text-sm mb-1">Scalable</h4>
+              <h3 className="font-bold text-[#0a1930] text-sm mb-1">Scalable</h3>
               <p className="text-xs text-slate-500">Built to grow with your business.</p>
             </div>
             {/* Reliable */}
@@ -997,7 +1007,7 @@ const CTASection = () => (
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3 text-primary">
                 <BarChart2 size={20} strokeWidth={2.5} />
               </div>
-              <h4 className="font-bold text-[#0a1930] text-sm mb-1">Reliable</h4>
+              <h3 className="font-bold text-[#0a1930] text-sm mb-1">Reliable</h3>
               <p className="text-xs text-slate-500">Maximize uptime and performance.</p>
             </div>
             {/* Strategic */}
@@ -1005,7 +1015,7 @@ const CTASection = () => (
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3 text-primary">
                 <Users size={20} strokeWidth={2.5} />
               </div>
-              <h4 className="font-bold text-[#0a1930] text-sm mb-1">Strategic</h4>
+              <h3 className="font-bold text-[#0a1930] text-sm mb-1">Strategic</h3>
               <p className="text-xs text-slate-500">Aligned with your business goals.</p>
             </div>
           </motion.div>
@@ -1025,8 +1035,8 @@ const CTASection = () => (
         </motion.div>
 
         {/* Right Content - Illustration */}
-        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="relative h-full flex items-center justify-center w-full min-h-[250px] sm:min-h-[350px] lg:min-h-[550px] mt-8 lg:mt-0">
-          <img src="/images/it-infra.webp" alt="IT Infrastructure Solutions" className="w-40% max-w-[500px] h-auto object-contain drop-shadow-2xl scale-110 lg:scale-125 lg:origin-right xl:scale-[1.35] translate-x-4 md:translate-x-8 lg:translate-x-16" />
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="relative flex items-center justify-center lg:justify-end w-full h-full my-auto mt-8 lg:mt-0">
+          <img src="/images/it-infra1.png" alt="IT Infrastructure Solutions" className="w-full max-w-[560px] lg:w-[95%] xl:w-full h-auto max-h-[520px] object-contain drop-shadow-xl rounded-[20px]" />
         </motion.div>
       </div>
 

@@ -37,7 +37,7 @@ const AboutCTA = () => {
                 <Briefcase size={20} className="text-primary" />
               </div>
               <div>
-                <h4 className="font-bold text-foreground text-sm mb-1">Meaningful Work</h4>
+                <h3 className="font-bold text-foreground text-sm mb-1">Meaningful Work</h3>
                 <p className="text-xs text-muted-foreground">Solve real problems that create impact.</p>
               </div>
             </div>
@@ -47,7 +47,7 @@ const AboutCTA = () => {
                 <TrendingUp size={20} className="text-primary" />
               </div>
               <div>
-                <h4 className="font-bold text-foreground text-sm mb-1">Growth Mindset</h4>
+                <h3 className="font-bold text-foreground text-sm mb-1">Growth Mindset</h3>
                 <p className="text-xs text-muted-foreground">Learn, grow and unlock your potential.</p>
               </div>
             </div>
@@ -57,7 +57,7 @@ const AboutCTA = () => {
                 <Users size={20} className="text-primary" />
               </div>
               <div>
-                <h4 className="font-bold text-foreground text-sm mb-1">Amazing People</h4>
+                <h3 className="font-bold text-foreground text-sm mb-1">Amazing People</h3>
                 <p className="text-xs text-muted-foreground">Work with talented, passionate people.</p>
               </div>
             </div>

@@ -162,7 +162,7 @@ const Hero = () => (
         >
           {/* Main Hero Image */}
           <div className="relative w-full lg:w-[120%] max-w-[950px] aspect-[4/3] sm:aspect-auto sm:h-[500px] lg:h-[750px] z-20 flex items-center justify-center">
-            <img src="/images/web-systems-hero.png" alt="Web Systems Platforms" className="w-full h-full object-contain drop-shadow-[0_30px_60px_rgba(0,47,135,0.15)] scale-100 lg:scale-110 xl:scale-[1.2] lg:origin-right lg:translate-x-10" />
+            <img src="/images/web-systems-hero.webp" alt="Web Systems Platforms" className="w-full h-full object-contain drop-shadow-[0_30px_60px_rgba(0,47,135,0.15)] scale-100 lg:scale-110 xl:scale-[1.2] lg:origin-right lg:translate-x-10" />
 
             {/* Floating Element 1: 500+ Projects */}
             <motion.div
@@ -231,7 +231,7 @@ const Hero = () => (
               <Rocket size={20} strokeWidth={2} />
             </div>
             <div>
-              <h4 className="font-bold text-[#0a1930] text-sm mb-0.5">10+</h4>
+              <h2 className="font-bold text-[#0a1930] text-sm mb-0.5">10+</h2>
               <p className="text-xs text-slate-500 font-medium">Years of Excellence</p>
             </div>
           </div>
@@ -242,7 +242,7 @@ const Hero = () => (
               <Shield size={20} strokeWidth={2} />
             </div>
             <div>
-              <h4 className="font-bold text-[#0a1930] text-sm mb-0.5">ISO</h4>
+              <h3 className="font-bold text-[#0a1930] text-sm mb-0.5">ISO</h3>
               <p className="text-xs text-slate-500 font-medium">Certified Process</p>
             </div>
           </div>
@@ -287,12 +287,12 @@ const Hero = () => (
 );
 
 const featuredProjectsData = [
-  { image: "/images/website/astha.png", icon: Monitor },
-  { image: "/images/website/batara.png", icon: PieChart },
-  { image: "/images/website/carbonhive.png", icon: Smartphone },
-  { image: "/images/website/rasa.png", icon: Monitor },
-  { image: "/images/website/shrisat.png", icon: PieChart },
-  { image: "/images/website/surya.png", icon: Smartphone }
+  { image: "/images/website/astha.webp", icon: Monitor },
+  { image: "/images/website/batara.webp", icon: PieChart },
+  { image: "/images/website/carbonhive.webp", icon: Smartphone },
+  { image: "/images/website/rasa.webp", icon: Monitor },
+  { image: "/images/website/shrisat.webp", icon: PieChart },
+  { image: "/images/website/surya.webp", icon: Smartphone }
 ];
 
 const FeaturedProjects = () => {
@@ -305,7 +305,7 @@ const FeaturedProjects = () => {
 
     setCount(api.scrollSnapList().length)
     setCurrent(api.selectedScrollSnap())
-    
+
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap())
     })
@@ -360,43 +360,43 @@ const FeaturedProjects = () => {
               const isActive = current === idx;
               const Icon = project.icon;
               return (
-                <CarouselItem 
-                  key={idx} 
+                <CarouselItem
+                  key={idx}
                   className="flex justify-center items-center basis-[85%] sm:basis-[60%] md:basis-[45%] lg:basis-[33.33%]"
                 >
                   <div className="relative pb-10 w-full">
                     <div className={`w-full bg-white rounded-[24px] transition-all duration-700 ease-in-out flex flex-col ${isActive ? 'scale-[1.05] z-10 opacity-100 border border-transparent shadow-[0_0_40px_hsl(var(--primary)/0.25)]' : 'scale-95 opacity-80 z-0 shadow-sm border border-slate-100'}`}>
                       <div className="rounded-[22px] overflow-hidden bg-transparent flex items-center justify-center p-1">
-                        <img 
-                          src={project.image} 
-                          alt="Project" 
+                        <img
+                          src={project.image}
+                          alt="Project"
                           className="w-full h-auto object-contain rounded-[18px]"
                         />
                       </div>
                     </div>
                     {/* Floating Icon */}
                     <div className={`absolute bottom-3 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full flex flex-col items-center justify-center transition-all duration-700 ${isActive ? 'bg-primary text-primary-foreground shadow-xl scale-110 z-20' : 'bg-primary/10 text-primary/60 z-10 shadow-sm'}`}>
-                       <Icon size={24} strokeWidth={isActive ? 2.5 : 2} />
+                      <Icon size={24} strokeWidth={isActive ? 2.5 : 2} />
                     </div>
                     <div className={`absolute -bottom-3 left-1/2 -translate-x-1/2 transition-opacity duration-700 ${isActive ? 'opacity-100' : 'opacity-40'}`}>
-                       <MoreHorizontal size={24} className="text-slate-400" />
+                      <MoreHorizontal size={24} className="text-slate-400" />
                     </div>
                   </div>
                 </CarouselItem>
               )
             })}
           </CarouselContent>
-          
+
           {/* Pagination Dots */}
           <div className="flex justify-center mt-12 gap-2 relative z-20">
-             {Array.from({ length: count }).map((_, index) => (
-               <button
-                 key={index}
-                 onClick={() => api?.scrollTo(index)}
-                 className={`h-1.5 rounded-full transition-all duration-300 ${current === index ? 'w-8 bg-primary' : 'w-2 bg-slate-200 hover:bg-slate-300'}`}
-                 aria-label={`Go to slide ${index + 1}`}
-               />
-             ))}
+            {Array.from({ length: count }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`h-1.5 rounded-full transition-all duration-300 ${current === index ? 'w-8 bg-primary' : 'w-2 bg-slate-200 hover:bg-slate-300'}`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
         </Carousel>
       </div>
@@ -409,7 +409,7 @@ const FeaturedProjects = () => {
               <Target size={32} strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-bold text-[#0f172a] text-[15px] mb-1">Business Focused</h4>
+              <h3 className="font-bold text-[#0f172a] text-[15px] mb-1">Business Focused</h3>
               <p className="text-slate-500 text-[13px] leading-relaxed">Solutions aligned with your goals to drive real business growth.</p>
             </div>
           </div>
@@ -419,7 +419,7 @@ const FeaturedProjects = () => {
               <Lightbulb size={32} strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-bold text-[#0f172a] text-[15px] mb-1">Innovative Approach</h4>
+              <h3 className="font-bold text-[#0f172a] text-[15px] mb-1">Innovative Approach</h3>
               <p className="text-slate-500 text-[13px] leading-relaxed">Cutting-edge technology and creative thinking at every step.</p>
             </div>
           </div>
@@ -429,7 +429,7 @@ const FeaturedProjects = () => {
               <ShieldCheck size={32} strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-bold text-[#0f172a] text-[15px] mb-1">Reliable & Scalable</h4>
+              <h3 className="font-bold text-[#0f172a] text-[15px] mb-1">Reliable & Scalable</h3>
               <p className="text-slate-500 text-[13px] leading-relaxed">Robust, secure and scalable solutions built for the future.</p>
             </div>
           </div>
@@ -439,7 +439,7 @@ const FeaturedProjects = () => {
               <Headset size={32} strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-bold text-[#0f172a] text-[15px] mb-1">Expert Support</h4>
+              <h3 className="font-bold text-[#0f172a] text-[15px] mb-1">Expert Support</h3>
               <p className="text-slate-500 text-[13px] leading-relaxed">Dedicated support and guidance whenever you need us.</p>
             </div>
           </div>
@@ -501,23 +501,23 @@ const CTASection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"} className="max-w-6xl mx-auto">
           <div className="bg-[#f8fafc] border border-slate-100 rounded-[32px] lg:rounded-[40px] overflow-hidden shadow-sm flex flex-col">
-            
+
             {/* Top Area */}
             <div className="p-8 lg:p-12 flex flex-col items-center text-center">
               <motion.span variants={itemVariants} className="inline-block py-1.5 px-4 rounded-full bg-primary/10 text-primary text-[11px] font-bold tracking-[0.15em] uppercase mb-4 border border-primary/20">
                 LET&apos;S BUILD SOMETHING GREAT
               </motion.span>
-              
+
               <motion.h2 variants={itemVariants} className="font-display text-3xl lg:text-4xl xl:text-5xl font-bold leading-[1.1] mb-4 text-[#0f172a]">
                 Ready to Build Your<br />
                 Next-Gen <span className="text-primary">Web Platform?</span>
               </motion.h2>
-              
+
               <motion.p variants={itemVariants} className="text-[14px] lg:text-[15px] text-slate-500 leading-relaxed mb-8 max-w-2xl mx-auto font-medium">
                 Partner with our experts to turn your ideas into a powerful,<br className="hidden sm:block" />
                 scalable, and future-ready digital platform.
               </motion.p>
-              
+
               <motion.div variants={itemVariants} className="mb-10">
                 <MagneticButton>
                   <Link
@@ -535,14 +535,14 @@ const CTASection = () => {
 
               {/* 3 Features */}
               <motion.div variants={itemVariants} className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 relative text-left">
-                
+
                 {/* Feature 1 */}
                 <div className="flex flex-col items-center sm:flex-row sm:items-start text-center sm:text-left gap-4">
                   <div className="w-10 h-10 lg:w-12 lg:h-12 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                     <Shield size={20} strokeWidth={2} />
                   </div>
                   <div>
-                    <h4 className="text-[#0f172a] font-bold text-[14px] lg:text-[15px] mb-1">Enterprise Grade</h4>
+                    <h3 className="text-[#0f172a] font-bold text-[14px] lg:text-[15px] mb-1">Enterprise Grade</h3>
                     <p className="text-slate-500 text-[12px] lg:text-[13px] font-medium leading-relaxed">Secure, reliable &<br />built to scale</p>
                   </div>
                 </div>
@@ -556,7 +556,7 @@ const CTASection = () => {
                     <Zap size={20} strokeWidth={2} />
                   </div>
                   <div>
-                    <h4 className="text-[#0f172a] font-bold text-[14px] lg:text-[15px] mb-1">High Performance</h4>
+                    <h3 className="text-[#0f172a] font-bold text-[14px] lg:text-[15px] mb-1">High Performance</h3>
                     <p className="text-slate-500 text-[12px] lg:text-[13px] font-medium leading-relaxed">Optimized for speed<br />and seamless experience</p>
                   </div>
                 </div>
@@ -570,11 +570,11 @@ const CTASection = () => {
                     <TrendingUp size={20} strokeWidth={2} />
                   </div>
                   <div>
-                    <h4 className="text-[#0f172a] font-bold text-[14px] lg:text-[15px] mb-1">Results Driven</h4>
+                    <h3 className="text-[#0f172a] font-bold text-[14px] lg:text-[15px] mb-1">Results Driven</h3>
                     <p className="text-slate-500 text-[12px] lg:text-[13px] font-medium leading-relaxed">Built to convert,<br />engage & grow</p>
                   </div>
                 </div>
-                
+
               </motion.div>
             </div>
 
@@ -595,16 +595,16 @@ const CTASection = () => {
                       className="inline-flex items-center gap-2 lg:gap-3 px-5 py-2.5 lg:px-6 lg:py-3 text-[13px] lg:text-[14px] font-bold border border-slate-200 bg-[#f8fafc] rounded-full text-[#0f172a] hover:border-blue-300 hover:text-blue-600 hover:bg-white transition-all shadow-sm group"
                     >
                       <div className="w-5 h-5 lg:w-6 lg:h-6 rounded-md bg-blue-50 flex items-center justify-center text-blue-500">
-                        {i % 2 === 0 ? <Box size={14} strokeWidth={2.5}/> : <TrendingUp size={14} strokeWidth={2.5}/>}
+                        {i % 2 === 0 ? <Box size={14} strokeWidth={2.5} /> : <TrendingUp size={14} strokeWidth={2.5} />}
                       </div>
-                      {relatedTitles[i]} 
+                      {relatedTitles[i]}
                       <ArrowRight size={14} className="text-slate-400 group-hover:text-blue-600 transition-colors lg:w-4 lg:h-4" />
                     </Link>
                   ))}
                 </div>
               </motion.div>
             )}
-            
+
           </div>
         </motion.div>
       </div>

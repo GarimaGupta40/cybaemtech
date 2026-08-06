@@ -572,7 +572,7 @@ const WhyCybaemSection = () => {
             <div className="absolute top-0 bottom-0 left-[-20%] w-[60%] -z-10 opacity-30 pointer-events-none hidden lg:block">
               <div className="absolute inset-0 bg-gradient-to-b from-[#fafbfc] via-[#fafbfc]/50 to-transparent z-10" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#fafbfc] via-transparent to-transparent z-10" />
-              <img src="/images/team.png" alt="" className="w-full h-full object-cover object-center" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <img src="/images/team.webp" alt="" className="w-full h-full object-cover object-center" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
             </div>
 
             {/* Left Column (Sticky) */}
@@ -750,7 +750,7 @@ const FAQSection = () => {
     <section ref={ref} className="py-24 lg:py-32 section-border bg-[#fafbfc]">
       <div className="container mx-auto px-6 lg:px-12">
         <motion.div variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"} className="max-w-6xl mx-auto">
-          
+
           <div className="text-center mb-16">
             <motion.span variants={itemVariants} className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#1d4ed8] mb-4 block">
               Frequently Asked Questions
@@ -788,15 +788,19 @@ const CTASection = () => {
 
   return (
     <section ref={ref} className="py-24 lg:py-32 text-primary-foreground relative overflow-hidden bg-[#0a1128]">
-      
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img src="/images/product-card-4.avif" alt="Background" className="w-full h-full object-cover opacity-30 mix-blend-luminosity" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1d4ed8]/80 to-[#0a1128]/90 mix-blend-multiply" />
+
+      {/* Background Image with Premium Navy Overlay */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <img src="/images/product-card-4.avif" alt="Background" className="w-full h-full object-cover opacity-35 brightness-[0.95] contrast-[1.05]" />
+        
+        {/* Subtle Radial & Linear Deep Navy Gradient Overlay (Vignette: Darker Edges, Slightly Lighter Center) */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#0e2152]/80 via-[#071338]/92 to-[#03091e]/98" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050c24]/40 via-transparent to-[#050c24]/60 pointer-events-none" />
       </div>
 
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-white/5 blur-3xl z-0" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-white/5 blur-2xl z-0" />
+      {/* Ambient Glowing Radial Auras */}
+      <div className="absolute top-0 right-1/4 w-[450px] h-[450px] rounded-full bg-blue-600/10 blur-[130px] pointer-events-none z-0" />
+      <div className="absolute bottom-0 left-1/4 w-[350px] h-[350px] rounded-full bg-indigo-600/10 blur-[120px] pointer-events-none z-0" />
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <motion.div variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"} className="text-center max-w-2xl mx-auto">

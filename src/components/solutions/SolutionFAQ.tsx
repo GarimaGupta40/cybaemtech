@@ -13,14 +13,15 @@ interface FAQ {
 interface Props {
   faqs: FAQ[];
   title: string;
+  className?: string;
 }
 
-const SolutionFAQ = ({ faqs, title }: Props) => {
+const SolutionFAQ = ({ faqs, title, className = "py-20 lg:py-24" }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="bg-white py-20 lg:py-24" ref={ref}>
+    <section className={`bg-white ${className}`} ref={ref}>
       <div className="container mx-auto px-5 sm:px-6 lg:px-12">
         <motion.div variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"} className="max-w-5xl mx-auto">
           <motion.div variants={itemVariants} className="text-center mb-12">

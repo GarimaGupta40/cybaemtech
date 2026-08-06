@@ -356,7 +356,7 @@ const Contact = () => {
                       <Building2 className="w-7 h-7 md:w-8 md:h-8 text-[#004E98]" />
                     </div>
                     <div>
-                      <h3 className="text-[22px] md:text-2xl font-bold text-[#004E98] leading-tight md:mb-2">Head Office<br className="md:hidden" /> Address</h3>
+                      <h2 className="text-[22px] md:text-2xl font-bold text-[#004E98] leading-tight md:mb-2">Head Office<br className="md:hidden" /> Address</h2>
                       <div className="hidden md:flex items-start gap-2 text-sm text-gray-700">
                         <MapPin size={16} className="text-[#004E98] mt-0.5 shrink-0" />
                         <p>Suratwala Mark Plazzo, Hinjawadi,<br />Pune, Maharashtra 411057</p>
@@ -373,10 +373,10 @@ const Contact = () => {
                   {/* Desktop Grid Layout */}
                   <div className="hidden md:grid grid-cols-2 gap-6 pt-6 border-t border-gray-100">
                     <div className="space-y-3">
-                      <div className="flex items-center gap-2 text-[#004E98] font-semibold text-sm">
+                      <h4 className="flex items-center gap-2 text-[#004E98] font-semibold text-sm">
                         <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center border border-blue-100"><Phone size={14} /></div>
                         Call Us
-                      </div>
+                      </h4>
                       <ul className="space-y-2 text-sm text-gray-700 pl-2">
                         <li className="flex items-center gap-2"><div className="w-4 h-4 rounded-full bg-blue-500 text-white flex items-center justify-center text-[10px]">✓</div> Business: +91 9028541383</li>
                         <li className="flex items-center gap-2"><div className="w-4 h-4 rounded-full bg-blue-500 text-white flex items-center justify-center text-[10px]">✓</div> Business: 020 2069010200</li>
@@ -464,10 +464,10 @@ const Contact = () => {
                   {/* Desktop Grid Layout */}
                   <div className="hidden md:grid grid-cols-2 gap-6 pt-6 border-t border-gray-100">
                     <div className="space-y-3">
-                      <div className="flex items-center gap-2 text-[#004E98] font-semibold text-sm">
+                      <h4 className="flex items-center gap-2 text-[#004E98] font-semibold text-sm">
                         <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center border border-blue-100"><Phone size={14} /></div>
                         Call Us
-                      </div>
+                      </h4>
                       <ul className="space-y-2 text-sm text-gray-700 pl-2">
                         <li className="flex items-center gap-2"><div className="w-4 h-4 rounded-full bg-blue-500 text-white flex items-center justify-center text-[10px]">✓</div> Tel: +1 (713) 234-7916</li>
                       </ul>
@@ -556,7 +556,7 @@ const Contact = () => {
                     <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India" className="w-full h-full object-cover" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm text-gray-900">CYBAEM TECH PRIVATE LIMITED</h4>
+                    <h3 className="font-bold text-sm text-gray-900">CYBAEM TECH PRIVATE LIMITED</h3>
                     <p className="text-xs text-gray-500 mt-1">Suratwala Mark Plazzo, Hinjawadi, Pune, Maharashtra 411057</p>
                   </div>
                 </div>
@@ -582,7 +582,7 @@ const Contact = () => {
                     <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="USA" className="w-full h-full object-cover" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm text-gray-900">CYBAEM TECH PRIVATE LIMITED</h4>
+                    <h3 className="font-bold text-sm text-gray-900">CYBAEM TECH PRIVATE LIMITED</h3>
                     <p className="text-xs text-gray-500 mt-1">16107 Kensington Drive, Suite 227, Sugar Land, TX 77479, United States</p>
                   </div>
                 </div>

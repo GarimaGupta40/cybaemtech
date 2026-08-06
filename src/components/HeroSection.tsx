@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { MagneticButton } from "./Navbar";
 import type { Variants } from "framer-motion";
 import heroVideo from "../assets/web video 01.mp4";
+import heroBg from "../assets/hero-new.jpg";
 
 const heroContainer: Variants = {
   hidden: {},
@@ -21,18 +22,24 @@ const fadeUp: Variants = {
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden flex items-end justify-center pb-6 sm:pb-10">
-      {/* Full-screen background video */}
-      <div className="absolute inset-0">
+    <section className="relative min-h-screen overflow-hidden flex items-end justify-center pb-6 sm:pb-10 bg-slate-950">
+      {/* Full-screen background image fallback & optimized video */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/hero-bg.webp"
+          alt="Hero Background"
+          className="w-full h-full object-cover absolute inset-0 z-0"
+        />
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
-          poster="/hero-new.avif"
+          preload="auto"
+          poster="/images/hero-bg.webp"
+          className="w-full h-full object-cover relative z-10"
         >
-          <source src={heroVideo} type="video/mp4" />
+          <source src="/video/hero-bg.mp4" type="video/mp4" />
         </video>
       </div>
 

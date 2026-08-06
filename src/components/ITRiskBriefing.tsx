@@ -282,7 +282,7 @@ ROI OF RESOLUTION
 
   /* ═══ RENDER ═══ */
   return (
-    <section ref={containerRef} className="bg-slate-50/50 flex flex-col pt-8 pb-10 relative overflow-hidden min-h-[650px] justify-center">
+    <section ref={containerRef} className="bg-white flex flex-col pt-8 pb-10 relative overflow-hidden min-h-[650px] justify-center">
       {/* Background Decorative Graphic removed to prevent double rendering */}
 
       <div className="w-full flex flex-col px-5 sm:px-6 lg:px-12 relative z-10">

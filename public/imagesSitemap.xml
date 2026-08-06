@@ -53,7 +53,7 @@
       <image:loc>https://cybaemtech.com/images/about-team-4.avif</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/team.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/team.webp</image:loc>
     </image:image>
   </url>
 
@@ -61,7 +61,7 @@
   <url>
     <loc>https://cybaemtech.com/life-at-cybaemtech</loc>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/it-bg.webp</image:loc>
+      <image:loc>https://cybaemtech.com/images/it-bg1.png</image:loc>
     </image:image>
   </url>
 
@@ -80,7 +80,7 @@
   <url>
     <loc>https://cybaemtech.com/portfolio</loc>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/portfolio-header.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/portfolio-header.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://cybaemtech.com/images/CRM-website.webp</image:loc>
@@ -98,7 +98,7 @@
       <image:loc>https://cybaemtech.com/images/corporate-websites1.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/saas-website.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/saas-website.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://cybaemtech.com/images/education.webp</image:loc>
@@ -125,22 +125,22 @@
       <image:loc>https://cybaemtech.com/images/product-card-6.avif</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/website/astha.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/website/astha.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/website/batara.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/website/batara.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/website/carbonhive.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/website/carbonhive.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/website/rasa.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/website/rasa.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/website/shrisat.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/website/shrisat.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/website/surya.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/website/surya.webp</image:loc>
     </image:image>
   </url>
 
@@ -148,7 +148,7 @@
   <url>
     <loc>https://cybaemtech.com/leadership</loc>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/leadership-hero.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/leadership-hero.webp</image:loc>
     </image:image>
   </url>
 
@@ -173,7 +173,7 @@
   <url>
     <loc>https://cybaemtech.com/solutions/web-systems</loc>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/web-systems-hero.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/web-systems-hero.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://cybaemtech.com/images/web-hero.avif</image:loc>
@@ -197,7 +197,7 @@
       <image:loc>https://cybaemtech.com/images/web-educational.avif</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/web-platform.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/web-platform.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://cybaemtech.com/images/web-portfolio.avif</image:loc>
@@ -285,7 +285,7 @@
   <url>
     <loc>https://cybaemtech.com/solutions/managed-it</loc>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/manageit-hero.png</image:loc>
+      <image:loc>https://cybaemtech.com/images/manageit-hero.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://cybaemtech.com/images/Tech-port/Managed%20it.webp</image:loc>
@@ -307,7 +307,7 @@
   <url>
     <loc>https://cybaemtech.com/solutions/it-infrastructure-services</loc>
     <image:image>
-      <image:loc>https://cybaemtech.com/images/it-infra.webp</image:loc>
+      <image:loc>https://cybaemtech.com/images/it-infra1.png</image:loc>
     </image:image>
   </url>
 

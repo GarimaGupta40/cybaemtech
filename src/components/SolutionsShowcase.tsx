@@ -37,7 +37,7 @@ const solutionsData = [
       { text: "Mobile-First", icon: MonitorSmartphone },
       { text: "High Performance", icon: Zap }
     ],
-    image: "/images/ecomm-website.webp"
+    image: "/images/Ecomm-website.webp"
   },
   {
     id: "portals",
@@ -52,7 +52,7 @@ const solutionsData = [
       { text: "Data Integration", icon: Cloud },
       { text: "Secure Comms", icon: MessagesSquare }
     ],
-    image: "/images/saas-website.png"
+    image: "/images/saas-website.webp"
   },
   {
     id: "saas",
@@ -67,7 +67,7 @@ const solutionsData = [
       { text: "Scalable Infra", icon: Cloud },
       { text: "Advanced Analytics", icon: PieChart }
     ],
-    image: "/images/saas-website.png"
+    image: "/images/saas-website.webp"
   },
   {
     id: "crm",
@@ -97,7 +97,7 @@ const solutionsData = [
       { text: "Real-time Data", icon: Zap },
       { text: "Integrated Modules", icon: LayoutTemplate }
     ],
-    image: "/images/saas-website.png"
+    image: "/images/saas-website.webp"
   }
 ];
 
@@ -265,6 +265,12 @@ const SolutionsShowcase = () => {
               >
                 <img
                   src={activeTab.image}
+                  onError={(e) => {
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.src.includes("web-ecommerce.avif")) {
+                      target.src = "/images/web-ecommerce.avif";
+                    }
+                  }}
                   alt={activeTab.tabLabel}
                   className="w-full max-w-[600px] xl:max-w-none h-auto object-contain transition-transform duration-700 hover:scale-[1.02] drop-shadow-[0_20px_40px_rgba(11,27,51,0.15)] xl:drop-shadow-[0_40px_80px_rgba(11,27,51,0.15)]"
                 />

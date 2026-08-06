@@ -166,9 +166,9 @@ const DevelopmentProcess = () => {
                   
                   {/* Text Content */}
                   <div>
-                    <h4 className={`font-bold text-sm mb-2 whitespace-nowrap transition-colors duration-300 ${isPast ? "text-primary" : "text-[#0a1930]"}`}>
+                    <h3 className={`font-bold text-sm mb-2 whitespace-nowrap transition-colors duration-300 ${isPast ? "text-primary" : "text-[#0a1930]"}`}>
                       {step.num}. {step.title}
-                    </h4>
+                    </h3>
                     <p className="text-[11px] leading-relaxed text-slate-500 font-medium px-2">
                       {step.desc}
                     </p>

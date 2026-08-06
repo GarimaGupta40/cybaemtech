@@ -180,7 +180,7 @@ const GlobalReachSection = () => {
                     <div className={`absolute top-1/2 -translate-y-1/2 -left-[5px] w-[8px] h-[8px] border-l border-b ${item.borderColor} bg-white rotate-45 rounded-[1px]`}></div>
                     
                     <div className="flex-1 pl-1">
-                      <h4 className="font-bold text-sm leading-tight mb-0.5" style={{ color: item.color }}>{item.phase}</h4>
+                      <h3 className="font-bold text-sm leading-tight mb-0.5" style={{ color: item.color }}>{item.phase}</h3>
                       <p className="text-gray-500 text-[11px] font-medium mb-1.5">{item.years}</p>
                       <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                         {item.locations.map((loc, i) => (

@@ -15,7 +15,7 @@ const solutions = [
     capability: "Build robust, dependable & scalable software solutions tailored to your business.",
     cta: "Explore Solution",
     slug: "enterprise-software",
-    image: "/images/Tech-port/Enterprise Custom Software.png",
+    image: "/images/Tech-port/Enterprise Custom Software.webp",
     icon: Code2
   },
   {
@@ -24,7 +24,7 @@ const solutions = [
     capability: "From immersive corporate portals to high-traffic E-commerce and PWA architectures, we design secure, lightning-fast web systems.",
     cta: "Explore Solution",
     slug: "web-systems",
-    image: "/images/Tech-port/High-Performance Web systems.png",
+    image: "/images/Tech-port/High-Performance Web systems.webp",
     icon: Globe
   },
   {
@@ -33,7 +33,7 @@ const solutions = [
     capability: "Seamlessly integrate pre-vetted Cloud Architects, DevOps Engineers, and Full-Stack Developers into your existing workflows.",
     cta: "Explore Solution",
     slug: "it-staff-augmentation",
-    image: "/images/Tech-port/Elite IT Staff.png",
+    image: "/images/Tech-port/Elite IT Staff.webp",
     icon: Users
   },
   {
@@ -42,7 +42,7 @@ const solutions = [
     capability: "We provide comprehensive NOC support, seamless AWS/Azure cloud migrations, and proactive threat monitoring.",
     cta: "Explore Solution",
     slug: "managed-it-cloud-security",
-    image: "/images/Tech-port/Managed it.webp",
+    image: "/images/Tech-port/Managed IT.webp",
     icon: Shield
   },
   {
@@ -51,7 +51,7 @@ const solutions = [
     capability: "Dominate international search results through advanced AEO/GEO optimization, CRO, and targeted executive LinkedIn thought leadership strategies.",
     cta: "Explore Solution",
     slug: "digital-revenue-growth",
-    image: "/images/Tech-port/Digital revenue and growth.png",
+    image: "/images/Tech-port/Digital revenue and growth.webp",
     icon: BarChart3
   },
 ];
@@ -68,7 +68,7 @@ const SolutionsSection = () => {
       ScrollTrigger.create({
         trigger: sectionRef.current,
         start: "center center",
-        end: `+=${solutions.length * 120}vh`,
+        end: `+=${solutions.length * 240}vh`,
         pin: true,
         pinSpacing: true,
         onUpdate: (self) => {
@@ -201,16 +201,22 @@ const SolutionsSection = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={active.slug}
-                initial={{ opacity: 0, filter: 'blur(10px)' }}
+                initial={{ opacity: 0, filter: 'blur(6px)' }}
                 animate={{ opacity: 1, filter: 'blur(0px)' }}
-                exit={{ opacity: 0, filter: 'blur(10px)' }}
-                transition={{ duration: 0.5 }}
+                exit={{ opacity: 0, filter: 'blur(6px)' }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
                 className="absolute inset-0 flex flex-col"
               >
                 {/* Background Image full cover */}
                 <div className="absolute inset-0">
                   <img
-                    src={active.image}
+                    src={encodeURI(active.image)}
+                    onError={(e) => {
+                      const target = e.currentTarget as HTMLImageElement;
+                      if (!target.src.includes("it.webp")) {
+                        target.src = "/images/it.webp";
+                      }
+                    }}
                     alt={active.title}
                     className="w-full h-full object-cover opacity-60 mix-blend-screen"
                   />

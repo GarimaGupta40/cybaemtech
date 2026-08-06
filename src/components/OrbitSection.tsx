@@ -74,10 +74,10 @@ const OrbitSection = () => {
               {/* Center Logo */}
               <div
                 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 
-                           w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 lg:w-56 lg:h-56 bg-white rounded-full 
-                           shadow-[0_10px_40px_rgba(0,82,204,0.1)] flex items-center justify-center p-3 sm:p-5 lg:p-6"
+                           w-20 h-20 sm:w-30 sm:h-30 md:w-40 md:h-40 lg:w-44 lg:h-44 bg-white rounded-full 
+                           shadow-[0_10px_40px_rgba(0,82,204,0.1)] flex items-center justify-center p-2.5 sm:p-4 lg:p-5"
               >
-                <img src="/images/cybaem-logo.webp" alt="Cybaem Tech" className="w-[85%] h-auto" />
+                <img src="/images/cybaem-logo.webp" alt="Cybaem Tech" className="w-[80%] h-auto" />
               </div>
 
               {/* Floating Nodes */}

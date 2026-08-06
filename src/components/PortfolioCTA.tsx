@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const PortfolioCTA = () => {
   return (
-    <section className="py-12 lg:py-20 pb-24">
+    <section className="pt-2 lg:pt-4 pb-16 lg:pb-20">
       <div className="container mx-auto px-6 lg:px-12">
         <div 
           className="rounded-[3rem] border border-blue-100/50 p-12 lg:p-16 flex flex-col lg:flex-row items-center gap-12 relative overflow-hidden bg-gradient-to-br from-white via-[#f0f7ff] to-[#e0efff]"

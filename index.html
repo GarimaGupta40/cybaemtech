@@ -239,33 +239,15 @@ GEO SEO
 </script>
   <!-- SEO_INJECT_END -->
 
-  <!-- Preload LCP hero image -->
-  <link rel="preload" as="image" href="/hero-new.avif" type="image/avif" />
+  <!-- Preload hero background video and LCP fallback image for instant rendering -->
+  <link rel="preload" href="/video/hero-bg.mp4" as="video" type="video/mp4" />
+  <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
 
   <!-- Preconnect to Google Fonts for faster loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Inline critical font-face declarations for instant text rendering -->
-  <style>
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400 700;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiA.woff2) format('woff2');
-      unicode-range: U+0000-00FF;
-    }
 
-    @font-face {
-      font-family: 'Space Grotesk';
-      font-style: normal;
-      font-weight: 500 700;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2) format('woff2');
-      unicode-range: U+0000-00FF;
-    }
-  </style>
 
   <!-- Full font files loaded async for extended character sets -->
   <link rel="stylesheet"
