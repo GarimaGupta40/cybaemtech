@@ -292,10 +292,16 @@ const Hero = () => {
         {/* Right-Side Hero Visual Layer (Exact Untouched Image & Diagram Properties) */}
         <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[64%] xl:w-[67%] z-0 overflow-hidden pointer-events-none">
           <img
-            src="/images/it-bg1.png"
+            src="/images/it-bg.png"
             alt="IT Infrastructure Ecosystem"
-            className="w-full h-full object-contain object-[76%_55%] lg:object-[74%_55%] scale-100 origin-center brightness-[1.02]"
+            className="w-full h-full object-contain object-[88%_55%] lg:object-[85%_55%] scale-100 origin-center brightness-[1.02] translate-y-7 lg:translate-y-8 translate-x-8 lg:translate-x-12"
+            style={{
+              maskImage: "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 6%, black 15%, black 100%)",
+              WebkitMaskImage: "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 6%, black 15%, black 100%)"
+            }}
           />
+          {/* Soft Left Edge Fade Gradient */}
+          <div className="absolute inset-y-0 left-0 w-48 sm:w-72 lg:w-[320px] xl:w-[360px] bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none z-10" />
           {/* Subtle Edge Fade at Bottom Only */}
           <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none z-10" />
         </div>

@@ -253,7 +253,7 @@ const Hero = () => (
               <Headset size={20} strokeWidth={2} />
             </div>
             <div>
-              <h4 className="font-bold text-[#0a1930] text-sm mb-0.5">24/7</h4>
+              <h2 className="font-bold text-[#0a1930] text-sm mb-0.5">24/7</h2>
               <p className="text-xs text-slate-500 font-medium">Support Available</p>
             </div>
           </div>
@@ -264,7 +264,7 @@ const Hero = () => (
               <Lock size={20} strokeWidth={2} />
             </div>
             <div>
-              <h4 className="font-bold text-[#0a1930] text-sm mb-0.5">Secure</h4>
+              <h3 className="font-bold text-[#0a1930] text-sm mb-0.5">Secure</h3>
               <p className="text-xs text-slate-500 font-medium">Enterprise Grade</p>
             </div>
           </div>
@@ -275,7 +275,7 @@ const Hero = () => (
               <Globe size={20} strokeWidth={2} />
             </div>
             <div>
-              <h4 className="font-bold text-[#0a1930] text-sm mb-0.5">Global</h4>
+              <h3 className="font-bold text-[#0a1930] text-sm mb-0.5">Global</h3>
               <p className="text-xs text-slate-500 font-medium">Client Presence</p>
             </div>
           </div>

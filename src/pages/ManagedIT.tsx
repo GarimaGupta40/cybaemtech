@@ -679,8 +679,8 @@ const ManagedIT = () => {
                           key={event.title}
                           onClick={() => setOpenTriggerTitle(isOpen ? null : event.title)}
                           className={`group bg-white rounded-[18px] p-4.5 sm:p-5 border transition-all duration-300 cursor-pointer ${isOpen
-                              ? "border-primary/40 shadow-lg ring-2 ring-primary/10"
-                              : "border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-md hover:-translate-y-1 hover:border-slate-200"
+                            ? "border-primary/40 shadow-lg ring-2 ring-primary/10"
+                            : "border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-md hover:-translate-y-1 hover:border-slate-200"
                             }`}
                         >
                           <div className="flex items-center justify-between gap-3">
@@ -867,7 +867,7 @@ const ManagedIT = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="container mx-auto px-5 sm:px-6 lg:px-12 relative z-10">
-          
+
           {/* Header */}
           <motion.div variants={fadeUp} className="mb-10 sm:mb-14 text-center">
             <div className="w-12 h-1 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400 rounded-full mx-auto mb-4 opacity-80" />
@@ -878,7 +878,7 @@ const ManagedIT = () => {
 
           {/* Desktop & Tablet Split Glass Timeline Grid */}
           <div className="max-w-6xl mx-auto">
-            
+
             {/* Column Layout Container */}
             <div className="grid lg:grid-cols-[1fr_56px_1fr] gap-4 lg:gap-6 items-stretch">
 
@@ -964,7 +964,7 @@ const ManagedIT = () => {
 
         <div className="container mx-auto px-5 sm:px-6 lg:px-12 relative z-10">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-14 items-center max-w-7xl mx-auto">
-            
+
             {/* LEFT COLUMN (≈45% Width): Typography & Colorful Premium Service Checklist */}
             <motion.div variants={fadeUp} className="lg:col-span-5 xl:col-span-5 lg:pl-8 xl:pl-12">
               <span className="font-display text-[10.5px] font-bold tracking-[0.2em] uppercase text-primary mb-3 block">
@@ -1009,10 +1009,10 @@ const ManagedIT = () => {
 
             {/* RIGHT COLUMN (≈55% Width): Seamlessly Blended 3D Glass Shield Artwork */}
             <motion.div variants={fadeUp} className="lg:col-span-7 xl:col-span-7 relative flex items-center justify-center w-full lg:translate-x-2 py-4">
-              
+
               {/* Soft Radial Ambient Blue Glow Aura behind Shield */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[510px] sm:w-[580px] h-[510px] sm:h-[580px] bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
-              
+
               {/* Concentric Light Ring Highlight */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-80 sm:w-[420px] h-20 bg-blue-400/25 rounded-[100%] blur-2xl pointer-events-none" />
 
@@ -1439,7 +1439,7 @@ const ManagedIT = () => {
                 {/* Background texture only for the highlighted blue card */}
                 {tier.highlighted && (
                   <div className="absolute inset-0 z-0 pointer-events-none opacity-25 mix-blend-overlay flex items-center justify-center">
-                    <img src="/images/it-bg1.png" alt="" className="w-full h-full object-cover grayscale" />
+                    <img src="/images/it-bg.png" alt="" className="w-full h-full object-cover grayscale" />
                   </div>
                 )}
 

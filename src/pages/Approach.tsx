@@ -141,7 +141,7 @@ const StatsSection = () => {
               <div className={`w-10 h-10 lg:w-12 lg:h-12 rounded-full ${stat.bg} flex items-center justify-center mb-3 lg:mb-4`}>
                 <stat.icon className={`w-5 h-5 lg:w-6 lg:h-6 ${stat.color}`} />
               </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-0.5 lg:mb-1">{stat.value}</h3>
+              <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-0.5 lg:mb-1">{stat.value}</h2>
               <p className="text-xs lg:text-sm font-medium text-muted-foreground">{stat.label}</p>
             </div>
           ))}
@@ -609,7 +609,7 @@ const CultureSection = () => {
               <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full ${v.bg} flex items-center justify-center mb-4 sm:mb-6 shrink-0`}>
                 <v.icon className={`w-5 h-5 sm:w-7 sm:h-7 ${v.color}`} />
               </div>
-              <h4 className="font-bold text-[13px] sm:text-[15px] text-foreground mb-2 sm:mb-3 leading-tight">{v.title}</h4>
+              <h3 className="font-bold text-[13px] sm:text-[15px] text-foreground mb-2 sm:mb-3 leading-tight">{v.title}</h3>
               <p className="text-[10px] sm:text-[11px] text-muted-foreground leading-relaxed font-medium">
                 {v.desc}
               </p>

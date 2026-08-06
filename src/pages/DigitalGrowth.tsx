@@ -127,7 +127,7 @@ const ServiceCard = ({ icon: Icon, title, children }: { icon: any; title: string
     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
       <Icon size={20} className="text-primary" />
     </div>
-    <h4 className="font-display font-semibold text-base mb-2 text-foreground">{title}</h4>
+    <h3 className="font-display font-semibold text-base mb-2 text-foreground">{title}</h3>
     <div className="text-sm text-muted-foreground leading-relaxed">{children}</div>
   </motion.div>
 );
@@ -627,7 +627,7 @@ const DigitalGrowth = () => {
                         <div className="absolute inset-0 rounded-full bg-primary z-10 shadow-[0_0_8px_rgba(0,0,0,0.3)]"></div>
                       </div>
                       <div>
-                        <h4 className="font-bold text-[13px] sm:text-[14px] lg:text-[15px] text-slate-900 mb-1">{item.title}</h4>
+                        <h3 className="font-bold text-[13px] sm:text-[14px] lg:text-[15px] text-slate-900 mb-1">{item.title}</h3>
                         <p className="text-[12px] sm:text-[13px] text-slate-600 leading-relaxed font-medium">{item.desc}</p>
                       </div>
                     </div>
