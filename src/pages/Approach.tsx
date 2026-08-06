@@ -382,7 +382,7 @@ const CelebrationsSection = () => {
         { icon: Award, value: "4", label: "Years Strong" },
         { icon: Smile, value: "100%", label: "Celebration" },
       ],
-      image: "/lifeatcybaemtech/Foundationday.jpg"
+      image: "/lifeatcybaemtech/Foundationday.JPG"
     },
     {
       title: "Foundation Day 2026",

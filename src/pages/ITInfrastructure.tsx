@@ -436,13 +436,13 @@ const FlipServiceCard = ({ service, active, onActivate }: {
               animate={{ scale: flipped ? 1.12 : 1 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
             />
-            <div className="absolute left-4 top-4 flex items-center gap-2">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/95 border border-slate-200 shadow-sm">
-                <service.icon size={18} className="text-primary" />
+            <div className="absolute left-4 top-4 flex items-center gap-2.5 z-10">
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-md shrink-0">
+                <service.icon size={21} className="text-primary" />
               </span>
-              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-slate-800 bg-white/95 px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">Hover to Explore</span>
+              <span className="text-[11px] font-semibold tracking-[0.18em] uppercase text-slate-900 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-full border border-slate-200/90 shadow-md">Hover to Explore</span>
             </div>
-            <div className="absolute right-4 bottom-4 rounded-full bg-white/95 border border-slate-200 px-3 py-1.5 text-[11px] font-bold text-slate-800 shadow-sm">
+            <div className="absolute right-4 bottom-4 rounded-full bg-white/95 backdrop-blur-md border border-slate-200/90 px-3.5 py-1.5 text-[13px] font-semibold text-slate-900 shadow-md z-10">
               Service Group {service.number}
             </div>
           </div>
