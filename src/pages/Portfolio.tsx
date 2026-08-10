@@ -604,10 +604,10 @@ const SoftwareAISolutionsTab = () => {
       </div> {/* End Top Row */}
 
       {/* Bottom 2 Columns */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full">
 
-        {/* Enterprise Solutions */}
-        <div className="bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-6 lg:p-8 flex flex-col gap-6">
+        {/* Enterprise Solutions (40% width) */}
+        <div className="lg:col-span-5 bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-6 lg:p-8 flex flex-col gap-6">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100">
               <Briefcase size={22} strokeWidth={2} />
@@ -618,93 +618,18 @@ const SoftwareAISolutionsTab = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
-
-            {/* Card 1: Billing Application */}
-            <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-blue-200 hover:shadow-md transition-all duration-300 group h-full">
-              <div className="h-[300px] bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-100 rounded-[1.25rem] mb-4 relative overflow-hidden flex items-center justify-center p-4 group-hover:shadow-inner transition-all duration-500">
-                {/* Abstract background shapes */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-300/30 blur-2xl rounded-full" />
-                <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-300/30 blur-2xl rounded-full" />
-
-                {/* Main Dashboard Card */}
-                <div className="relative w-full max-w-[220px] bg-white rounded-xl shadow-2xl border border-white/50 flex flex-col overflow-hidden group-hover:-translate-y-2 transition-transform duration-700 z-10">
-                  {/* Header */}
-                  <div className="flex items-center gap-2 p-3 border-b border-slate-100 bg-slate-50/50">
-                    <div className="w-4 h-4 bg-blue-600 rounded flex flex-col items-center justify-center gap-px">
-                      <div className="w-0 h-0 border-l-[3px] border-r-[3px] border-b-[4px] border-l-transparent border-r-transparent border-b-white" />
-                      <div className="w-1.5 h-1.5 bg-white" />
-                    </div>
-                    <div className="text-[10px] font-bold text-slate-700">Invoice #INV-2345</div>
-                    <div className="ml-auto px-1.5 py-0.5 bg-green-100 text-green-700 text-[8px] font-bold rounded-sm">Paid</div>
-                  </div>
-                  {/* Sidebar + Content */}
-                  <div className="flex h-[180px]">
-                    {/* Sidebar */}
-                    <div className="w-8 border-r border-slate-100 bg-slate-50 flex flex-col items-center py-2 gap-3">
-                      <div className="w-4 h-4 rounded bg-slate-200" />
-                      <div className="w-4 h-4 rounded-full bg-slate-200" />
-                      <div className="w-4 h-4 rounded-sm bg-slate-200" />
-                      <div className="w-4 h-4 rounded-sm bg-slate-200 mt-auto" />
-                    </div>
-                    <div className="flex-1 p-3 flex flex-col relative bg-white">
-                      <div className="text-[9px] text-slate-400 font-medium">Invoices</div>
-                      <div className="text-[18px] font-bold text-slate-800">₹12,85,000</div>
-                      <div className="text-[7px] text-slate-400 mt-0.5">Due Date<br />25 Jul 2026</div>
-
-                      <div className="text-[8px] font-bold text-slate-700 mt-3">Invoice Overview</div>
-                      <div className="flex items-end gap-1.5 h-12 mt-1">
-                        <div className="w-3 bg-blue-100 h-[30%] rounded-t-sm" />
-                        <div className="w-3 bg-blue-200 h-[50%] rounded-t-sm" />
-                        <div className="w-3 bg-blue-400 h-[70%] rounded-t-sm" />
-                        <div className="w-3 bg-blue-600 h-[100%] rounded-t-sm" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Overlapping Floating Cards */}
-                <div className="absolute bottom-6 right-6 w-32 bg-white/90 backdrop-blur-md rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white p-3 flex flex-col gap-1.5 z-20 animate-[floating_5s_ease-in-out_infinite] group-hover:scale-105 transition-transform duration-500">
-                  <div className="text-[8px] text-slate-500 font-medium">Payment Received</div>
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center shadow-md shadow-green-500/30 mx-auto my-1">
-                    <CheckCircle size={14} className="text-white" />
-                  </div>
-                  <div className="text-[12px] font-bold text-slate-800 text-center">₹12,85,000</div>
-                  <div className="text-[6px] text-slate-400 text-center">Transaction ID<br />TXN45876</div>
-                </div>
-
-                {/* Floating Coin */}
-                <div className="absolute bottom-6 left-6 w-14 h-14 bg-gradient-to-tr from-blue-600 to-indigo-400 rounded-full shadow-lg shadow-blue-500/40 flex items-center justify-center border-4 border-white/20 z-20 group-hover:rotate-12 group-hover:-translate-y-2 transition-transform duration-500 animate-[floating_6s_ease-in-out_infinite_reverse]">
-                  <span className="text-white text-xl font-bold">₹</span>
-                </div>
-              </div>
-
-              <h4 className="text-[16px] font-bold text-slate-900 mb-2 leading-tight group-hover:text-blue-600 transition-colors">Billing Application</h4>
-              <p className="text-[12px] text-slate-500 leading-relaxed mb-6 flex-1">Smart billing with invoicing, GST, payments and reporting.</p>
-
-              <div className="flex flex-wrap gap-2 mt-auto">
-                <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-blue-200 transition-colors">
-                  <Receipt size={14} className="text-blue-500" />
-                  <span className="text-[11px] font-medium text-slate-700">Invoice Management</span>
-                </div>
-                <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-slate-200 shadow-sm group-hover:border-blue-200 transition-colors">
-                  <FileCheck size={14} className="text-blue-500" />
-                  <span className="text-[11px] font-medium text-slate-700">GST Ready</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2: Workflow & Operations */}
-            <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-4 hover:border-purple-200 hover:shadow-md transition-all duration-300 group h-full">
-              <div className="h-[300px] bg-gradient-to-br from-indigo-50/40 to-purple-100/50 rounded-[1.25rem] mb-4 relative overflow-hidden flex flex-col items-center justify-center p-2 group-hover:shadow-inner transition-all duration-500">
+          <div className="w-full mt-4">
+            {/* Workflow & Operations */}
+            <div className="flex flex-col bg-slate-50 border border-slate-100 rounded-3xl p-6 hover:border-purple-200 hover:shadow-md transition-all duration-300 group h-full w-full">
+              <div className="h-[300px] bg-gradient-to-br from-indigo-50/40 to-purple-100/50 rounded-[1.25rem] mb-4 relative overflow-hidden flex flex-col items-center justify-center p-2 group-hover:shadow-inner transition-all duration-500 w-full">
 
                 {/* Background patterns */}
                 <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(#4f46e5 1px, transparent 1px)", backgroundSize: "16px 16px" }}></div>
 
-                <div className="relative w-full max-w-[240px] h-full flex flex-col items-center justify-between py-4 group-hover:-translate-y-2 transition-transform duration-700 z-10">
+                <div className="relative w-full max-w-[280px] h-full flex flex-col items-center justify-between py-4 group-hover:-translate-y-2 transition-transform duration-700 z-10">
 
                   {/* Top Node */}
-                  <div className="w-40 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 z-10 text-white animate-[floating_4s_ease-in-out_infinite]">
+                  <div className="w-44 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 z-10 text-white animate-[floating_4s_ease-in-out_infinite]">
                     <Rocket size={12} className="fill-white" />
                     <span className="text-[10px] font-bold tracking-wide">Workflow Automation</span>
                   </div>
@@ -713,7 +638,7 @@ const SoftwareAISolutionsTab = () => {
                   <div className="w-0.5 h-6 bg-indigo-200/60" />
 
                   {/* Request Node */}
-                  <div className="w-32 h-8 bg-white rounded-full shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10">
+                  <div className="w-36 h-8 bg-white rounded-full shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10">
                     <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center"><Users size={10} className="text-blue-600" /></div>
                     <span className="text-[10px] font-bold text-slate-700">Request</span>
                   </div>
@@ -721,7 +646,7 @@ const SoftwareAISolutionsTab = () => {
                   <div className="w-0.5 h-6 bg-indigo-200/60" />
 
                   {/* Manager Approval */}
-                  <div className="w-40 h-8 bg-white rounded-full shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10">
+                  <div className="w-44 h-8 bg-white rounded-full shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10">
                     <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center shadow-sm shadow-green-500/40"><CheckCircle size={10} className="text-white" /></div>
                     <span className="text-[10px] font-bold text-slate-700">Manager Approval</span>
                   </div>
@@ -729,13 +654,13 @@ const SoftwareAISolutionsTab = () => {
                   <div className="w-0.5 h-6 bg-indigo-200/60" />
 
                   {/* Finance Review */}
-                  <div className="w-36 h-8 bg-white/80 backdrop-blur-sm rounded-full shadow-md border border-purple-100 flex items-center justify-center gap-2 z-10">
+                  <div className="w-40 h-8 bg-white/80 backdrop-blur-sm rounded-full shadow-md border border-purple-100 flex items-center justify-center gap-2 z-10">
                     <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center"><FileText size={10} className="text-purple-600" /></div>
                     <span className="text-[10px] font-bold text-slate-700">Finance Review</span>
                   </div>
 
                   {/* Split Connector */}
-                  <div className="flex flex-col items-center w-36">
+                  <div className="flex flex-col items-center w-40">
                     <div className="w-0.5 h-4 bg-indigo-200/60" />
                     <div className="w-full h-0.5 bg-indigo-200/60" />
                     <div className="flex justify-between w-full px-2">
@@ -745,7 +670,7 @@ const SoftwareAISolutionsTab = () => {
                   </div>
 
                   {/* Bottom Nodes */}
-                  <div className="flex justify-between w-full max-w-[200px] px-2">
+                  <div className="flex justify-between w-full max-w-[220px] px-2">
                     <div className="w-24 h-12 bg-white rounded-xl shadow-md border border-slate-100 flex items-center justify-center gap-2 z-10 hover:border-blue-200 transition-colors">
                       <div className="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center"><Users size={12} className="text-blue-600" /></div>
                       <span className="text-[9px] font-bold text-slate-700">IT Team</span>
@@ -773,12 +698,11 @@ const SoftwareAISolutionsTab = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
-        {/* AI Solutions */}
-        <div className="bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-6 lg:p-8 flex flex-col gap-6">
+        {/* AI Solutions (60% width) */}
+        <div className="lg:col-span-7 bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2rem] p-6 lg:p-8 flex flex-col gap-6">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 border border-purple-100">
               <BrainCircuit size={22} strokeWidth={2} />
@@ -1119,16 +1043,16 @@ const WebsiteDevelopmentTab = () => {
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <button
                 onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); navigate("/contact"); }}
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity group w-full sm:w-auto shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity group w-full sm:w-auto shadow-sm whitespace-nowrap"
               >
-                Start Your Project <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                Contact Us <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
 
               <button
                 onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); navigate("/solutions/web-systems"); }}
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity group w-full sm:w-auto shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity group w-full sm:w-auto shadow-sm whitespace-nowrap"
               >
-                Explore Web Systems <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                Explore Solutions <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           </div>
@@ -1393,12 +1317,12 @@ const CloudSolutionsTab = () => {
   };
 
   const cloudServices = [
-    { id: "migration", title: "Cloud Migration", desc: "Migrate seamlessly. Modernize efficiently.", icon: Cloud, x: 25, y: 15 },
-    { id: "hosting", title: "Cloud Hosting", desc: "High performance. Always available.", icon: Server, x: 75, y: 25 },
-    { id: "security", title: "Cloud Security", desc: "Protect your data. Stay compliant.", icon: Shield, x: 15, y: 45 },
-    { id: "monitoring", title: "Cloud Monitoring", desc: "Real-time insights. Proactive alerts.", icon: Activity, x: 85, y: 60 },
-    { id: "backup", title: "Cloud Backup & Disaster Recovery", desc: "Be prepared. Recover fast.", icon: Database, x: 20, y: 75 },
-    { id: "devops", title: "DevOps & Deployment", desc: "Automate. Deploy. Deliver faster.", icon: InfinityIcon, x: 65, y: 85 },
+    { id: "migration", title: "Cloud Migration", desc: "Migrate seamlessly. Modernize efficiently.", icon: Cloud, x: 18, y: 10 },
+    { id: "hosting", title: "Cloud Hosting", desc: "High performance. Always available.", icon: Server, x: 81, y: 17 },
+    { id: "security", title: "Cloud Security", desc: "Protect your data. Stay compliant.", icon: Shield, x: 10, y: 43 },
+    { id: "monitoring", title: "Cloud Monitoring", desc: "Real-time insights. Proactive alerts.", icon: Activity, x: 89, y: 61 },
+    { id: "backup", title: "Cloud Backup & Disaster Recovery", desc: "Be prepared. Recover fast.", icon: Database, x: 15, y: 83 },
+    { id: "devops", title: "DevOps & Deployment", desc: "Automate. Deploy. Deliver faster.", icon: InfinityIcon, x: 70, y: 89 },
   ];
 
   const features = [
@@ -1479,17 +1403,17 @@ const CloudSolutionsTab = () => {
             <div className="absolute inset-0 bg-blue-500/20 rounded-full animate-ping opacity-60" style={{ animationDuration: '4s' }} />
             <div className="absolute -inset-16 bg-blue-500/35 sm:bg-blue-500/40 rounded-full blur-[40px] sm:blur-[50px]" />
 
-            <div className="relative flex flex-col items-center justify-center text-center p-4 min-w-[180px] sm:min-w-[220px]">
-              {/* Background Cloud Icon behind Cloud Infrastructure text */}
+            <div className="relative flex flex-col items-center justify-center text-center p-6 sm:p-8 min-w-[240px] sm:min-w-[280px] min-h-[190px] sm:min-h-[210px]">
+              {/* Background Cloud Icon positioned higher and centered behind Cloud Infrastructure text */}
               <Cloud
-                size={140}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-blue-500/25 pointer-events-none stroke-[1.2] filter drop-shadow-sm"
+                size={270}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[58%] text-blue-500/35 fill-blue-50/80 pointer-events-none stroke-[1.5] filter drop-shadow-md"
               />
 
-              <div className="relative z-10 flex flex-col items-center mt-1 sm:mt-2">
-                <Server size={32} className="text-blue-700 mb-1.5 drop-shadow-sm" strokeWidth={2} />
-                <h3 className="text-slate-900 font-bold text-[14px] sm:text-[17px] leading-tight mb-0.5">Cloud Infrastructure</h3>
-                <p className="text-slate-600 text-[9px] sm:text-[11px] font-medium tracking-wide">
+              <div className="relative z-10 flex flex-col items-center justify-center -mt-1 sm:-mt-2">
+                <Server size={28} className="text-blue-700 mb-1 drop-shadow-sm" strokeWidth={2.2} />
+                <h3 className="text-slate-900 font-bold text-[15px] sm:text-[16.5px] leading-tight mb-0.5 whitespace-nowrap tracking-tight">Cloud Infrastructure</h3>
+                <p className="text-slate-600 text-[10px] sm:text-[11px] font-semibold tracking-wide whitespace-nowrap">
                   Secure. Scalable. Reliable.
                 </p>
               </div>

@@ -9,7 +9,7 @@ import {
   ClipboardList, Wrench, RefreshCw, Briefcase, TrendingUp, Award,
   Zap, Clock, Activity, Sparkles, Check, MousePointer2, Globe2,
   Laptop2, BadgeCheck, CloudCog, NetworkIcon, Boxes, PenTool,
-  Layers, BarChart2, Headset, Settings
+  Layers, BarChart2, Headset, Settings, Plus, Minus
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { MagneticButton } from "@/components/Navbar";
@@ -289,71 +289,81 @@ const Hero = () => {
   return (
     <>
       <section ref={heroRef} className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden pt-16 sm:pt-20 lg:pt-16 pb-16 lg:pb-20 bg-white w-full">
-        {/* Right-Side Hero Visual Layer (Exact Untouched Image & Diagram Properties) */}
-        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[64%] xl:w-[67%] z-0 overflow-hidden pointer-events-none">
+        {/* Right-Side Hero Visual Layer (Desktop Only) */}
+        <div className="hidden lg:block absolute right-0 top-0 bottom-0 lg:w-[64%] xl:w-[67%] z-0 overflow-hidden pointer-events-none">
           <img
             src="/images/it-bg.png"
             alt="IT Infrastructure Ecosystem"
-            className="w-full h-full object-contain object-[88%_55%] lg:object-[85%_55%] scale-100 origin-center brightness-[1.02] translate-y-7 lg:translate-y-8 translate-x-8 lg:translate-x-12"
+            className="w-full h-full object-contain object-[85%_55%] scale-100 origin-center brightness-[1.02] translate-y-8 translate-x-12"
             style={{
               maskImage: "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 6%, black 15%, black 100%)",
               WebkitMaskImage: "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 6%, black 15%, black 100%)"
             }}
           />
           {/* Soft Left Edge Fade Gradient */}
-          <div className="absolute inset-y-0 left-0 w-48 sm:w-72 lg:w-[320px] xl:w-[360px] bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none z-10" />
+          <div className="absolute inset-y-0 left-0 lg:w-[320px] xl:w-[360px] bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none z-10" />
           {/* Subtle Edge Fade at Bottom Only */}
           <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none z-10" />
         </div>
         <motion.div className="container mx-auto px-5 sm:px-6 lg:px-12 relative z-10 pt-4 lg:pt-16 pb-8 lg:pb-16" style={{ y: contentY }}>
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-6 items-center">
 
-            {/* Left — copy */}
-            <motion.div variants={stagger} initial="hidden" animate={inView ? "visible" : "hidden"} className="lg:pr-10">
+            {/* Left — copy & mobile single column layout */}
+            <motion.div variants={stagger} initial="hidden" animate={inView ? "visible" : "hidden"} className="lg:pr-10 flex flex-col items-start w-full">
               <motion.div variants={fadeUp}>
-                <span className="inline-flex items-center gap-2 px-4 py-1.5 text-[10px] sm:text-xs font-bold tracking-widest uppercase text-primary border border-primary/20 rounded-full mb-6 sm:mb-8 bg-white shadow-sm">
+                <span className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 text-[10px] sm:text-xs font-bold tracking-widest uppercase text-primary border border-primary/20 rounded-full mb-5 sm:mb-8 bg-white shadow-sm">
                   <div className="w-2 h-2 rounded-full bg-primary" />
                   ENTERPRISE IT INFRASTRUCTURE SERVICES
                 </span>
               </motion.div>
 
-              <motion.h1 variants={fadeUp} className="font-display font-bold leading-[1.1] text-slate-900 mb-5 sm:mb-6 text-4xl sm:text-5xl xl:text-[64px] tracking-tight">
+              <motion.h1 variants={fadeUp} className="font-display font-bold leading-[1.1] text-slate-900 mb-4 sm:mb-6 text-3xl sm:text-5xl xl:text-[64px] tracking-tight">
                 Infrastructure<br />
                 Engineered for<br />
                 <span className="text-primary">Business Continuity.</span>
               </motion.h1>
 
-              <motion.p variants={fadeUp} className="text-base sm:text-[17px] text-slate-600 leading-relaxed max-w-[420px] mb-8 sm:mb-10 font-medium">
+              <motion.p variants={fadeUp} className="text-base sm:text-[17px] text-slate-600 leading-relaxed max-w-[420px] mb-5 sm:mb-8 font-medium">
                 We design, manage and secure IT environments that keep your business running — 24x7.
               </motion.p>
 
-              <motion.div variants={fadeUp} className="flex flex-wrap gap-3 sm:gap-4 mb-10 sm:mb-14">
+              {/* Mobile Hero Image (Inline on mobile, hidden on desktop) */}
+              <motion.div variants={fadeUp} className="lg:hidden w-full my-4 sm:my-6 rounded-2xl bg-slate-50/80 border border-slate-200/60 p-3 sm:p-5 shadow-xs overflow-hidden flex items-center justify-center">
+                <img
+                  src="/images/it-bg.png"
+                  alt="IT Infrastructure Ecosystem"
+                  className="w-full h-auto max-h-[260px] sm:max-h-[360px] object-contain object-center rounded-xl"
+                />
+              </motion.div>
+
+              {/* Buttons */}
+              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 w-full">
                 <MagneticButton>
-                  <Link to="/contact" className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-[15px] font-semibold bg-primary text-primary-foreground rounded-[12px] sm:rounded-[14px] hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25">
+                  <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-[15px] font-semibold bg-primary text-primary-foreground rounded-[12px] sm:rounded-[14px] hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25 w-full sm:w-auto text-center">
                     Contact Us <ArrowRight size={18} />
                   </Link>
                 </MagneticButton>
                 <MagneticButton>
-                  <Link to="/portfolio" className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-[15px] font-semibold border border-slate-200 text-slate-700 rounded-[12px] sm:rounded-[14px] hover:bg-slate-50 transition-colors bg-white/50 backdrop-blur-sm">
+                  <Link to="/portfolio" className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-[15px] font-semibold border border-slate-200 text-slate-700 rounded-[12px] sm:rounded-[14px] hover:bg-slate-50 transition-colors bg-white/80 backdrop-blur-sm w-full sm:w-auto text-center">
                     Explore Services <ArrowRight size={18} className="text-slate-400" />
                   </Link>
                 </MagneticButton>
               </motion.div>
 
-              {/* Stats row */}
-              <motion.div variants={fadeUp} className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5">
+              {/* 4 Stats Grid */}
+              <motion.div variants={fadeUp} className="grid grid-cols-2 sm:grid-cols-4 gap-3.5 sm:gap-5 w-full">
                 {[
                   { icon: Shield, value: "ISO 27001", label: "Certified" },
                   { icon: Phone, value: "24 x 7", label: "NOC Support" },
                   { icon: Clock, value: "15+ Min", label: "Avg. Response" },
                   { icon: Users, value: "200+", label: "Happy Clients" },
                 ].map((s) => (
-                  <div key={s.label} className="flex flex-col gap-2">
+                  <div key={s.label} className="flex flex-col gap-2 p-3 sm:p-0 bg-slate-50/60 sm:bg-transparent rounded-xl border border-slate-100 sm:border-0">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20 text-primary">
                       <s.icon size={18} />
                     </div>
                     <div>
-                      <p className="font-display text-[15px] font-bold text-slate-900 leading-none mb-1.5">{s.value}</p>
+                      <p className="font-display text-[14px] sm:text-[15px] font-bold text-slate-900 leading-none mb-1.5">{s.value}</p>
                       <p className="text-[11px] text-slate-500 leading-tight font-medium">{s.label}</p>
                     </div>
                   </div>
@@ -361,7 +371,7 @@ const Hero = () => {
               </motion.div>
             </motion.div>
 
-            {/* Right — Empty container to balance grid */}
+            {/* Right — Empty container to balance grid on desktop */}
             <div className="hidden lg:block z-20" />
 
           </div>
@@ -391,129 +401,368 @@ const Hero = () => {
   );
 };
 
+/* ── Business Outcomes stats ── */
+const businessOutcomesData = [
+  { value: "99.9%", label: "Uptime SLA Commitment", sub: "For managed critical infrastructure" },
+  { value: "<15m", label: "P1 Incident Response", sub: "24/7 rapid dispatch & triage" },
+  { value: "35%", label: "Average TCO Reduction", sub: "Through optimized assets & cloud" },
+  { value: "100+", label: "Managed Workloads", sub: "Servers, networks & endpoints" },
+];
+
+const BusinessOutcomes = () => (
+  <section className="py-16 sm:py-24 bg-slate-950 text-white relative overflow-hidden">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1),transparent_70%)]" />
+    <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        {businessOutcomesData.map((o, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: idx * 0.1, duration: 0.5 }}
+            className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-md"
+          >
+            <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300 font-display">
+              {o.value}
+            </div>
+            <div className="mt-2 text-sm font-semibold text-slate-200">{o.label}</div>
+            <div className="mt-1 text-xs text-slate-400">{o.sub}</div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 const LogosStrip = () => null;
 
 /* ════════════════ WHAT WE MANAGE ════════════════ */
-const FlipServiceCard = ({ service, active, onActivate }: {
-  service: typeof serviceSections[0];
-  active: boolean;
-  onActivate: (id: string | null) => void;
-}) => {
-  const [hovered, setHovered] = useState(false);
-  const flipped = active || hovered;
-  return (
-    <button
-      type="button"
-      onClick={() => onActivate(active ? null : service.id)}
-      onMouseEnter={() => {
-        setHovered(true);
-        onActivate(service.id);
-      }}
-      onMouseLeave={() => {
-        setHovered(false);
-        onActivate(null);
-      }}
-      className={`group relative block w-full text-left [perspective:1800px] h-full antialiased ${active ? "z-20" : "z-10"}`}
-    >
-      <motion.div
-        animate={{ y: active ? -6 : 0 }}
-        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="relative w-full h-full min-h-[460px]"
-      >
-        {/* FRONT FACE */}
-        <motion.div
-          animate={{ rotateY: flipped ? -180 : 0 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          style={{ backfaceVisibility: "hidden" }}
-          className={`absolute inset-0 w-full h-full rounded-[24px] shadow-[0_20px_80px_rgba(15,23,42,0.12)] ${active ? "shadow-lg shadow-primary/20 ring-1 ring-primary/40" : ""} bg-white border border-slate-200/80 overflow-hidden flex flex-col z-20`}
-        >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,hsla(var(--primary),0.12),transparent_35%),radial-gradient(circle_at_80%_10%,hsla(var(--primary),0.12),transparent_25%)] opacity-100" />
-          <div className="relative h-[220px] overflow-hidden shrink-0">
-            <motion.img
-              src={service.image}
-              alt={service.title}
-              className="w-full h-full object-cover"
-              animate={{ scale: flipped ? 1.12 : 1 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-            />
-            <div className="absolute left-4 top-4 flex items-center gap-2.5 z-10">
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-md shrink-0">
-                <service.icon size={21} className="text-primary" />
-              </span>
-              <span className="text-[11px] font-semibold tracking-[0.18em] uppercase text-slate-900 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-full border border-slate-200/90 shadow-md">Hover to Explore</span>
-            </div>
-            <div className="absolute right-4 bottom-4 rounded-full bg-white/95 backdrop-blur-md border border-slate-200/90 px-3.5 py-1.5 text-[13px] font-semibold text-slate-900 shadow-md z-10">
-              Service Group {service.number}
-            </div>
-          </div>
-          <div className="p-5 flex-1 flex flex-col justify-center">
-            <p className="text-[11px] font-bold tracking-[0.24em] uppercase text-primary mb-2">Service Group {service.number}</p>
-            <h3 className="text-xl font-bold tracking-tight text-slate-950 mb-2 leading-tight">{service.title}</h3>
-            <p className="text-sm text-slate-600 leading-relaxed mb-4">{service.description}</p>
-            <div className="flex flex-wrap gap-2 mt-auto">
-              {service.shortBullets.map((item) => (
-                <span key={item} className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-2 text-xs font-medium text-slate-700 shadow-sm">
-                  <Check size={12} className="text-primary" />
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-        {/* BACK FACE */}
-        <motion.div
-          initial={{ rotateY: 180 }}
-          animate={{ rotateY: flipped ? 0 : 180 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          style={{ backfaceVisibility: "hidden" }}
-          className={`absolute inset-0 w-full h-full rounded-[24px] shadow-[0_20px_80px_rgba(15,23,42,0.12)] ${active ? "shadow-lg shadow-primary/20 ring-1 ring-primary/40" : ""} bg-white text-slate-900 p-6 flex flex-col overflow-hidden border border-slate-200/80 z-10`}
-        >
-          <div className="flex items-center justify-between mb-4 shrink-0">
-            <div>
-              <p className="text-xs font-semibold tracking-[0.28em] uppercase text-primary mb-2">Service Group {service.number}</p>
-              <h3 className="text-xl font-bold leading-tight text-slate-950">{service.title}</h3>
-            </div>
-            <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10">
-              <service.icon size={18} className="text-primary" />
-            </span>
-          </div>
+const defaultTheme = { color: "#2563EB", rgb: "37, 99, 235", border: "#BFDBFE", bgSoft: "#EFF6FF" };
 
-          <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar">
-            <p className="text-sm leading-relaxed text-slate-600 max-w-[28ch]">{service.description}</p>
-            <div className="my-4 h-px bg-slate-200 shrink-0" />
-            <div className="grid grid-cols-2 gap-3 pb-2">
-              {service.details.map((detail) => (
-                <div key={detail.title} className="rounded-2xl border border-slate-200 bg-slate-50 px-3 py-3 shadow-sm h-full">
-                  <div className="flex items-start gap-2 mb-2">
-                    <div className="mt-0.5 h-4 w-4 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                      <CheckCircle2 size={10} className="text-primary" />
-                    </div>
-                    <span className="text-[13px] font-semibold leading-snug text-primary">{detail.title}</span>
-                  </div>
-                  <ul className="space-y-1.5 pl-6">
-                    {detail.bullets.map(b => (
-                      <li key={b} className="text-[11px] text-slate-600 list-disc">{b}</li>
+const serviceThemeMap: Record<string, { color: string; rgb: string; border: string; bgSoft: string }> = {
+  "01": defaultTheme,
+  "02": defaultTheme,
+  "03": defaultTheme,
+  "04": defaultTheme,
+  "05": defaultTheme,
+  "06": defaultTheme,
+};
+
+const ServiceCard = ({
+  service,
+  isHovered,
+  isMobileExpanded,
+  onMouseEnter,
+  onMouseLeave,
+  onToggleMobileExpand,
+}: {
+  service: typeof serviceSections[0];
+  isHovered: boolean;
+  isMobileExpanded: boolean;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
+  onToggleMobileExpand: () => void;
+}) => {
+  const theme = serviceThemeMap[service.number] || serviceThemeMap["01"];
+  const isDesktop = typeof window !== "undefined" && window.innerWidth >= 1024;
+  const isExpanded = (isHovered && isDesktop) || isMobileExpanded;
+
+  const handleCardMouseEnter = () => {
+    if (typeof window !== "undefined" && window.innerWidth >= 1024) {
+      onMouseEnter();
+    }
+  };
+
+  const handleCardMouseLeave = () => {
+    if (typeof window !== "undefined" && window.innerWidth >= 1024) {
+      onMouseLeave();
+    }
+  };
+
+  const handleCollapse = () => {
+    onMouseLeave();
+    onToggleMobileExpand();
+  };
+
+  return (
+    <motion.div
+      id={service.id}
+      onMouseEnter={handleCardMouseEnter}
+      onMouseLeave={handleCardMouseLeave}
+      animate={{
+        y: isHovered && isDesktop ? -6 : 0,
+        scale: isHovered && isDesktop ? 1.02 : 1,
+      }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      style={{
+        borderColor: isExpanded ? theme.color : "rgba(226, 232, 240, 0.8)",
+        boxShadow: isExpanded
+          ? `0 28px 60px rgba(${theme.rgb}, 0.14)`
+          : "0 10px 30px rgba(15, 23, 42, 0.04)",
+      }}
+      className={`group relative bg-white rounded-[24px] border p-5 sm:p-7 flex flex-col w-full transition-all duration-600 ease-[cubic-bezier(0.16,1,0.3,1)] z-10 hover:z-20 ${
+        isMobileExpanded ? "h-auto" : "h-[420px] sm:h-[440px]"
+      } lg:h-[440px] ${isExpanded ? "overflow-visible lg:overflow-hidden" : "overflow-hidden"}`}
+    >
+      <div 
+        className="shrink-0 mb-3 sm:mb-4 min-h-[72px] sm:min-h-[68px] flex items-start justify-between gap-2.5 cursor-pointer lg:cursor-default"
+        onClick={() => {
+          if (typeof window !== "undefined" && window.innerWidth < 1024) {
+            handleCollapse();
+          }
+        }}
+      >
+        <div className="flex-1 min-w-0 pr-1">
+          <div className="flex items-center gap-2 mb-1">
+            <p className="text-[11px] font-bold tracking-[0.2em] uppercase" style={{ color: theme.color }}>
+              SERVICE GROUP {service.number}
+            </p>
+            <div
+              className="w-1.5 h-1.5 rounded-full transition-opacity duration-500"
+              style={{ backgroundColor: theme.color, opacity: isExpanded ? 1 : 0.5 }}
+            />
+          </div>
+          <h3 className="text-lg sm:text-xl lg:text-[22px] font-bold tracking-tight text-slate-900 leading-snug whitespace-normal line-clamp-2 lg:truncate">
+            {service.title}
+          </h3>
+          <div
+            className="w-6 h-[2px] rounded-full mt-1.5 transition-all duration-500"
+            style={{
+              backgroundColor: theme.color,
+              width: isExpanded ? "28px" : "18px",
+              opacity: isExpanded ? 1 : 0.4,
+            }}
+          />
+        </div>
+
+        {/* Mobile Expand / Collapse Affordance */}
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            handleCollapse();
+          }}
+          aria-label={isMobileExpanded ? "Hide details" : "View details"}
+          className="lg:hidden shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-semibold border transition-all duration-300 shadow-xs cursor-pointer mt-0.5 z-30 whitespace-nowrap"
+          style={{
+            backgroundColor: isMobileExpanded ? `rgba(${theme.rgb}, 0.12)` : "#EFF6FF",
+            borderColor: isMobileExpanded ? theme.color : "#BFDBFE",
+            color: theme.color,
+          }}
+        >
+          {isMobileExpanded ? (
+            <>
+              <Minus size={13} className="stroke-[2.5]" />
+              <span>Hide details</span>
+            </>
+          ) : (
+            <>
+              <Plus size={13} className="stroke-[2.5]" />
+              <span>View details</span>
+            </>
+          )}
+        </button>
+      </div>
+
+      <div className="relative flex-1 w-full min-h-[280px] lg:min-h-0 rounded-[24px]">
+        {/* 3D Illustration Image */}
+        <motion.div
+          initial={false}
+          animate={{
+            opacity: isExpanded ? 0 : 1,
+            scale: isExpanded ? 0.94 : 1,
+            filter: isExpanded ? "blur(8px)" : "blur(0px)",
+            y: isExpanded ? -8 : 0,
+          }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className={`absolute inset-0 w-full h-full rounded-[24px] overflow-hidden border border-slate-200/60 shadow-sm ${
+            isExpanded ? "pointer-events-none hidden lg:block" : "pointer-events-auto block"
+          }`}
+        >
+          <img
+            src={service.image}
+            alt={service.title}
+            className="w-full h-full object-cover object-center rounded-[24px]"
+            style={{ borderRadius: "24px" }}
+          />
+        </motion.div>
+
+        {/* Hover / Mobile Details Overlay Container */}
+        <motion.div
+          initial={false}
+          animate={{
+            opacity: isExpanded ? 1 : 0,
+          }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          style={{
+            background: `linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(${theme.rgb}, 0.05))`,
+            backdropFilter: "blur(18px)",
+            WebkitBackdropFilter: "blur(18px)",
+            border: `1px solid rgba(${theme.rgb}, 0.22)`,
+            boxShadow: `0 20px 50px rgba(${theme.rgb}, 0.12)`,
+          }}
+          className={`${
+            isExpanded ? "relative lg:absolute pointer-events-auto flex" : "absolute pointer-events-none hidden lg:flex"
+          } inset-0 w-full h-full lg:h-full flex-col justify-between p-4 sm:p-4.5 rounded-[26px] overflow-visible lg:overflow-hidden`}
+        >
+          <div
+            className="absolute inset-0 pointer-events-none z-0 opacity-80"
+            style={{
+              background: `radial-gradient(circle at top right, rgba(${theme.rgb}, 0.14), transparent 70%)`,
+            }}
+          />
+
+          <motion.p
+            initial={false}
+            animate={{
+              opacity: isExpanded ? 1 : 0,
+              y: isExpanded ? 0 : 14,
+            }}
+            transition={{
+              duration: 0.6,
+              delay: isExpanded ? 0.08 : 0,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className="relative z-10 text-xs sm:text-[13px] text-slate-700 leading-snug font-medium mb-3 shrink-0"
+          >
+            {service.description}
+          </motion.p>
+
+          {service.details ? (
+            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-2.5 flex-1 lg:overflow-hidden">
+              {service.details.map((mod, idx) => (
+                <motion.div
+                  key={mod.title}
+                  initial={false}
+                  animate={{
+                    opacity: isExpanded ? 1 : 0,
+                    y: isExpanded ? 0 : 14,
+                  }}
+                  transition={{
+                    duration: 0.6,
+                    delay: isExpanded ? 0.08 + idx * 0.05 : 0,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  style={{
+                    borderColor: `rgba(${theme.rgb}, 0.22)`,
+                  }}
+                  className="rounded-xl border bg-white/90 backdrop-blur-md p-2.5 flex flex-col justify-start shadow-[0_2px_8px_rgba(15,23,42,0.03)]"
+                >
+                  <p className="text-[11px] sm:text-[12px] font-bold text-slate-900 mb-1 flex items-center gap-1.5" style={{ color: theme.color }}>
+                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: theme.color }} />
+                    <span className="truncate">{mod.title}</span>
+                  </p>
+                  <ul className="space-y-1">
+                    {mod.bullets.map((bullet) => (
+                      <li key={bullet} className="text-[10px] sm:text-[11px] text-slate-600 flex items-start gap-1 leading-snug">
+                        <Check size={10} style={{ color: theme.color }} className="shrink-0 mt-0.5 stroke-[3]" />
+                        <span>{bullet}</span>
+                      </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
-
-          <div className="shrink-0 mt-4 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs text-slate-500 text-center font-medium">
-            Tap or hover back to return to the overview.
-          </div>
+          ) : (
+            <div className="relative z-10 flex flex-col gap-2.5 sm:gap-3 mt-auto pt-2">
+              {service.shortBullets.map((bullet, idx) => (
+                <motion.div
+                  key={bullet}
+                  initial={false}
+                  animate={{
+                    opacity: isExpanded ? 1 : 0,
+                    y: isExpanded ? 0 : 14,
+                  }}
+                  transition={{
+                    duration: 0.6,
+                    delay: isExpanded ? 0.08 + idx * 0.07 : 0,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  style={{
+                    borderColor: theme.border,
+                  }}
+                  className="w-full h-[48px] flex items-center justify-start gap-3 rounded-full border bg-white/80 backdrop-blur-md px-3.5 sm:px-4 text-xs sm:text-[13px] font-semibold text-slate-900 shadow-[0_4px_12px_rgba(15,23,42,0.04)] hover:bg-white transition-all duration-500"
+                >
+                  <div
+                    className="w-[34px] h-[34px] rounded-full flex items-center justify-center shrink-0 shadow-xs transition-colors"
+                    style={{
+                      backgroundColor: `rgba(${theme.rgb}, 0.12)`,
+                      border: `1px solid rgba(${theme.rgb}, 0.25)`,
+                    }}
+                  >
+                    <Check size={14} style={{ color: theme.color }} className="stroke-[3]" />
+                  </div>
+                  <span className="truncate">{bullet}</span>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </motion.div>
-      </motion.div>
-    </button>
+      </div>
+    </motion.div>
+  );
+};
+
+const ServiceRow = ({
+  services,
+  expandedMobileId,
+  onToggleMobileExpand,
+}: {
+  services: typeof serviceSections;
+  expandedMobileId: string | null;
+  onToggleMobileExpand: (id: string) => void;
+}) => {
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
+
+  return (
+    <div className="flex flex-col lg:flex-row gap-6 xl:gap-8 w-full transition-all duration-600 ease-[cubic-bezier(0.16,1,0.3,1)]">
+      {services.map((service) => {
+        const isHovered = hoveredId === service.id;
+        const isMobileExpanded = expandedMobileId === service.id;
+        const isRowActive = hoveredId !== null;
+
+        const flexStyle = isRowActive
+          ? isHovered
+            ? "2.1 1 0%"
+            : "0.95 1 0%"
+          : "1 1 0%";
+
+        return (
+          <motion.div
+            key={service.id}
+            layout
+            style={{ flex: flexStyle }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full min-w-0 transition-all duration-600 ease-[cubic-bezier(0.16,1,0.3,1)]"
+          >
+            <ServiceCard
+              service={service}
+              isHovered={isHovered}
+              isMobileExpanded={isMobileExpanded}
+              onMouseEnter={() => setHoveredId(service.id)}
+              onMouseLeave={() => setHoveredId(null)}
+              onToggleMobileExpand={() => onToggleMobileExpand(service.id)}
+            />
+          </motion.div>
+        );
+      })}
+    </div>
   );
 };
 
 const WhatWeManage = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
-  const [activeId, setActiveId] = useState<string | null>(null);
-  const serviceRows = [serviceSections.slice(0, 3), serviceSections.slice(3, 6)];
+  const [expandedMobileId, setExpandedMobileId] = useState<string | null>(null);
+
+  const handleToggleMobileExpand = (id: string) => {
+    setExpandedMobileId((prev) => (prev === id ? null : id));
+  };
+
+  const row1Services = serviceSections.slice(0, 3);
+  const row2Services = serviceSections.slice(3, 6);
 
   return (
     <section ref={ref} className="relative overflow-hidden py-20 sm:py-28 bg-white">
@@ -523,7 +772,7 @@ const WhatWeManage = () => {
         <motion.div variants={stagger} initial="hidden" animate={inView ? "visible" : "hidden"}>
           <motion.div variants={fadeUp} className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-white/80 text-xs font-semibold tracking-[0.25em] uppercase text-primary backdrop-blur-md shadow-sm">
-              <Sparkles size={13} /> Our Infrastructure Services
+              <Sparkles size={13} /> OUR INFRASTRUCTURE SERVICES
             </span>
             <h2 className="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-950">
               What We Manage. <span className="text-primary italic">So You Can Focus.</span>
@@ -532,33 +781,18 @@ const WhatWeManage = () => {
               Enterprise-grade service groups crafted with spacious layouts, premium visuals, and fast-glance clarity for modern IT teams.
             </p>
           </motion.div>
-
-          <div className="space-y-6 xl:space-y-7">
-            {serviceRows.map((row, rowIndex) => (
-              <motion.div
-                key={rowIndex}
-                variants={fadeUp}
-                layout
-                className="flex flex-col lg:flex-row gap-6 xl:gap-7 items-stretch"
-              >
-                {row.map((service, colIndex) => {
-                  const active = service.id === activeId;
-                  const itemIndex = rowIndex * 3 + colIndex;
-                  return (
-                    <motion.div
-                      key={service.id}
-                      layout
-                      transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-                      className={`min-w-0 w-full ${active ? "lg:flex-[2_1_0%]" : "lg:flex-[1_1_0%]"} sticky top-24 lg:relative lg:top-auto`}
-                      style={{ zIndex: active ? 30 : itemIndex }}
-                    >
-                      <FlipServiceCard service={service} active={active} onActivate={setActiveId} />
-                    </motion.div>
-                  );
-                })}
-              </motion.div>
-            ))}
-          </div>
+          <motion.div variants={fadeUp} className="flex flex-col gap-6 xl:gap-8 w-full mt-12 sm:mt-16">
+            <ServiceRow
+              services={row1Services}
+              expandedMobileId={expandedMobileId}
+              onToggleMobileExpand={handleToggleMobileExpand}
+            />
+            <ServiceRow
+              services={row2Services}
+              expandedMobileId={expandedMobileId}
+              onToggleMobileExpand={handleToggleMobileExpand}
+            />
+          </motion.div>
         </motion.div>
       </div>
     </section>

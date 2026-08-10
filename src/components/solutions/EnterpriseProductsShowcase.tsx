@@ -63,6 +63,15 @@ const products = [
     image: "/images/product-card-6.avif",
     video: hrManagementDemo.url,
   },
+  {
+    title: "Billing Application",
+    category: "Finance & Billing",
+    tag: "GST Ready",
+    description:
+      "Smart billing with invoicing, GST, payments and reporting.",
+    image: "/images/product-card-1.avif",
+    video: crmAceDemo,
+  },
 ];
 
 const stats = [
